@@ -4,9 +4,13 @@ body{
 
 .homepage-info{
     text-align:center;
+    padding:25px;
 }
 h1{
-    color:#ff9507 !important;
+    color:#ec8235 !important;
+}
+h2{
+    color:#ffc107 !important;
 }
 .row{
     margin-bottom: 20px !important;
@@ -20,6 +24,12 @@ h1{
   /* .hero-section{
     background: #ff9507;
   } */
+
+  .nav-link{
+    color: #cc6d27;
+    font-weight: 500;
+  }
+
   .navbar-nav li:hover > ul.dropdown-menu {
     display: block;
 }
@@ -49,7 +59,7 @@ h1{
     max-width: 850px;
     margin: 0 auto;
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 70px;
     padding: 0 20px;
 }
 
@@ -60,8 +70,8 @@ h1{
     position: relative;
     overflow: hidden;
     padding-bottom: 2rem;
-    width: 200px;
-    height: 230px;
+    width: 300px;
+    height: 300px;
     margin: 0 auto;
 }
 
@@ -85,7 +95,7 @@ h1{
     opacity: .9;
     width: 100%;
     object-fit: cover;
-    height: 130px;
+    height: 200px;
     transition: all .3s ease-in-out;
 }
 
@@ -95,6 +105,13 @@ h1{
     text-align: center;
 }
 
+.fav__hidden-text ul li{
+    text-align:left;
+}
+.fav__hidden-text a{
+    color:#492a0c;
+    font-size: 18px;
+}
 h4 {
     font-weight: 900;
     font-size: 16px;
@@ -116,10 +133,16 @@ h4 {
     margin-left: auto;
     margin-right: auto;
     width: 40%;
+    border-radius: 50px;
 }
 .carousel-container{
+    width: 300px;
+    margin:auto;
     /* max-width: 60% !important; */
 
+}
+.carousel-inner{
+    border-radius: 50px;
 }
 /* .hero-section {
   background: url('./assets/newlogobrdr.jpeg') 50% no-repeat;
