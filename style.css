@@ -1,10 +1,17 @@
 body{
     background: #212529;
 }
-
 .homepage-info{
-    text-align:center;
     padding:25px;
+}
+.homepage-info h1{ 
+    text-align:center;
+    color:#492a0c !important;
+   
+}
+.homepage-info h3{
+    text-align:center;
+    color:#ec8235;
 }
 h1{
     color:#ec8235 !important;
