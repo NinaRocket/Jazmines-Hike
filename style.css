@@ -13,6 +13,14 @@ body{
     text-align:center;
     color:#ec8235;
 }
+.mission{
+    width:80%;
+    margin:auto;
+}
+.callout{
+    font-weight:800;
+    color:#cc6d27;
+}
 h1{
     color:#ec8235 !important;
 }
