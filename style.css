@@ -1,32 +1,44 @@
 body{
     background: #212529;
 }
+.container{
+    min-width:75%;
+    margin-bottom:40px;
+}
+
 .homepage-info{
     padding:25px;
 }
+
 .homepage-info h1{ 
     text-align:center;
     color:#492a0c !important;
    
 }
+
 .homepage-info h3{
     text-align:center;
     color:#ec8235;
 }
+
 .mission{
     width:80%;
     margin:auto;
 }
+
 .callout{
     font-weight:800;
     color:#cc6d27;
 }
+
 h1{
     color:#ec8235 !important;
 }
+
 h2{
     color:#ffc107 !important;
 }
+
 .row{
     margin-bottom: 20px !important;
 }
@@ -44,9 +56,11 @@ h2{
     color: #cc6d27 !important;
     font-weight: 500;
   }
+
   .nav-link:hover{
     color:#ffc107 !important; 
   }
+
 .dropdown-item{
     color:#c8780d !important;
 }
@@ -54,15 +68,19 @@ h2{
 a.dropdown-item:hover{
     color:#ffc107 !important;
 }
+
 a.dropdown-item:visited{
     color:blueviolet;
 }
+
   .navbar-nav li:hover > ul.dropdown-menu {
     display: block;
 }
+
   .dropdown-submenu {
     position:relative;
 }
+
 .dropdown-submenu > .dropdown-menu {
     top: 0;
     left: 100%;
