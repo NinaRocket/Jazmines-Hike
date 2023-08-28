@@ -24,6 +24,8 @@ class Header extends HTMLElement {
                   <li><a class="dropdown-item" href="../Pages/hikingevents.html">Hiking Events</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="../Pages/support.html">Support</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../Pages/Contact.html">Contact</a></li>
                  
                 </ul>
               </li>
@@ -32,6 +34,9 @@ class Header extends HTMLElement {
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="../Pages/support.html">Support</a>
           </li>
+          <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="../Pages/contact.html">Contact</a>
+        </li>
         </ul>
        
       </div>
