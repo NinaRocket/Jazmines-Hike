@@ -35,7 +35,7 @@ class Header extends HTMLElement {
             <a class="nav-link active" aria-current="page" href="../Pages/support.html">Support</a>
           </li>
           <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="../Pages/contact.html">Contact</a>
+          <a class="nav-link active" aria-current="page" href="../Pages/Contact.html">Contact</a>
         </li>
         </ul>
        
