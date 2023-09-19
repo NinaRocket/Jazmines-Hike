@@ -1,6 +1,32 @@
-body{
-    background: #212529;
-}
+
+body {
+    /* Full height */
+    height: 100%;
+    margin: 0; /* Remove default margin for the body */
+  
+    /* Position relative for proper stacking */
+    position: relative;
+  }
+  
+  /* Create a pseudo-element for the background image with opacity */
+  body.home::before {
+    content: "";
+    background-image: url("./Assets/jazcollage2.png");
+    opacity: 0.2; /* Adjust the opacity level as needed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1; /* Place the pseudo-element behind the content */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  /* Add your content styles here */
+  
+
 .container{
     min-width:75%;
     margin-bottom:40px;
@@ -13,17 +39,59 @@ body{
 .homepage-info h1{ 
     text-align:center;
     color:#492a0c !important;
+    
    
 }
+.homepage-info h1,
+.homepage-info h3 {
+   /* Set the text color */
+  text-shadow:
+    -2px -2px 0 white, /* Top-left shadow */
+    2px -2px 0 white,  /* Top-right shadow */
+    -2px 2px 0 white,  /* Bottom-left shadow */
+    2px 2px 0 white;   /* Bottom-right shadow */
+}
 
+.home-cards{
+    display:flex;
+}
+.card-deck {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #ec8235 !important;
+    border-color:black !important;
+}
+.card-body{
+    text-align:center;
+}
+.card{
+    background: #ff9507;
+    box-shadow: 0 14px 30px rgb(0 0 0 / 25%), 0 4px 8px rgb(0 0 0 / 45%), 0 10px 40px 10px rgb(0 0 0 / 15%);
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 2rem;
+    width: 300px;
+    height: 400px;
+    margin: 30px;
+}
 .homepage-info h3{
     text-align:center;
     color:#ec8235;
+}
+.navbar{
+    background-color: white !important;
 }
 
 .mission{
     width:80%;
     margin:auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
 }
 
 .callout{
@@ -75,6 +143,9 @@ a.dropdown-item:visited{
 
   .navbar-nav li:hover > ul.dropdown-menu {
     display: block;
+}
+.navbar-brand{
+    color: #492a0c !important;
 }
 
 .centerText {
@@ -185,8 +256,8 @@ h4 {
     display:flex;
     margin-left: auto;
     margin-right: auto;
-    width: 40%;
-    border-radius: 50px;
+    width: 25%;
+    /* border-radius: 50px; */
 }
 .carousel-container{
     width: 300px;
@@ -574,7 +645,67 @@ label{
             }
             } 
           
-
+            .block {
+                position: relative;
+                margin: 300px auto 0;
+                width: 500px;
+                height: 250px;
+                background: linear-gradient(0deg, #000, #272727);
+              }
+              
+              .block:before, .block:after {
+                content: '';
+                position: absolute;
+                left: -2px;
+                top: -2px;
+                background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+                  #0000ff, #00ff00,#ffff00, #ff0000);
+                background-size: 400%;
+                width: calc(100% + 4px);
+                height: calc(100% + 4px);
+                z-index: -1;
+                animation: steam 20s linear infinite;
+              }
+              
+              @keyframes steam {
+                0% {
+                  background-position: 0 0;
+                }
+                50% {
+                  background-position: 400% 0;
+                }
+                100% {
+                  background-position: 0 0;
+                }
+              }
+              
+              .block:after {
+                filter: blur(50px);
+              }
+              
+.border-img{
+        --b: 5px;  /* the border thickness */
+        --d: 20px; /* the distance from the edge */
+        --o: 15px; /* the offset on hover */
+        --s: 1;    /* the direction of the hover effect (+1 or -1)*/
+        
+        --_d: calc(var(--d) + var(--s)*1em);
+        --_g: calc(100% - 2*(var(--_d) + var(--b)));
+        --_m:
+          conic-gradient(from 90deg at var(--_d) var(--_d),#0000 25%,#000 0)
+           0 0/calc(100% - var(--_d)) calc(100% - var(--_d)),
+          linear-gradient(#000 0 0) 50%/var(--_g) var(--_g) no-repeat;
+        -webkit-mask: var(--_m);
+                mask: var(--_m);
+        font-size: 0;
+        cursor: pointer;
+        transition: .35s;
+      }
+      img:hover {
+        font-size: var(--o);
+      }
+      
+    
 
 @media (min-width: 992px){
 .container, .container-lg, .container-md, .container-sm {
@@ -585,4 +716,32 @@ label{
     .container, .container-lg, .container-md, .container-sm {
         max-width: 720px !important;
     }
+    .hero-image img{
+        display:flex;
+        margin-left: auto;
+        margin-right: auto;
+        width: 35%;
+        /* border-radius: 50px; */
+    }
+    .border-img{
+        --b: 5px;  /* the border thickness */
+        --d: 10px; /* the distance from the edge */
+        --o: 15px; /* the offset on hover */
+        --s: 1;    /* the direction of the hover effect (+1 or -1)*/
+        
+        --_d: calc(var(--d) + var(--s)*1em);
+        --_g: calc(100% - 2*(var(--_d) + var(--b)));
+        --_m:
+          conic-gradient(from 90deg at var(--_d) var(--_d),#0000 25%,#000 0)
+           0 0/calc(100% - var(--_d)) calc(100% - var(--_d)),
+          linear-gradient(#000 0 0) 50%/var(--_g) var(--_g) no-repeat;
+        -webkit-mask: var(--_m);
+                mask: var(--_m);
+        font-size: 0;
+        cursor: pointer;
+        transition: .35s;
+      }
+      img:hover {
+        font-size: var(--o);
+      }
 }
