@@ -11,7 +11,7 @@ body {
   /* Create a pseudo-element for the background image with opacity */
   body.home::before {
     content: "";
-    background-image: url("./Assets/jazcollage2.png");
+    background-image: url("./Assets/jazcollage4.png");
     opacity: 0.2; /* Adjust the opacity level as needed */
     top: 0;
     left: 0;
@@ -78,6 +78,9 @@ body {
     height: 400px;
     margin: 30px;
 }
+.card-text{
+    margin-top: 10px !important;
+}
 .homepage-info h3{
     text-align:center;
     color:#ec8235;
@@ -93,9 +96,12 @@ body {
     padding: 30px;
     border-radius: 15px;
 }
+.mission h3{
+    text-align:center;
+}
 
 .callout{
-    font-weight:800;
+    font-weight:600;
     color:#cc6d27;
 }
 
