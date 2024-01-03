@@ -16,18 +16,16 @@ class Header extends HTMLElement {
               
                 </ul>
             <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+
               <li class="nav-item"><a class="nav-link active" href="./JazminesStory.html">Jazmine's Story</a></li>
 
-              <li class="nav-item"><a class="nav-link active" href="./bloodDrive.html">Blood Drive</a></li>
-
-              <li class="nav-item"><a class="nav-link active" href="./toydrive.html">Toy Drive</a></li>
-
+              <li class="nav-item"><a class="nav-link active" href="./NewsAndUpdates.html">News & Updates</a></li>
             
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="./support.html">Support</a>
               </li>
 
-              <li class="nav-item"><a class="nav-link active" href="./hikingevents.html">Past Events</a></li>
+              <li class="nav-item"><a class="nav-link active" href="./PastEvents.html">Past Events</a></li>
 
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="./Contact.html">Contact</a>
