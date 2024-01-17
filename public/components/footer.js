@@ -13,9 +13,13 @@ class Footer extends HTMLElement {
         <!-- Section: CTA -->
         <section class="">
           <p class="d-flex justify-content-center align-items-center">
-            <span class="me-3">Copyright © 2023 Jazmine's Journey</span>
+            <span class="me-3">Copyright © 2024 Jazmine's Journey</span>
             
           </p>
+          <p class="d-flex justify-content-center align-items-center">
+          <span class="me-3"><a href="/minutes">Meeting Minutes and Budget</a></span>
+          
+        </p>
         </section>
         <!-- Section: CTA -->
       </div>

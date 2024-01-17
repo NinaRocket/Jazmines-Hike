@@ -18,20 +18,20 @@ class Header extends HTMLElement {
             <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
 
 
-            <li class="nav-item"><a class="nav-link active" href="./bloodDrive.html">Blood Drive</a></li>
+            <li class="nav-item"><a class="nav-link active" href="/bloodDrive">Blood Drive</a></li>
             
-              <li class="nav-item"><a class="nav-link active" href="./JazminesStory.html">Jazmine's Story</a></li>
+              <li class="nav-item"><a class="nav-link active" href="/JazminesStory">Jazmine's Story</a></li>
 
-              <li class="nav-item"><a class="nav-link active" href="./NewsAndUpdates.html">News & Updates</a></li>
+              <li class="nav-item"><a class="nav-link active" href="/NewsAndUpdates">News & Updates</a></li>
             
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./support.html">Support</a>
+                <a class="nav-link active" aria-current="page" href="/support">Support</a>
               </li>
 
-              <li class="nav-item"><a class="nav-link active" href="./PastEvents.html">Past Events</a></li>
+              <li class="nav-item"><a class="nav-link active" href="/PastEvents">Past Events</a></li>
 
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./Contact.html">Contact</a>
+                <a class="nav-link active" aria-current="page" href="/Contact">Contact</a>
               </li>
             </ul>
            
