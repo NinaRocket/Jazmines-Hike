@@ -17,6 +17,10 @@ class Footer extends HTMLElement {
             
           </p>
           <p class="d-flex justify-content-center align-items-center">
+          <span class="me-3">   <span class="me-3">a 501(c)3 nonprofit </span>
+          
+        </p>
+          <p class="d-flex justify-content-center align-items-center">
           <span class="me-3"><a href="/components/Pages/minutes.html">Meeting Minutes and Budget</a></span>
           
         </p>
