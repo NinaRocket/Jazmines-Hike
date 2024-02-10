@@ -36,6 +36,10 @@ class Header extends HTMLElement {
               <li class="nav-item"><a class="nav-link active" href="./PastEvents.html">Past Events</a></li>
 
               <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./thankyou.html">Thank You</a>
+            </li>
+
+              <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="./Contact.html">Contact</a>
               </li>
             </ul>

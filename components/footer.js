@@ -21,7 +21,7 @@ class Footer extends HTMLElement {
           
         </p>
           <p class="d-flex justify-content-center align-items-center">
-          <span class="me-3"><a href="/components/Pages/minutes.html">Meeting Minutes and Budget</a></span>
+          <span class="me-3"><a href="/components/Pages/minutes.html">Meeting Minutes, Tax Exempt Letter and Budget</a></span>
           
         </p>
         </section>
