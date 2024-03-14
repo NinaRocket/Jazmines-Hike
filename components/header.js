@@ -19,9 +19,8 @@ class Header extends HTMLElement {
 
             <li class="nav-item"><a class="nav-link active" href="./JazminesStory.html">Jazmine's Story</a></li>
 
-            <li class="nav-item"><a class="nav-link active" href="./components/Pages/upcomingEvents.html">Events</a></li>
+            <li class="nav-item"><a class="nav-link active" href="./upcomingEvents.html">Events</a></li>
 
-              <li class="nav-item"><a class="nav-link active" href="./NewsAndUpdates.html">News & Updates</a></li>
             
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="./support.html">Support</a>
@@ -38,7 +37,7 @@ class Header extends HTMLElement {
             </li>
 
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./Contact.html">Contact</a>
+                <a class="nav-link active" aria-current="page" href="./Contact.html">Contact & Subscribe</a>
               </li>
             </ul>
            
