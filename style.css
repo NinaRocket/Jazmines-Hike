@@ -6,6 +6,7 @@ body {
   
     /* Position relative for proper stacking */
     position: relative;
+   
   }
   
   /* Create a pseudo-element for the background image with opacity */
@@ -23,8 +24,16 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
   }
+  /* .anchor {
+    display: none;
+      
+        left: 0;
+        position: fixed;
+       
+        z-index: 100;
+} */
+ 
 
-  
   .me-3 a{
     color:white;
   }

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../../Assets/Jazmines-Journey-Logo.PNG"/>
+    <title>Jazmine's Journey</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="../header.js" type="text/javascript" defer></script>
+    <script src="../footer.js" type="text/javascript" defer></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar/index.global.min.js'></script>
+    <!-- <base href="../Pages/copyevents.html"> -->
+   
+</head>
+<body>
+    <header-component></header-component>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var calendarEl = document.getElementById('calendar');
+
+
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            //initialView: 'listYear',
+            events: [
+               { // this object will be "parsed" into an Event Object                  
+                  title: 'Someburros Fundraiser', // a property!
+                  start: '2024-03-25', // a property!
+                  end: '2024-03-25', // a property!
+                  textColor: 'black',
+                  backgroundColor: 'white',
+                  borderColor: 'white',
+                  url: '#someburros',
+                  image_url: '../../Assets/someburros1.png'
+                 
+                },
+                {
+                  title: 'Rock Painting', // a property!
+                  start: '2024-04-20', // a property!
+                  end: '2024-04-20', // a property!
+                  textColor: 'black',
+                  backgroundColor: 'white',
+                  borderColor: 'white',
+                  url: '#rocks',
+                  image_url: '../../Assets/spacemountainrock.jpg'
+                },
+                {
+                  title: 'Memorial Hike', // a property!
+                  start: '2024-05-05', // a property!
+                  end: '2024-05-05', // a property!
+                  textColor: 'black',
+                  backgroundColor: 'white',
+                  borderColor: 'white',
+                  url: '#hike',
+                  classNames: 'calImage',
+                  image_url: '../../Assets/jazmines-memorial-hike-Final.png'
+                },
+                {
+                  title: 'Blood Drive', // a property!
+                  start: '2024-05-11', // a property!
+                  end: '2024-05-11', // a property!
+                  textColor: 'black',
+                  backgroundColor: 'white',
+                  borderColor: 'white',
+                  url: '#blooddrive',
+                  image_url: '../../Assets/redcrosslogo.png'
+                }
+             
+              ],
+              eventTimeFormat: { // like '14:30:00'
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                meridiem: false
+            },
+              
+              eventContent: function(arg) {
+                let arrayOfDomNodes = []
+                // title event
+                let titleEvent = document.createElement('div')
+                if(arg.event._def.title) {
+                  titleEvent.innerHTML = arg.event._def.title
+                  titleEvent.classList = "fc-event-title fc-sticky"
+                }
+    
+                // image event
+                let imgEventWrap = document.createElement('div')
+                if(arg.event.extendedProps.image_url) {
+                  let imgEvent = '<img src="'+arg.event.extendedProps.image_url+'" >'
+                  imgEventWrap.classList = "fc-event-img"
+                  imgEventWrap.innerHTML = imgEvent;
+                }
+    
+                arrayOfDomNodes = [ titleEvent,imgEventWrap ]
+    
+                return { domNodes: arrayOfDomNodes }
+              },
+            
+        
+            })
+        calendar.render();
+
+    });
+</script>
+     
+  <div class="row">
+        <div class="col section-header">
+          <h2>Jazmine's Journey</h2>
+          <p class="pulse">Upcoming Events </p>
+        </div>
+ </div>
+
+ <div class="row container calendar" style="width:50%;  margin:auto;">
+
+    <div id='calendar'>
+      
+    </div>
+
+ </div>
+ <div class="row container" style="margin:auto;">
+    <div class="col-sm-4" style="text-align:center;">
+          <img src="../../Assets/jazeat.jpg" style="width:200px;border-radius: 20px;" class="" alt="...">
+         
+        </div>
+        <div class="col-sm-8">
+         
+          </p>
+          <div class="container centerText">
+            <p>
+                <a class="anchor" name="someburros"></a>
+            <p>Sat, March 25th, 2024</p>
+            <p class="event-titles">Someburros Fundraiser</p> 
+            <p class="section-text" style="font-size: 18px;">Enjoy a meal and support Jazmine's Journey at Someburros located at: 5115 N. 7th St. Phoenix, AZ 85014
+              <a href="../../Assets/someburros1.png" target="_blank">Click here for more information</a>
+              <br>
+              <br>
+           
+     </p>
+     <br>
+     <br>
+    </div>
+    </div>
+  </div>
+
+ <div class="row container" style="margin:auto;">
+    <div class="col-sm-4" style="text-align:center;">
+          <img src="../../Assets/spacemountainrock.jpg" style="width:200px;border-radius: 20px;" class="" alt="...">
+         
+        </div>
+        
+        <div class="col-sm-8">
+         
+          </p>
+          <div class="container centerText">
+            <p>
+                <a class="anchor" name="rocks"></a>
+                <p>Sat, April 20, 2024 01:00 PM - 02:00 PM</p>
+            <p class="event-titles">Jazmine's Traveling Rocks: Painting Event</p> 
+            <p class="section-text" style="font-size: 18px;">
+                For this event, we will be raising money for our 501(c)3 Nonprofit Organization while painting beautiful rocks to leave around the community that will also bring smiles to those who find it.  We will have rocks for you to paint and take with you to leave at another location. We would love it if you took a picture of where you left it and posted it on social media with the hashtag #jazminestravelingrocks 
+              <br>
+              <a href="./rockPainting.html">Click here for more information</a> 
+           
+     </p>
+    </div>
+    </div>
+  </div>
+  
+
+  <div class="row container" style="margin:auto;">
+    <div class="col-sm-4" style="text-align:center;">
+          <img src="../../Assets/jazmines-memorial-hike-Final.png" style="width:200px;border-radius: 20px;" class="" alt="...">
+         
+        </div>
+        <div class="col-sm-8">
+         
+          </p>
+          <div class="container centerText">
+            <p>
+            <a class="anchor" name="hike"></a>
+            <p>Sat, May 5th, 2024 7:00 AM - 10:00 AM</p>
+            <p class="event-titles">Jazmine's Memorial Hike</p> 
+            <p class="section-text" style="font-size: 18px;">Join us for Jazmine's Journey Memorial Hike, a heartfelt event dedicated to childhood cancer research and supporting families affected by pediatric cancer.
+              <a href="./memorialhike.html">Click here for more information</a>
+              <br>
+              <br>
+           
+     </p>
+    </div>
+    </div>
+  </div>
+
+ <div class="row container" style="margin:auto;">
+    <div class="col-sm-4" style="text-align:center;">
+          <img src="../../Assets/redcrosslogo.png" style="width:200px;border-radius: 20px;" class="" alt="...">
+         
+        </div>
+        <div class="col-sm-8">
+         
+          </p>
+          <div class="container centerText">
+            <p>
+            <a class="anchor" name="blooddrive"></a>
+            <p>Sat, May 11th, 2024 9:00 AM - 2:00 PM</p>
+            <p class="event-titles">Blood Drive</p> 
+           
+            <p class="section-text" style="font-size: 18px;">During Jazmine's Cancer treatments, she went through an astounding number of blood product transfusions. By donating blood, you will be helping other children just like Jazmine who are in need of countless blood transfusions. You will be saving lives. 
+              
+            <a href="./bloodDrive.html">Click here for more information</a>
+              <br>
+           
+     </p>
+    </div>
+    </div>
+  </div>
+
+       
+
+     <style>
+        .fc-event-img img{
+            height:65px;
+            
+        }
+        .fc-event-img{
+            text-align: center;
+        }
+        .fc-daygrid-day-top a{
+            color:204, 109, 39;
+            text-decoration:none;
+        }
+        .fc-scrollgrid-sync-inner a{
+            color:#cc6d27;
+        }
+        .fc-h-event .fc-event-title{
+            font-weight:500;
+        }
+        .fc .fc-toolbar-title {
+             font-size: 2em;
+        }
+     </style>
+
+        
+
+      
+
+  
+<footer-component></footer-component>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
