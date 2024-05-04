@@ -13,9 +13,51 @@
 
   <script src="components/header.js" type="text/javascript" defer></script>
   <script src="components/footer.js" type="text/javascript" defer></script>
+  <script>
+    // Show the modal on page load
+    window.onload = function() {
+      var myModal = new bootstrap.Modal(document.getElementById('exampleModal'));
+      myModal.show();
+    };
+  </script>
+  
 </head>
 
+
+
 <body class="home">
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div>
+          <img src="/Assets/Jazmines-Journey-Logo.PNG" style="height: 30px;margin-right: 10px;" alt="Jazmine's Journey Butterfly Logo">
+        </div>
+        <br>
+       
+        <br>
+        <h5 class="modal-title" id="exampleModalLabel" style="text-align:center;">Thank you for visiting us!</h5>
+       
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="text-align:center;">
+       
+        Please subscribe to our newsletter!
+        <br>
+        <button class="sub-btn"><a href="./components/Pages/Contact.html">Subscribe</a></button>
+       
+      </div>
+  
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
   <button class="floating-btn"> <a href="./components/Pages/support.html">Support Us</a></button>
   <!-- <div class="hero-section">
         <div class="hero-image center">

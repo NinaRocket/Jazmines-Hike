@@ -733,29 +733,12 @@ label{
                 filter: blur(50px);
               }
               
-.border-img{
-        --b: 5px;  /* the border thickness */
-        --d: 20px; /* the distance from the edge */
-        --o: 15px; /* the offset on hover */
-        --s: 1;    /* the direction of the hover effect (+1 or -1)*/
-        
-        --_d: calc(var(--d) + var(--s)*1em);
-        --_g: calc(100% - 2*(var(--_d) + var(--b)));
-        --_m:
-          conic-gradient(from 90deg at var(--_d) var(--_d),#0000 25%,#000 0)
-           0 0/calc(100% - var(--_d)) calc(100% - var(--_d)),
-          linear-gradient(#000 0 0) 50%/var(--_g) var(--_g) no-repeat;
-        -webkit-mask: var(--_m);
-                mask: var(--_m);
-        font-size: 0;
-        cursor: pointer;
-        transition: .35s;
-      }
-      img:hover {
-        font-size: var(--o);
-      }
-      
-    
+.sub-btn{
+  border-radius:10px;
+  background-color:#fff;
+  color:#cc6d27;
+  margin-top: 10px;
+}
 
 @media (min-width: 992px){
 .container, .container-lg, .container-md, .container-sm {
