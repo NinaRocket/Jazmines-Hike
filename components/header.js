@@ -26,6 +26,19 @@ class Header extends HTMLElement {
                 <a class="nav-link active" aria-current="page" href="./support.html">Support</a>
               </li>
 
+              <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Online Fundraisers
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./JazminesPiggies.html">Piggy Fundraiser</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="./statefortyeight.html">State Forty Eight Collab</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="https://www.zeffy.com/en-US/donation-form/b6a57cd2-dc35-4595-80bf-47d4561e4d72" target="_blank">Link to General Donation</a></li>
+              </ul>
+            </li>
+
               <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="./joinUs.html">Join Us</a>
             </li>
