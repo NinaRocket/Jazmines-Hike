@@ -21,8 +21,20 @@ class Header extends HTMLElement {
 
         <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
              
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Events
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="./upcomingEvents.html">Upcoming Events</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="./familySupport.html">Family Support Events</a></li>
+       
+       
+        </ul>
+      </li>
 
-              <li class="nav-item"><a class="nav-link active" href="./upcomingEvents.html">Events</a></li>
+         
 
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -43,6 +55,8 @@ class Header extends HTMLElement {
                   Impact
                 </a>
                 <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./familySupport.html">Family Support Events</a></li>
+                <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="./giving.html">Your Impact</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="./PastEvents.html">Past Events</a></li>     
@@ -74,7 +88,7 @@ class Header extends HTMLElement {
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link active" href="https://us21.list-manage.com/survey?u=b84b865ea6ed9e8e3894bb424&id=13d9b44e2b&attribution=false" target="_blank">Family Application</a></li>
-              
+
         </ul>
 
       </div>
