@@ -10,32 +10,159 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="../header.js" type="text/javascript" defer></script>
     <script src="../footer.js" type="text/javascript" defer></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar/index.global.min.js'></script>
+   
 </head>
 <body>
     <header-component></header-component>
 
-    <button class="floating-btn"> <a href="https://us21.list-manage.com/survey?u=b84b865ea6ed9e8e3894bb424&id=13d9b44e2b&attribution=false">Apply to Receive Family Support</a></button>
+  <button class="floating-btn"> <a href="https://us21.list-manage.com/survey?u=b84b865ea6ed9e8e3894bb424&id=13d9b44e2b&attribution=false">Apply to Receive Family Support</a></button>
      
   <div class="row">
-        <div class="col section-header homepage-info">
-          <h2>Jazmine's Journey</h2>
-          <h1 class="pulse">Upcoming Events </h1>
-        </div>
- </div>
+    <div class="col section-header homepage-info">
+      <h2>Jazmine's Journey</h2>
+      <h1 class="pulse">Upcoming Events </h1>
+    </div>
+</div>
 
 
-  <div class="row container" style="margin:auto;">
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  var calendarEl = document.getElementById('calendar');
+  new FullCalendar.Calendar(calendarEl, {
+    initialView: 'listYear',
+ 
+
+eventContent: function(arg) {
+  let arrayOfDomNodes = [];
+
+  // Create anchor element for the URL
+  let anchorElement = document.createElement('a');
+  anchorElement.href = arg.event.url;
+  anchorElement.style.display = 'flex'; // Use flexbox layout
+  anchorElement.style.alignItems = 'center'; // Center align vertically
+
+  // Title event
+  if (arg.event._def.title) {
+    let titleEvent = document.createElement('div');
+    titleEvent.innerHTML = arg.event._def.title;
+    titleEvent.classList = "fc-event-title fc-sticky";
+    anchorElement.appendChild(titleEvent);
+  }
+
+  // Image event
+  if (arg.event.extendedProps.image_url) {
+    let imgEvent = document.createElement('img');
+    imgEvent.src = arg.event.extendedProps.image_url;
+    imgEvent.classList = "fc-event-img";
+    anchorElement.appendChild(imgEvent);
+  }
+
+  // Append the anchor element (with title and image) to the DOM nodes array
+  arrayOfDomNodes.push(anchorElement);
+
+  return { domNodes: arrayOfDomNodes };
+}
+
+,
+eventTimeFormat: { // like '14:30:00'
+  hour: 'numeric',
+  minute: '2-digit',
+  meridiem: 'short'
+},
+    events: [
+      {
+        title: 'Bruster'+"'"+'s',
+        url: '#brusters',
+        start: '2024-06-27T17:00', 
+        end: '2024-06-27T20:00',
+        classNames: 'smallImg',
+        image_url: '../../Assets/Fundraisers/BrustersLogo.svg',
+        // extendedProps: {
+        //               eventType: 'Family Support Event'
+                       
+        //               },
+        //               description: 'Family Support Event'
+      },
+      {
+        title: 'Peter Piper Pizza', // a property!
+        start: '2024-07-12T17:00', // a property!
+        end: '2024-07-12T20:00', // a property!
+        textColor: 'black',
+        backgroundColor: 'white',
+        borderColor: 'white',
+        classNames: 'smallImg',
+        url: '#pizza',
+        image_url: '../../Assets/Fundraisers/Peter_Piper_Pizza.png'
+      },
+      {
+        title: 'Donation Photo Sessions', // a property!
+        start: '2024-07-14T08:00', // a property!
+        end: '2024-07-14T13:30', // a property!
+        textColor: 'black',
+        backgroundColor: 'white',
+        borderColor: 'white',
+        classNames: 'smallImg',
+        url: '#photo',
+        image_url: '../../Assets/jazsiblings.jpg'
+      }, 
+      {
+        title: 'On the Border', // a property!
+        start: '2024-08-06T11:00', // a property!
+        end: '2024-08-06T21:00', // a property!
+        textColor: 'black',
+        backgroundColor: 'white',
+        borderColor: 'white',
+        url: '#border',
+        classNames: 'smallImg',
+        image_url: '../../Assets/Fundraisers/on-the-border-logo.png'
+      },
+      {
+        title: 'Bingo', // a property!
+        start: '2024-08-26T18:00', // a property!
+        end: '2024-08-26T20:00', // a property!
+        textColor: 'black',
+        backgroundColor: 'white',
+        borderColor: 'white',
+        classNames: 'smallImg',
+        url: '#bingo',
+        image_url: '../../Assets/Fundraisers/bingologo.png'
+      }
+    ],
+    // eventDidMount: function(info) {
+    //               console.log(info.event.extendedProps);
+    //               `{description: "Family Support Event",eventType: "Family Support"}`
+    //             }
+   
+  }).render();
+});
+</script>
+
+<br>
+<div class="row container calendar" style="width:50%; margin:auto;">
+
+  <div id='calendar'>
+    
+  </div>
+
+</div>
+
+
+
+
+  <div class="row container" style="margin:auto; margin-top: 50px;">
 
 
     <div class="container centerText" style="text-align:center;">
+      <a class="anchor" name="brusters"></a>
       <div>
           <img src="../../Assets/Fundraisers/BrustersLogo.svg" style="width:200px;border-radius: 20px;" class="" alt="...">    
       </div>
-         
+    
             <p>
             <p>Thursday, June 27th  5-8pm</p>
-            <p class="event-titles">Brusters Giveback Night</p> 
-
+            <p class="event-titles">Bruster's Giveback Night</p> 
+          
             <p class="section-text" style="font-size: 18px;">
                 Location: 17115 N 51st ave, Glendale, AZ 85308
                 <br>
@@ -45,12 +172,15 @@
               <br>   
      </p>
     </div>
+   
   
     <div class="container centerText" style="text-align:center;">
+      <a class="anchor" name="pizza"></a>
       <div style="text-align:center;">
           <img src="../../Assets/Fundraisers/Peter_Piper_Pizza.png" style="width:200px;border-radius: 20px;" class="" alt="...">
          
       </div>
+     
             <p>
                 <p>Friday, July 12th, 2024 5:00 PM - 8:00 PM</p>
             <p class="event-titles">Peter Piper Pizza Fundraiser</p> 
@@ -63,6 +193,33 @@
     </div>
 
     <div class="container centerText" style="text-align:center;">
+      <a class="anchor" name="photo"></a>
+      <div style="text-align:center;">
+          <img src="../../Assets/jazsiblings.jpg" style="width:200px;border-radius: 20px;" class="" alt="...">
+         
+      </div>
+     
+            <p>
+                <p>Sun, July 14, 2024 08:00 AM - 01:30 PM</p>
+            <p class="event-titles">Jazmine's Journey Donation Photo Sessions</p> 
+            <p>Location: 2757 E Guadalupe Rd, Gilbert, AZ 85234</p>
+            <p class="section-text" style="font-size: 18px;">
+              
+              
+                We invite you to participate in a special event in honor of Jazmine, who passed away from Infant Leukemia at just 16 months old. Jazmine Journey, our nonprofit organization, is dedicated to supporting families and children undergoing pediatric cancer treatments. 
+<br>
+You will have a 20-minute time slot and will digitally receive all the edited images that are taken within the time frame. There is no set amount of images, it just depends on the amount of time it takes to position for each pose. You are welcome to bring a group, and have individual images done. Just remember, your time slot is only 20 minutes. They will be emailed to you with the email provided during signup, Please make sure that the email address is correct. Please allow twenty-four business days to receive your email. This time is just an estimate to allow time to properly edit all photos taken this day. 
+
+<br>
+
+              <br>
+              <a href="https://www.zeffy.com/en-US/ticketing/9bb02c08-ff0e-4f84-acfb-5e29ff1c9571" target="_blank">Click here for more information</a> 
+           
+     </p>
+    </div>
+
+    <div class="container centerText" style="text-align:center;">
+      <a class="anchor" name="border"></a>
       <div style="text-align:center;">
           <img src="../../Assets/Fundraisers/on-the-border-logo.png" style="width:200px;border-radius: 20px;" class="" alt="...">
          
@@ -82,8 +239,9 @@
     </div>
 
     <div class="container centerText" style="text-align:center;">
+      <a class="anchor" name="bingo"></a>
       <div style="text-align:center;">
-          <img src="../../Assets/bingologo.png" style="width:200px;border-radius: 20px;" class="" alt="...">
+          <img src="../../Assets/Fundraisers/bingologo.png" style="width:200px;border-radius: 20px;" class="" alt="...">
          
       </div>
             <p>
@@ -114,10 +272,70 @@
 
      
 
-        
-
       
+      
+  <style>
+    .calendar{
+      width:100% !important;
+    }
+    #calendar{
+      width:80%;
+      margin:auto;
+    }
+    .fc-theme-standard .fc-list-day-cushion {
+    background-color: #dfeaed;
+    }
 
+    .fc-list-event-dot{
+      display:none !important;
+    }
+    .fc-event-img img{
+      
+        height:65px;
+        
+    }
+    .smallImg img{
+      margin-left: 10px;
+      height:40px;
+    }
+    .fc-event-img{
+        text-align: center;
+    }
+    .fc-daygrid-day-top a{
+        color:204, 109, 39;
+        text-decoration:none;
+    }
+    .fc-scrollgrid-sync-inner a{
+        color:#cc6d27;
+    }
+    .fc-h-event .fc-event-title{
+        font-weight:500;
+    }
+    .fc .fc-toolbar-title {
+         font-size: 2em;
+    }
+    .fc-listYear-view {
+      height: fit-content;
+    }
+  
+
+    @media only screen and (max-width: 600px) {
+      .fc-listYear-view {
+      height: auto;
+    }
+    .fc-list-event-graphic{
+      display:none;
+    }
+    #calendar {
+    width: 100%;
+    margin: auto;
+    }
+    .fc .fc-scroller-liquid {
+    height: 100%;
+    overflow: auto !important;
+    }
+}
+ </style>
   
 <footer-component></footer-component>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>

@@ -11,240 +11,331 @@
     <script src="../header.js" type="text/javascript" defer></script>
     <script src="../footer.js" type="text/javascript" defer></script>
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar/index.global.min.js'></script>
-    <!-- <base href="../Pages/copyevents.html"> -->
    
 </head>
 <body>
     <header-component></header-component>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var calendarEl = document.getElementById('calendar');
-
-
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-            //initialView: 'listYear',
-            events: [
-               { // this object will be "parsed" into an Event Object                  
-                  title: 'Someburros Fundraiser', // a property!
-                  start: '2024-03-25', // a property!
-                  end: '2024-03-25', // a property!
-                  textColor: 'black',
-                  backgroundColor: 'white',
-                  borderColor: 'white',
-                  url: '#someburros',
-                  image_url: '../../Assets/someburros1.png'
-                 
-                },
-                {
-                  title: 'Rock Painting', // a property!
-                  start: '2024-04-20', // a property!
-                  end: '2024-04-20', // a property!
-                  textColor: 'black',
-                  backgroundColor: 'white',
-                  borderColor: 'white',
-                  url: '#rocks',
-                  image_url: '../../Assets/spacemountainrock.jpg'
-                },
-                {
-                  title: 'Memorial Hike', // a property!
-                  start: '2024-05-05', // a property!
-                  end: '2024-05-05', // a property!
-                  textColor: 'black',
-                  backgroundColor: 'white',
-                  borderColor: 'white',
-                  url: '#hike',
-                  classNames: 'calImage',
-                  image_url: '../../Assets/jazmines-memorial-hike-Final.png'
-                },
-                {
-                  title: 'Blood Drive', // a property!
-                  start: '2024-05-11', // a property!
-                  end: '2024-05-11', // a property!
-                  textColor: 'black',
-                  backgroundColor: 'white',
-                  borderColor: 'white',
-                  url: '#blooddrive',
-                  image_url: '../../Assets/redcrosslogo.png'
-                }
-             
-              ],
-              eventTimeFormat: { // like '14:30:00'
-                hour: '2-digit',
-                minute: '2-digit',
-                second: '2-digit',
-                meridiem: false
-            },
-              
-              eventContent: function(arg) {
-                let arrayOfDomNodes = []
-                // title event
-                let titleEvent = document.createElement('div')
-                if(arg.event._def.title) {
-                  titleEvent.innerHTML = arg.event._def.title
-                  titleEvent.classList = "fc-event-title fc-sticky"
-                }
-    
-                // image event
-                let imgEventWrap = document.createElement('div')
-                if(arg.event.extendedProps.image_url) {
-                  let imgEvent = '<img src="'+arg.event.extendedProps.image_url+'" >'
-                  imgEventWrap.classList = "fc-event-img"
-                  imgEventWrap.innerHTML = imgEvent;
-                }
-    
-                arrayOfDomNodes = [ titleEvent,imgEventWrap ]
-    
-                return { domNodes: arrayOfDomNodes }
-              },
-            
-        
-            })
-        calendar.render();
-
-    });
-</script>
+  <button class="floating-btn"> <a href="https://us21.list-manage.com/survey?u=b84b865ea6ed9e8e3894bb424&id=13d9b44e2b&attribution=false">Apply to Receive Family Support</a></button>
      
   <div class="row">
-        <div class="col section-header">
-          <h2>Jazmine's Journey</h2>
-          <p class="pulse">Upcoming Events </p>
-        </div>
- </div>
-
- <div class="row container calendar" style="width:50%;  margin:auto;">
-
-    <div id='calendar'>
-      
+    <div class="col section-header homepage-info">
+      <h2>Jazmine's Journey</h2>
+      <h1 class="pulse">Upcoming Events </h1>
     </div>
+</div>
 
- </div>
- <div class="row container" style="margin:auto;">
-    <div class="col-sm-4" style="text-align:center;">
-          <img src="../../Assets/jazeat.jpg" style="width:200px;border-radius: 20px;" class="" alt="...">
-         
-        </div>
-        <div class="col-sm-8">
-         
-          </p>
-          <div class="container centerText">
-            <p>
-                <a class="anchor" name="someburros"></a>
-            <p>Sat, March 25th, 2024</p>
-            <p class="event-titles">Someburros Fundraiser</p> 
-            <p class="section-text" style="font-size: 18px;">Enjoy a meal and support Jazmine's Journey at Someburros located at: 5115 N. 7th St. Phoenix, AZ 85014
-              <a href="../../Assets/someburros1.png" target="_blank">Click here for more information</a>
-              <br>
-              <br>
-           
-     </p>
-     <br>
-     <br>
-    </div>
-    </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  var calendarEl = document.getElementById('calendar');
+  new FullCalendar.Calendar(calendarEl, {
+    initialView: 'listYear',
+ 
+
+eventContent: function(arg) {
+  let arrayOfDomNodes = [];
+
+  // Create anchor element for the URL
+  let anchorElement = document.createElement('a');
+  anchorElement.href = arg.event.url;
+  anchorElement.style.display = 'flex'; // Use flexbox layout
+  anchorElement.style.alignItems = 'center'; // Center align vertically
+
+  // Title event
+  if (arg.event._def.title) {
+    let titleEvent = document.createElement('div');
+    titleEvent.innerHTML = arg.event._def.title;
+    titleEvent.classList = "fc-event-title fc-sticky";
+    anchorElement.appendChild(titleEvent);
+  }
+
+  // Image event
+  if (arg.event.extendedProps.image_url) {
+    let imgEvent = document.createElement('img');
+    imgEvent.src = arg.event.extendedProps.image_url;
+    imgEvent.classList = "fc-event-img";
+    anchorElement.appendChild(imgEvent);
+  }
+
+  // Append the anchor element (with title and image) to the DOM nodes array
+  arrayOfDomNodes.push(anchorElement);
+
+  return { domNodes: arrayOfDomNodes };
+}
+
+,
+eventTimeFormat: { // like '14:30:00'
+  hour: 'numeric',
+  minute: '2-digit',
+  meridiem: 'short'
+},
+    events: [
+      {
+        title: 'Bruster'+"'"+'s',
+        url: '#brusters',
+        start: '2024-06-27T17:00', 
+        end: '2024-06-27T20:00',
+        classNames: 'smallImg',
+        image_url: '../../Assets/Fundraisers/BrustersLogo.svg',
+        // extendedProps: {
+        //               eventType: 'Family Support Event'
+                       
+        //               },
+        //               description: 'Family Support Event'
+      },
+      {
+        title: 'Peter Piper Pizza', // a property!
+        start: '2024-07-12T17:00', // a property!
+        end: '2024-07-12T20:00', // a property!
+        textColor: 'black',
+        backgroundColor: 'white',
+        borderColor: 'white',
+        classNames: 'smallImg',
+        url: '#pizza',
+        image_url: '../../Assets/Fundraisers/Peter_Piper_Pizza.png'
+      },
+      {
+        title: 'Donation Photo Sessions', // a property!
+        start: '2024-07-14T08:00', // a property!
+        end: '2024-07-14T13:30', // a property!
+        textColor: 'black',
+        backgroundColor: 'white',
+        borderColor: 'white',
+        classNames: 'smallImg',
+        url: '#photo',
+        image_url: '../../Assets/jazsiblings.jpg'
+      }, 
+      {
+        title: 'On the Border', // a property!
+        start: '2024-08-06T11:00', // a property!
+        end: '2024-08-06T21:00', // a property!
+        textColor: 'black',
+        backgroundColor: 'white',
+        borderColor: 'white',
+        url: '#border',
+        classNames: 'smallImg',
+        image_url: '../../Assets/Fundraisers/on-the-border-logo.png'
+      },
+      {
+        title: 'Bingo', // a property!
+        start: '2024-08-26T18:00', // a property!
+        end: '2024-08-26T20:00', // a property!
+        textColor: 'black',
+        backgroundColor: 'white',
+        borderColor: 'white',
+        classNames: 'smallImg',
+        url: '#bingo',
+        image_url: '../../Assets/Fundraisers/bingologo.png'
+      }
+    ],
+    // eventDidMount: function(info) {
+    //               console.log(info.event.extendedProps);
+    //               `{description: "Family Support Event",eventType: "Family Support"}`
+    //             }
+   
+  }).render();
+});
+</script>
+
+<br>
+<div class="row container calendar" style="width:50%; margin:auto;">
+
+  <div id='calendar'>
+    
   </div>
 
- <div class="row container" style="margin:auto;">
-    <div class="col-sm-4" style="text-align:center;">
-          <img src="../../Assets/spacemountainrock.jpg" style="width:200px;border-radius: 20px;" class="" alt="...">
-         
-        </div>
-        
-        <div class="col-sm-8">
-         
-          </p>
-          <div class="container centerText">
+</div>
+
+
+
+
+  <div class="row container" style="margin:auto; margin-top: 50px;">
+
+
+    <div class="container centerText" style="text-align:center;">
+      <a class="anchor" name="brusters"></a>
+      <div>
+          <img src="../../Assets/Fundraisers/BrustersLogo.svg" style="width:200px;border-radius: 20px;" class="" alt="...">    
+      </div>
+    
             <p>
-                <a class="anchor" name="rocks"></a>
-                <p>Sat, April 20, 2024 01:00 PM - 02:00 PM</p>
-            <p class="event-titles">Jazmine's Traveling Rocks: Painting Event</p> 
+            <p>Thursday, June 27th  5-8pm</p>
+            <p class="event-titles">Bruster's Giveback Night</p> 
+          
             <p class="section-text" style="font-size: 18px;">
-                For this event, we will be raising money for our 501(c)3 Nonprofit Organization while painting beautiful rocks to leave around the community that will also bring smiles to those who find it.  We will have rocks for you to paint and take with you to leave at another location. We would love it if you took a picture of where you left it and posted it on social media with the hashtag #jazminestravelingrocks 
+                Location: 17115 N 51st ave, Glendale, AZ 85308
+                <br>
+                <br>
+                Cool down with a Brusters ice cream and support Jazmine's Journey! Do not miss this delicious fundraising night!
+            
+              <br>   
+     </p>
+    </div>
+   
+  
+    <div class="container centerText" style="text-align:center;">
+      <a class="anchor" name="pizza"></a>
+      <div style="text-align:center;">
+          <img src="../../Assets/Fundraisers/Peter_Piper_Pizza.png" style="width:200px;border-radius: 20px;" class="" alt="...">
+         
+      </div>
+     
+            <p>
+                <p>Friday, July 12th, 2024 5:00 PM - 8:00 PM</p>
+            <p class="event-titles">Peter Piper Pizza Fundraiser</p> 
+            <p class="section-text" style="font-size: 18px;">
+                Enjoy a meal, games and fun all while supporting Jazmine's Journey at Peter Piper Pizza located at: 245 E Bell Rd, #55, Phoenix, AZ 85022
               <br>
-              <a href="./rockPainting.html">Click here for more information</a> 
+              <a href="../../Assets/Fundraisers/peterpiper.png" target="_blank">Click here for more information</a> 
            
      </p>
     </div>
+
+    <div class="container centerText" style="text-align:center;">
+      <a class="anchor" name="photo"></a>
+      <div style="text-align:center;">
+          <img src="../../Assets/jazsiblings.jpg" style="width:200px;border-radius: 20px;" class="" alt="...">
+         
+      </div>
+     
+            <p>
+                <p>Sun, July 14, 2024 08:00 AM - 01:30 PM</p>
+            <p class="event-titles">Jazmine's Journey Donation Photo Sessions</p> 
+            <p>Location: 2757 E Guadalupe Rd, Gilbert, AZ 85234</p>
+            <p class="section-text" style="font-size: 18px;">
+              
+              
+                We invite you to participate in a special event in honor of Jazmine, who passed away from Infant Leukemia at just 16 months old. Jazmine Journey, our nonprofit organization, is dedicated to supporting families and children undergoing pediatric cancer treatments. 
+<br>
+You will have a 20-minute time slot and will digitally receive all the edited images that are taken within the time frame. There is no set amount of images, it just depends on the amount of time it takes to position for each pose. You are welcome to bring a group, and have individual images done. Just remember, your time slot is only 20 minutes. They will be emailed to you with the email provided during signup, Please make sure that the email address is correct. Please allow twenty-four business days to receive your email. This time is just an estimate to allow time to properly edit all photos taken this day. 
+
+<br>
+
+              <br>
+              <a href="https://www.zeffy.com/en-US/ticketing/9bb02c08-ff0e-4f84-acfb-5e29ff1c9571" target="_blank">Click here for more information</a> 
+           
+     </p>
+    </div>
+
+    <div class="container centerText" style="text-align:center;">
+      <a class="anchor" name="border"></a>
+      <div style="text-align:center;">
+          <img src="../../Assets/Fundraisers/on-the-border-logo.png" style="width:200px;border-radius: 20px;" class="" alt="...">
+         
+      </div>
+            <p>
+                <p>Tuesday, August 6, 2024 11:00am-9:00pm</p>
+            <p class="event-titles">On the Border</p> 
+            <p>Location: 7873 W. Bell Road Peoria, AZ 85832</p>
+            <p class="section-text" style="font-size: 18px;">
+              Jazmines Journey will receive 20% of fundraiser sales* during this fundraiser. Participate on Aug 6, 2024 during the scheduled fundraiser time by showing this flyer to the your waiter or waitress at this On the Border location, or by ordering online using the digital fundraiser code.
+
+              *Gift card sales, alcoholic beverage sales, taxes, and delivery fees excluded.
+              <br>
+              <a href="https://ontheborder.force4good.com/event/0d2429fa-be57-4599-a640-aa18a6e7eec7" target="_blank">Click here for more information</a> 
+           
+     </p>
+    </div>
+
+    <div class="container centerText" style="text-align:center;">
+      <a class="anchor" name="bingo"></a>
+      <div style="text-align:center;">
+          <img src="../../Assets/Fundraisers/bingologo.png" style="width:200px;border-radius: 20px;" class="" alt="...">
+         
+      </div>
+            <p>
+                <p>Monday, August 26, 2024 6:00 PM - 8:00 PM</p>
+            <p class="event-titles">Jazmine's Bingo Night</p> 
+            <p class="section-text" style="font-size: 18px;">
+              Did you miss out on the fun last time? Don’t worry, because we're back with another exciting Bingo Fundraiser Night! Join us at Chicken N Pickle, 9330 W Hanna Ln, Glendale, AZ 85305 on Monday, August 26th from 6pm-8pm for an evening filled with laughter, excitement, and great prizes!
+              <br>
+              <br>
+              But that’s not all! Chicken N Pickle is generously hosting a <strong>10% Giveback Night</strong>. That means from open to close on August 26th, 10% of all food and soft drink orders will be donated to <strong>Jazmine's Journey</strong>. Enjoy delicious food and drinks while supporting a great cause!
+              <br>
+              <br>
+
+              Whether you’re a seasoned bingo player or a first-timer, this event promises fun for everyone. Bring your friends, family, and competitive spirit for a night you won’t forget!
+              Come for the bingo, stay for the food, and help us make a difference with Jazmine’s Journey.
+              <br>
+              <br>
+              <strong>DON'T FORGET!</strong><br>
+              Purchase your 50/50 Raffle Tickets
+
+              <br>
+              <p> <a class="animate-charcter" href="https://www.zeffy.com/ticketing/3ee5937f-a7c8-42b6-8af0-6a981f4300e4" target="_blank">Register Here</a> </p>
+             
+           
+     </p>
     </div>
   </div>
+
+     
+
+      
+      
+  <style>
+    .calendar{
+      width:100% !important;
+    }
+    #calendar{
+      width:80%;
+      margin:auto;
+    }
+    .fc-theme-standard .fc-list-day-cushion {
+    background-color: #dfeaed;
+    }
+
+    .fc-list-event-dot{
+      display:none !important;
+    }
+    .fc-event-img img{
+      
+        height:65px;
+        
+    }
+    .smallImg img{
+      margin-left: 10px;
+      height:40px;
+    }
+    .fc-event-img{
+        text-align: center;
+    }
+    .fc-daygrid-day-top a{
+        color:204, 109, 39;
+        text-decoration:none;
+    }
+    .fc-scrollgrid-sync-inner a{
+        color:#cc6d27;
+    }
+    .fc-h-event .fc-event-title{
+        font-weight:500;
+    }
+    .fc .fc-toolbar-title {
+         font-size: 2em;
+    }
+    .fc-listYear-view {
+      height: fit-content;
+    }
   
 
-  <div class="row container" style="margin:auto;">
-    <div class="col-sm-4" style="text-align:center;">
-          <img src="../../Assets/jazmines-memorial-hike-Final.png" style="width:200px;border-radius: 20px;" class="" alt="...">
-         
-        </div>
-        <div class="col-sm-8">
-         
-          </p>
-          <div class="container centerText">
-            <p>
-            <a class="anchor" name="hike"></a>
-            <p>Sat, May 5th, 2024 7:00 AM - 10:00 AM</p>
-            <p class="event-titles">Jazmine's Memorial Hike</p> 
-            <p class="section-text" style="font-size: 18px;">Join us for Jazmine's Journey Memorial Hike, a heartfelt event dedicated to childhood cancer research and supporting families affected by pediatric cancer.
-              <a href="./memorialhike.html">Click here for more information</a>
-              <br>
-              <br>
-           
-     </p>
-    </div>
-    </div>
-  </div>
-
- <div class="row container" style="margin:auto;">
-    <div class="col-sm-4" style="text-align:center;">
-          <img src="../../Assets/redcrosslogo.png" style="width:200px;border-radius: 20px;" class="" alt="...">
-         
-        </div>
-        <div class="col-sm-8">
-         
-          </p>
-          <div class="container centerText">
-            <p>
-            <a class="anchor" name="blooddrive"></a>
-            <p>Sat, May 11th, 2024 9:00 AM - 2:00 PM</p>
-            <p class="event-titles">Blood Drive</p> 
-           
-            <p class="section-text" style="font-size: 18px;">During Jazmine's Cancer treatments, she went through an astounding number of blood product transfusions. By donating blood, you will be helping other children just like Jazmine who are in need of countless blood transfusions. You will be saving lives. 
-              
-            <a href="./bloodDrive.html">Click here for more information</a>
-              <br>
-           
-     </p>
-    </div>
-    </div>
-  </div>
-
-       
-
-     <style>
-        .fc-event-img img{
-            height:65px;
-            
-        }
-        .fc-event-img{
-            text-align: center;
-        }
-        .fc-daygrid-day-top a{
-            color:204, 109, 39;
-            text-decoration:none;
-        }
-        .fc-scrollgrid-sync-inner a{
-            color:#cc6d27;
-        }
-        .fc-h-event .fc-event-title{
-            font-weight:500;
-        }
-        .fc .fc-toolbar-title {
-             font-size: 2em;
-        }
-     </style>
-
-        
-
-      
-
+    @media only screen and (max-width: 600px) {
+      .fc-listYear-view {
+      height: auto;
+    }
+    .fc-list-event-graphic{
+      display:none;
+    }
+    #calendar {
+    width: 100%;
+    margin: auto;
+    }
+    .fc .fc-scroller-liquid {
+    height: 100%;
+    overflow: auto !important;
+    }
+}
+ </style>
   
 <footer-component></footer-component>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
