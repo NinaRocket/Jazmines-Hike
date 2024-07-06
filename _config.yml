@@ -1,0 +1,6 @@
+title: Jazmine's Journey
+description: >- # this means to ignore newlines until "baseurl:"
+  This site is for the 501c3 nonprofit Jazmine's Journey
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://jazminesjourney/jazmines-hike.github.io" # the base hostname & protocol for your site
+theme: minima # you can change this to any other Jekyll theme you prefer
