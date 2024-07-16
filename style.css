@@ -383,6 +383,14 @@ label{
     padding: 10px;
     width: 115px;
 }
+
+.impact-list li{
+  text-align:justify;
+}
+.impact-desc p{
+  text-align:justify;
+}
+
 .section-header {
     text-align: center;
     padding-top: 40px;
