@@ -26,6 +26,8 @@ class Header extends HTMLElement {
           Events
         </a>
         <ul class="dropdown-menu">
+         <li><a class="dropdown-item" href="./jazmineshike.html">Jazmine's Hike</a></li>
+          <li><hr class="dropdown-divider"></li>
           <li><a class="dropdown-item" href="./upcomingEvents.html">Upcoming Events</a></li>
           <li><hr class="dropdown-divider"></li>
           <li><a class="dropdown-item" href="./familySupport.html">Family Support Events</a></li>
