@@ -80,6 +80,10 @@ class Header extends HTMLElement {
                   <li><a class="dropdown-item" href="./JazminesStory.html">Jazmine's
                     Story</a></li>
                   <li><hr class="dropdown-divider"></li>
+                     <li>
+                    <a class="dropdown-item" aria-current="page" href="./NewsAndUpdates.html">News</a>
+                  </li>
+                    <li><hr class="dropdown-divider"></li>
                   <li>
                     <a class="dropdown-item" aria-current="page" href="./joinUs.html">Join Us</a>
                   </li>
