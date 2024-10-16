@@ -26,8 +26,7 @@ class Header extends HTMLElement {
           Events
         </a>
         <ul class="dropdown-menu">
-         <li><a class="dropdown-item" href="./jazmineshike.html">Jazmine's Hike</a></li>
-          <li><hr class="dropdown-divider"></li>
+        
           <li><a class="dropdown-item" href="./upcomingEvents.html">Upcoming Events</a></li>
           <li><hr class="dropdown-divider"></li>
           <li><a class="dropdown-item" href="./familySupport.html">Family Support Events</a></li>
@@ -46,8 +45,7 @@ class Header extends HTMLElement {
                   Online Fundraisers
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="./JazminesPiggies.html">Piggy Fundraiser</a></li>
-                  <li><hr class="dropdown-divider"></li>
+               
                   <li><a class="dropdown-item" href="https://pa.exchange/marketplace/9140364e-290d-11ef-8ad4-87f0436ed2cb/storefront/91403842-290d-11ef-9544-5f5bc6406bea" target="_blank">Arizona Cardinals Tickets</a></li>
                   <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="./SponsorStuffed.html" target="_blank">Sponsor a Stuffed Animal</a></li>
