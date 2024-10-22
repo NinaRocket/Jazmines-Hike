@@ -786,6 +786,25 @@ label{
         font-size: var(--o);
       }
 }
+/* CSS for Desktop View */
+
+.logo-grid img {
+  width: 100%;
+  margin:auto;
+  padding: 15px 0;
+}
+
+
+/* Responsive CSS */
+
+.logo-grid {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.logo-grid img {
+  width: 100%;
+}
 
 /* Video Container */
 .video-container {
@@ -803,4 +822,8 @@ label{
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.fc-view-harness{
+  height:auto !important;
 }

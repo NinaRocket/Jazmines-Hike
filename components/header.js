@@ -55,14 +55,24 @@ class Header extends HTMLElement {
                 </ul>
               </li>
 
+           <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Families
+                </a>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./familySupport.html">Family Support Events</a></li>
+                <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="./resources.html">Resources</a></li>
+                 
+                </ul>
+              </li>
 
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Impact
                 </a>
                 <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="./familySupport.html">Family Support Events</a></li>
-                <li><hr class="dropdown-divider"></li>
+        
                   <li><a class="dropdown-item" href="./giving.html">Your Impact</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" aria-current="page" href="./thankyou.html">Thank You</a></li> 
@@ -83,7 +93,7 @@ class Header extends HTMLElement {
                   </li>
                     <li><hr class="dropdown-divider"></li>
                   <li>
-                    <a class="dropdown-item" aria-current="page" href="./joinUs.html">Join Us</a>
+                    <a class="dropdown-item" aria-current="page" href="./joinUs.html">About Us</a>
                   </li>
                   <li><hr class="dropdown-divider"></li>
                   <li>
