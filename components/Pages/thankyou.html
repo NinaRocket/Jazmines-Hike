@@ -106,6 +106,8 @@
                     <li><a href="https://www.azcardinals.com" target="_blank">AZ Cardinals </a>donated Autographed Football</li>
                     <li><a href="https://dbg.org/" target="_blank">Desert Botanical Gardens</a> donated one year friends & family membership valued $119</li>
                     <li><a href="https://www.peiwei.com/arizona/500-phoenix/" target="_blank">Pei Wei </a> donated gift cards</li>
+                    <li><a href="https://www.facebook.com/jerryzippy.gibbens" target="_blank">Zippy's Balloon Twister </a> donated his time and talent to bring smiles to a family pancake breakfast</li>
+                    <li><a href="https://www.facebook.com/ScorpionRidge" target="_blank">Scorpion Ridge </a> donated medals and trophies for Pickleball Tournament</li>
                 </ul>
             </div>
         </div>
@@ -130,6 +132,30 @@
 
             setInterval(scrollList, 100); // Adjust the interval by changing this value
         });
+
+        document.addEventListener('DOMContentLoaded', function() {
+        const list = document.querySelector('.scrolling-list');
+        const listItems = Array.from(list.querySelectorAll('li'));
+        
+        // Reverse the order of list items
+        list.innerHTML = ''; // Clear existing list
+        listItems.reverse().forEach(item => list.appendChild(item)); // Append items in reversed order
+
+        const listHeight = list.offsetHeight;
+        const containerHeight = document.querySelector('.scrolling-list-container').offsetHeight;
+        let topPosition = 0;
+
+        function scrollList() {
+            if (topPosition <= -listHeight) {
+                topPosition = containerHeight;
+            } else {
+                topPosition -= 1; // Adjust the speed by changing this value
+            }
+            list.style.top = topPosition + 'px';
+        }
+
+        setInterval(scrollList, 100); // Adjust the interval by changing this value
+    });
     </script>
 </body>
 </html>
