@@ -29,11 +29,7 @@ class Header extends HTMLElement {
         
           <li><a class="dropdown-item" href="./upcomingEvents.html">Upcoming Events</a></li>
           <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item" href="./familySupport.html">Family Support Events</a></li>
-          <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item" href="./PastEvents.html">Past Fundraising Events</a></li>     
-        
-       
+          <li><a class="dropdown-item" href="./familySupport.html">Family Support Events</a></li> 
        
         </ul>
       </li>
