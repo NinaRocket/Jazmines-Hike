@@ -46,7 +46,7 @@ class Header extends HTMLElement {
                   <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="./SponsorStuffed.html" target="_blank">Sponsor a Stuffed Animal</a></li>
                        <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="https://www.zeffy.com/en-US/donation-form/b6a57cd2-dc35-4595-80bf-47d4561e4d72" target="_blank">Link to General Donation</a></li>
+                  <li><a class="dropdown-item" href="https://www.zeffy.com/fundraising/support-jazmines-journeys-mission--2025" target="_blank">Link to General Donation</a></li>
                  
                 </ul>
               </li>
