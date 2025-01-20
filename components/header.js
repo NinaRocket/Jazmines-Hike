@@ -42,8 +42,6 @@ class Header extends HTMLElement {
                 </a>
                 <ul class="dropdown-menu">
                
-                  <li><a class="dropdown-item" href="https://pa.exchange/marketplace/9140364e-290d-11ef-8ad4-87f0436ed2cb/storefront/91403842-290d-11ef-9544-5f5bc6406bea" target="_blank">Arizona Cardinals Tickets</a></li>
-                  <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="./SponsorStuffed.html" target="_blank">Sponsor a Stuffed Animal</a></li>
                        <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="https://www.zeffy.com/fundraising/support-jazmines-journeys-mission--2025" target="_blank">Link to General Donation</a></li>
@@ -101,7 +99,7 @@ class Header extends HTMLElement {
                   </li>
                 </ul>
               </li>
-              <li class="nav-item"><a class="nav-link active" href="https://us21.list-manage.com/survey?u=b84b865ea6ed9e8e3894bb424&id=13d9b44e2b&attribution=false" target="_blank">Family Application</a></li>
+              <li class="nav-item"><a class="nav-link active" href="https://us21.list-manage.com/survey?u=b84b865ea6ed9e8e3894bb424&id=5669a6442e&attribution=false" target="_blank">Family Application</a></li>
 
         </ul>
 
