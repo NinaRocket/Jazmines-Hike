@@ -26,14 +26,11 @@ class Header extends HTMLElement {
           Events
         </a>
         <ul class="dropdown-menu">
-        
           <li><a class="dropdown-item" href="./upcomingEvents.html">Upcoming Events</a></li>
           <li><hr class="dropdown-divider"></li>
           <li><a class="dropdown-item" href="./familySupport.html">Family Support Events</a></li> 
-            <li><hr class="dropdown-divider"></li>
-             <li><a class="dropdown-item" href="https://www.zeffy.com/fundraising/support-jazmines-journeys-mission--2025" target="_blank">Link to General Donation</a></li>
-                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="./toydrive.html">Toy Drive</a></li>
+            <li><hr class="dropdown-divider"></li>          
+            <li><a class="dropdown-item" href="./toydrive.html">Toy Drive</a></li>
 
        
         </ul>
