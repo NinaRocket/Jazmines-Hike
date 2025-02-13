@@ -30,6 +30,11 @@ class Header extends HTMLElement {
           <li><a class="dropdown-item" href="./upcomingEvents.html">Upcoming Events</a></li>
           <li><hr class="dropdown-divider"></li>
           <li><a class="dropdown-item" href="./familySupport.html">Family Support Events</a></li> 
+            <li><hr class="dropdown-divider"></li>
+             <li><a class="dropdown-item" href="https://www.zeffy.com/fundraising/support-jazmines-journeys-mission--2025" target="_blank">Link to General Donation</a></li>
+                   <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="./toydrive.html">Toy Drive</a></li>
+
        
         </ul>
       </li>
@@ -44,9 +49,9 @@ class Header extends HTMLElement {
                  <li><a class="dropdown-item" href="./davenbusterspowercards.html" target="_blank">Dave & Buster's Power Cards</a></li>
                        <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="./SponsorStuffed.html" target="_blank">Sponsor a Stuffed Animal</a></li>
-                       <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="https://www.zeffy.com/fundraising/support-jazmines-journeys-mission--2025" target="_blank">Link to General Donation</a></li>
-                 
+                         <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="https://www.zeffy.com/en-US/fundraising/support-jazmines-journeys-mission--2025" target="_blank">Link to General Donation</a></li>
+               
                 </ul>
               </li>
 
