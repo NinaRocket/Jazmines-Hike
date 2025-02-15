@@ -38,7 +38,7 @@ class Header extends HTMLElement {
 
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Online Fundraisers
+                 Fundraisers
                 </a>
                 <ul class="dropdown-menu">
                  <li><a class="dropdown-item" href="./easterbasket.html">Sponsor an Easter Basket</a></li>
