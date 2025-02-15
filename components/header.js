@@ -36,17 +36,19 @@ class Header extends HTMLElement {
         </ul>
       </li>
 
-         
-
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Online Fundraisers
                 </a>
                 <ul class="dropdown-menu">
+                 <li><a class="dropdown-item" href="./easterbasket.html">Sponsor an Easter Basket</a></li>
+                  <li><hr class="dropdown-divider"></li>
                  <li><a class="dropdown-item" href="./davenbusterspowercards.html" target="_blank">Dave & Buster's Power Cards</a></li>
                        <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="./SponsorStuffed.html" target="_blank">Sponsor a Stuffed Animal</a></li>
                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="./researchdonations.html" target="_blank">Pediatric Cancer Research</a></li>
+                  <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="https://www.zeffy.com/en-US/fundraising/support-jazmines-journeys-mission--2025" target="_blank">Link to General Donation</a></li>
                
                 </ul>
