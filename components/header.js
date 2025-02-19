@@ -48,8 +48,11 @@ class Header extends HTMLElement {
                     <li><a class="dropdown-item" href="./SponsorStuffed.html" target="_blank">Sponsor a Stuffed Animal</a></li>
                          <li><hr class="dropdown-divider"></li>
                           <li><a class="dropdown-item" href="./researchdonations.html" target="_blank">Pediatric Cancer Research</a></li>
+                             <li><hr class="dropdown-divider"></li>
+                     <li><a class="dropdown-item" href="./agentsvscancer.html" target="_blank">Agents Vs. Cancer</a></li>
                   <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="https://www.zeffy.com/en-US/fundraising/support-jazmines-journeys-mission--2025" target="_blank">Link to General Donation</a></li>
+                  
                
                 </ul>
               </li>
