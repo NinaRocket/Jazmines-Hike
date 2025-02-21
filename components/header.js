@@ -18,6 +18,16 @@ class Header extends HTMLElement {
 
         </ul>
 
+     <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+        <li>
+          <button style="    border-radius: 32px;
+    background-color: white; border-color: orange;">
+            <a class="dropdown-item pulse" style="padding: 10px;
+    font-weight: 600;" href="https://www.zeffy.com/fundraising/support-jazmines-journeys-mission--2025" target="_blank">Donate</a>
+          </button>
+         
+        </li>
+        </ul>
 
         <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
              
