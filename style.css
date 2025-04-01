@@ -33,12 +33,19 @@ body {
         z-index: 100;
 } */
  
-
+.home{
+  margin-top:100px;
+}
   .me-3 a{
     color:white;
   }
   /* Add your content styles here */
   
+  .modal-div button a{
+    font-size: 20px;
+    vertical-align: middle;
+  }
+
   .floating-btn {
     position: fixed;
     bottom: 20px;
@@ -131,6 +138,10 @@ body {
 }
 .navbar{
     background-color: white !important;
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
 }
 
 .mission{
@@ -310,9 +321,9 @@ h4 {
     /* border-radius: 50px; */
 }
 .carousel-container{
-    /* width: 300px; */
+    width: 300px;
     margin:auto;
-    /* max-width: 60% !important; */
+    max-width: 60% !important;
 
 }
 .carousel-item{

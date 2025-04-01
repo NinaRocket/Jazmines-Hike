@@ -25,7 +25,6 @@
 </head>
 
 
-
 <body class="home">
 
 <!-- Modal -->
@@ -37,11 +36,33 @@
           <img src="/Assets/Jazmines-Journey-Logo.PNG" style="height: 50px;margin-right: 10px;" alt="Jazmine's Journey Butterfly Logo">
         </div>
         <br>
+        <br>
+
+        <h5 class="modal-title" id="exampleModalLabel" style="text-align:center;">Events and Newsletter</h5>
        
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="text-align:center;">
+        Sign up now for our <strong>Bingo Night</strong> at Chicken N Pickle April 6th
+        <br>
+        <br>
+        <img src="/Assets/Fundraisers/bingologo.png" style="width: 100px;border-radius:20px;
+        margin-bottom: 30px;" alt="Jazmine's Journey logo">
+        <br>
+     <div class="modal-div">
+      <button class="sub-btn animate-charcter"><a href="/components/Pages/upcomingEvents.html">See Events Here</a></button>
+     </div>
+       
+   
+      <hr>
+
+
+
+       <!-- Newsletter -->
         <br>
         <h5 class="modal-title" id="exampleModalLabel" style="text-align:center;">Subscribe to our Newsletter</h5>
        
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      
       </div>
       <div class="modal-body" style="text-align:center;">
        
@@ -51,10 +72,11 @@
         <img src="/Assets/jazjourneymountainlogo.png" style="width: 100px;border-radius:20px;
         margin-bottom: 30px;" alt="Jazmine's Journey logo">
         <br>
-        <br>
+     <div class="modal-div">
         <button class="sub-btn animate-charcter"><a href="/components/Pages/Contact.html">Sign Up Here</a></button>
-       
       </div>
+      </div>
+      <!-- Newsletter End -->
   
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -64,9 +86,9 @@
 </div> 
 <!-- Modal End -->
 
-
+<!-- floating support us button -->
   <button class="floating-btn"> <a href="./components/Pages/support.html">Support Us</a></button>
-
+ <!-- Navbar -->
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand" href="./index.html">Jazmine's <img src="./Assets/Jazmines-Journey-Logo.PNG"
@@ -191,18 +213,15 @@
       </div>
     </div>
   </nav>
+<!-- Navbar End -->
 
+<!-- Title heading -->
   <div class="container">
     <div class="homepage-info pulse">
-      
       <h1 class="">Jazmine's Journey</h1>
       <h3>Her unseen journey to cure pediatric cancer</h3>
-      <div class="callout" style="text-align:center;"><p><a style="color: rgb(146 5 144);    font-size: 22px;
-    " href="./components/Pages/NewsAndUpdates.html">Watch our news features!</a></p></div>
-
     </div>
-
-
+      <!-- Cards -->
     <div class="row">
       <div class="col-sm-4 card-deck">
         <div class="card" style="height: 440px;"> <!-- Adjust the height as needed -->
@@ -225,8 +244,6 @@
         </div>
       </div>
 
-
-
       <div class="col-sm-4 card-deck">
         <div class="card" style="height: 440px;"> <!-- Adjust the height as needed -->
           <div class="card-body">
@@ -239,13 +256,10 @@
       </div>
 
 
-
-
-
       <div class="col-sm-4 card-deck">
         <div class="card" style="height: 440px;"> <!-- Adjust the height as needed -->
           <div class="card-body">
-            <h5 class="card-title">Support Jazmine's Journey</h5>
+            <h5 class="card-title">Ways to Support</h5>
             <img class="img-fluid" src="./Assets/jazsibs2.jpg" style="border-radius:20px;max-height: 220px;">
             <p class="card-text">Ways to support Jazmine's Journey to make a difference.</p>
             <a href="./components/Pages/support.html" class="btn btn-primary">Support</a>
@@ -273,12 +287,11 @@
         </div>
       </div>
     </div>
-
-  
     </div> 
+<!-- Cards End -->
 
+<!-- mission statement -->
     <div class="mission">
-     
       <br>
       <p><strong>If you are or know a family impacted by pediatric cancer who could use our support, please complete this online form:</strong>
         <a href="https://us21.list-manage.com/survey?u=b84b865ea6ed9e8e3894bb424&id=5669a6442e&attribution=false" target="_blank">Link to form</a>
@@ -311,8 +324,11 @@
 
       <p style="text-align: center;">We are a 501c3 nonprofit organization run by volunteers. All profits go towards cancer research and families impacted by childhood cancer.</p>
 
+      <p class="callout" style="text-align:center;"><a style="color: rgb(184, 67, 20);    font-size: 22px;
+        " href="./components/Pages/NewsAndUpdates.html">Watch our news features!</a></p>
+      
       <div style="width:50%;margin:auto;text-align:center;" >
-        <img src="./Assets/Fundraisers/cnplogo.png" alt="">
+        <img class="img-fluid" src="./Assets/Fundraisers/cnplogo.png" alt="">
         <p>
           <strong style="color: #cc6d27;
     font-size: 20px;">Sponsored Events By Chicken N Pickle</strong>
@@ -322,7 +338,8 @@
 <br>
 <hr>
       <div style="width:50%;margin:auto;text-align:center;" >
-        <img style="height:75px;" src="./Assets/Logo/blackburnwirth.jpg" alt="">
+        <img class="img-fluid" style="margin-bottom: 15px; width: 225px;" src="./Assets/Logo/blackburnwirth.jpg" alt="">
+        <br>
         <p>
           🚂 🎄  A Huge Shoutout to Our Sponsor: Blackburn Wirth Injury Firm! 🎥❄️  
           <br>
@@ -335,6 +352,7 @@
     <!-- end container -->
   </div>
 
+  <!-- footer -->
   <section class="footer">
     <!-- Footer -->
     <footer class="text-center text-white" style="background-color: #ff9507">
@@ -384,6 +402,7 @@
     </footer>
     <!-- Footer -->
   </section>
+
   <style>
     .footer {
       position: sticky;
