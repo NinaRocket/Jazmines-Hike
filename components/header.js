@@ -53,8 +53,7 @@ class Header extends HTMLElement {
                  Fundraisers
                 </a>
                 <ul class="dropdown-menu">
-                 <li><a class="dropdown-item" href="./davenbusterspowercards.html" target="_blank">Dave & Buster's Power Cards</a></li>
-                       <li><hr class="dropdown-divider"></li>
+            
                     <li><a class="dropdown-item" href="./SponsorStuffed.html" target="_blank">Sponsor a Stuffed Animal</a></li>
                          <li><hr class="dropdown-divider"></li>
                           <li><a class="dropdown-item" href="./researchdonations.html" target="_blank">Pediatric Cancer Research</a></li>

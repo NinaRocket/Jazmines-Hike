@@ -1,0 +1,58 @@
+[
+    {
+      "id": "blood",
+      "title": "Blood Drive",
+      "postTitle": "🩸 Jazmine’s Journey Blood Drive – In Honor of Jazmine 💛",
+      "date": "Saturday, May 10th, 2025",
+      "time": "9:00 AM – 2:00 PM",
+      "start": "2025-05-10T09:00:00-07:00",
+      "end": "2025-05-10T14:00:00-07:00",
+      "location": "1st Southern Baptist Church, 851 N Stapley Dr, Mesa, AZ 85203",
+      "image": "/Assets/redcrosslogo.png",
+      "textColor": "black",
+      "backgroundColor": "white",
+      "borderColor": "white",
+      "classNames": "smallImg",
+      "url": "#blood",
+      "postImage": "/Assets/hospitalequip.jpg",
+      "description": [
+        "We’re honored to host our 2nd Blood Drive in memory of sweet Jazmine.",
+        "Jazmine needed countless blood transfusions. Each one gave her more time.",
+        "💉 Be a part of her legacy. Help save lives!"
+      ],
+      "listItems": [
+        "Wear your Jazmine’s Journey shirt or colors 💛",
+        "Share pics using #JazminesJourney"
+      ],
+      "linkText": "Click Here and be a Hero",
+      "linkUrl": "https://www.redcrossblood.org/give.html/drive-results?zipSponsor=jazmine"
+    },
+    {
+      "id": "rattlers",
+      "title": "AZ Rattlers Game Fundraiser",
+      "date": "Saturday, April 26, 2025",
+      "time": "6:05 PM – 9:00 PM",
+      "start": "2025-04-26T18:05:00-07:00",
+      "end": "2025-04-26T21:00:00-07:00",
+      "location": "Desert Diamond Arena, 9400 W Maryland Ave, Glendale, AZ 85305",
+      "image": "/Assets/Fundraisers/rattlerslogo.png",
+      "textColor": "black",
+      "backgroundColor": "white",
+      "borderColor": "white",
+      "classNames": "smallImg",
+      "url": "#rattlers",
+      "description": [
+        "Get ready for an exciting night of football and fun at the Arizona Rattlers vs Northern Arizona Wranglers!",
+        "🏈 A portion of ticket sales will be donated to Jazmine's Journey.",
+        "Bring your friends and family, enjoy the game, and support our cause!"
+      ],
+      "listItems": [
+        "Wear your Jazmine’s Journey shirt or colors 💛",
+        "Share pics using #JazminesJourney"
+      ],
+      "linkText": "Click here for tickets!",
+      "linkUrl": "https://www.gofevo.com/event/Jazminesjourney21"
+    }
+ 
+  ]
+  

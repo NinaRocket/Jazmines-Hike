@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../../Assets/Jazmines-Journey-Logo.PNG"/>
+    <title>Jazmine's Journey</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="../components/header.js" type="text/javascript" defer></script>
+    <script src="../components/footer.js" type="text/javascript" defer></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/luxon@2.3.0/build/global/luxon.min.js"></script>
+  
+    <!-- <script src='https://cdn.jsdelivr.net/npm/fullcalendar/index.global.min.js'></script> -->
+     
+   
+</head>
+<body>
+    <header-component></header-component>
+
+  <button class="floating-btn"> <a href="https://us21.list-manage.com/survey?u=b84b865ea6ed9e8e3894bb424&id=5669a6442e&attribution=false" target="_blank">Apply to Receive Family Support</a></button>
+     
+  <div class="row">
+    <div class="col section-header homepage-info">
+      <h2>Jazmine's Journey</h2>
+      <h1 class="animate-character pulse">Upcoming Events </h1>
+    </div>
+    <p style="text-align:center;">There are always opportunities to support without attending an event! Visit our <a href="./onlinefundraiser.html">online fundraising page!</a>
+      <p style="text-align:center;">Year Round <span class="animate-charcter" style="font-size:18px !important">Toy Drive </span> information <a href="./toydrive.html">here.</a></p>
+    </p>
+    
+    <p style="text-align:center;">Click on an event below to view details.</p>
+
+    <!-- <p style="text-align:center; font-size:26px;">We are planning 2025 events now, check back soon for new events!</p> -->
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const { DateTime } = luxon;
+    const calendarEl = document.getElementById('calendar');
+
+    // events array
+    const events = [
+    {
+        title: 'Blood Drive',
+          start: '2025-05-10T09:00:00-07:00',
+          end: '2025-05-10T14:00:00-07:00',
+          textColor: 'black',
+          backgroundColor: 'white',
+          borderColor: 'white',
+          classNames: 'smallImg',
+          url: '#blood',
+          image_url: '/Assets/redcrosslogo.png'
+      },    
+      {
+          title: 'Chicken N Pickle Giveback',
+          start: '2025-06-10T11:00:00-07:00',
+          end: '2025-06-10T23:00:00-07:00',
+          textColor: 'black',
+          backgroundColor: 'white',
+          borderColor: 'white',
+          classNames: 'smallImg',
+          url: '#cnpgb',
+          image_url: '/Assets/Fundraisers/cnplogo.png'
+      },
+      {
+         title: 'Bingo Night',
+          start: '2025-06-22T18:00:00-07:00',
+          end: '2025-06-22T20:00:00-07:00',
+          textColor: 'black',
+          backgroundColor: 'white',
+          borderColor: 'white',
+          classNames: 'smallImg',
+          url: '#bingojune',
+          image_url: '/Assets/Fundraisers/bingologo.png'
+      },
+      {
+         title: 'Bingo Night',
+          start: '2025-08-12T18:00:00-07:00',
+          end: '2025-08-12T20:00:00-07:00',
+          textColor: 'black',
+          backgroundColor: 'white',
+          borderColor: 'white',
+          classNames: 'smallImg',
+          url: '#bingoaug',
+          image_url: '/Assets/Fundraisers/bingologo.png'
+      },
+      {
+         title: 'Bingo Night',
+          start: '2025-10-07T18:00:00-07:00',
+          end: '2025-10-07T20:00:00-07:00',
+          textColor: 'black',
+          backgroundColor: 'white',
+          borderColor: 'white',
+          classNames: 'smallImg',
+          url: '#bingooct',
+          image_url: '/Assets/Fundraisers/bingologo.png'
+      },
+      {
+         title: 'Jazmines Hike',
+          start: '2025-10-25T07:00:00-07:00',
+          end: '2025-10-25T10:00:00-07:00',
+          textColor: 'black',
+          backgroundColor: 'white',
+          borderColor: 'white',
+          classNames: 'smallImg',
+          url: '#hike',
+          image_url: '/Assets/jazjourneymountainlogo.png'
+      },
+      {
+         title: 'Rock Painting',
+          start: '2025-11-16T10:00:00-07:00',
+          end: '2025-11-16T12:00:00-07:00',
+          textColor: 'black',
+          backgroundColor: 'white',
+          borderColor: 'white',
+          classNames: 'smallImg',
+          url: '#rocknov',
+          image_url: '/Assets/100rock.jpg'
+      },
+      {
+         title: 'Birthday Bash Pickleball Tournament',
+          start: '2025-12-17T18:00:00-07:00',
+          end: '2025-12-17T21:00:00-07:00',
+          textColor: 'black',
+          backgroundColor: 'white',
+          borderColor: 'white',
+          classNames: 'smallImg',
+          url: '#pickleball',
+          image_url: '/Assets/Fundraisers/pickleball.jpeg'
+      },
+      
+    ];
+
+    // Parse events with ISO 8601 dates using Luxon to ensure compatibility
+    const parsedEvents = events.map(event => {
+      const start = DateTime.fromISO(event.start).toISO();
+      const end = event.end ? DateTime.fromISO(event.end).toISO() : null;
+      
+      console.log(`Event: ${event.title}, Start: ${start}, End: ${end}`);
+
+      return {
+        ...event,
+        start: start,
+        end: end
+      };
+    });
+
+    // Initialize FullCalendar with parsedEvents
+    const calendar = new FullCalendar.Calendar(calendarEl, {
+      initialView: 'listYear',
+      events: parsedEvents,
+      eventContent: function(arg) {
+        let arrayOfDomNodes = [];
+
+        // Create anchor element for the URL
+        let anchorElement = document.createElement('a');
+        anchorElement.href = arg.event.url;
+        anchorElement.style.display = 'flex';
+        anchorElement.style.alignItems = 'center';
+
+        // Title event
+        if (arg.event._def.title) {
+          let titleEvent = document.createElement('div');
+          titleEvent.innerHTML = arg.event._def.title;
+          titleEvent.classList = "fc-event-title fc-sticky";
+          anchorElement.appendChild(titleEvent);
+        }
+
+        // Image event
+        if (arg.event.extendedProps.image_url) {
+          let imgEvent = document.createElement('img');
+          imgEvent.src = arg.event.extendedProps.image_url;
+          imgEvent.classList = "fc-event-img";
+          anchorElement.appendChild(imgEvent);
+        }
+
+        // Append the anchor element (with title and image) to the DOM nodes array
+        arrayOfDomNodes.push(anchorElement);
+
+        return { domNodes: arrayOfDomNodes };
+      },
+      eventTimeFormat: {
+        hour: 'numeric',
+        minute: '2-digit',
+        meridiem: 'short',
+      }
+    });
+
+    calendar.render();
+  });
+</script>
+
+<br>
+<div class="row container calendar" style="width:50%; margin:auto;">
+
+  <div id='calendar'>
+    
+  </div>
+</div>
+  <div class="row container" style="margin:auto; margin-top: 50px;">
+
+
+
+
+    <!-- Blood Drive 5/10-->
+    <div class="container centerText" style="text-align:center;"> 
+      <a class="anchor" name="blood"></a>
+      <div style="text-align:center;">
+          <img src="../../Assets/jazsibs2.jpg" style="width:200px;border-radius: 20px;" class="" alt="...">       
+      </div>   
+            <p>
+                <p>Saturday, May 10th, 2025 </p>
+                📍 <strong>Location:</strong> 1st Southern Baptist Church
+                851 N Stapley Dr, Mesa, AZ 85203
+            <p class="event-titles">🩸 Jazmine’s Journey Blood Drive – In Honor of Jazmine 💛 </p> 
+            <br>
+            <p>
+              We’re honored to host our 2nd Blood Drive in memory of sweet Jazmine, who passed away from infant leukemia at just 16 months old.
+              </p>
+            <p style="text-align:left;">
+
+            📅 <strong>Date: </strong>Saturday, May 10th, 2025
+            <br>
+            ⏰ <strong>Time: </strong>9:00 AM – 2:00 PM
+            <br>
+           📍 <strong>Location:</strong> 1st Southern Baptist Church
+           851 N Stapley Dr, Mesa, AZ 85203
+           
+            </p>
+            <p class="section-text" style="font-size: 18px;">
+              
+              Jazmine needed countless blood transfusions throughout her treatment. Each one gave her more time and comfort—and now, your donation can do the same for another child fighting cancer.
+
+              💉 Be a part of Jazmine’s legacy. Help save lives. <br>
+              👉 Sign up here: <a style="font-size:22px;text-align:center;" href="https://www.redcrossblood.org/give.html/drive-results?zipSponsor=jazmine " target="_blank"><strong>Click Here and be a Hero</strong></a> <br>
+              <img src="../../Assets/redcrosslogo.png" style="width:200px;border-radius: 20px;" class="" alt="...">
+  </div> 
+    <hr> 
+
+          <!-- Bingo 2/24 -->
+    <!-- <div class="container centerText" style="text-align:center;">
+      <a class="anchor" name="bingofeb"></a>
+      <div style="text-align:center;">
+          <img src="../../Assets/Fundraisers/bingologo.png" style="width:200px;border-radius: 20px;" class="" alt="...">       
+      </div>   
+            <p>
+                <p> February 24th, 2025 6:00 PM - 8:00 PM </p>
+            <p class="event-titles">Jazmine's Bingo Night </p> 
+            <p>Location: Chicken N Pickle, 9330 W Hanna Ln, Glendale, AZ 85305</p>
+            <p class="section-text" style="font-size: 18px;">
+              
+              📅 When: Saturday, February 24th, 2025
+              <br>
+              ⏰ Time: 6:00 PM - 8:00 PM
+              <br>
+              📍 Where: Chicken N Pickle, 9330 W Hanna Ln, Glendale, AZ 85305
+              <br>
+              🎉 Cost: $10 gets you a bingo card to play all 5 rounds. That’s 5 chances to win amazing prizes!
+              <br>
+              All proceeds support Jazmine’s Journey and our mission to help families impacted by pediatric cancer. Bring your friends and family for a night of fun, prizes, and making a difference!
+              <br>
+              We can’t wait to see you there! 💛
+              
+                       
+                <br>
+              <a href="https://www.zeffy.com/ticketing/february-24-2025-bingo-fundraiser" target="_blank"><strong>Click here to register today!</strong></a> 
+
+           
+     </p>
+    </div> 
+    <hr> -->
+
+
+          <!-- Someburros 4/10-->
+          <!-- <div class="container centerText" style="text-align:center;">
+            <a class="anchor" name="burrosapr"></a>
+            <div style="text-align:center;">
+                <img src="../../Assets/Fundraisers/Someburros.png" style="width:200px;border-radius: 20px;" class="" alt="...">       
+            </div>   
+                  <p>
+                      <p> April 10, 2025 All Day</p>
+                  <p class="event-titles">Someburros Give Back Night <br>🌮 Dine Out for a Cause at Someburros! 🌮</p> 
+                  <p> 📍 Location: Someburros, 83rd Ave & Thunderbird, Peoria</p>
+                  <p class="section-text" style="font-size: 18px;">
+                    
+                    Join us on April 10, 2025, at Someburros (Peoria location: 83rd & Thunderbird) for a delicious way to support Jazmine's Journey!
+            <br>
+                  <br>
+                  <strong>How it works:</strong>
+          Mention <strong>Jazmine's Journey</strong> when placing your order, and Someburros will donate <strong>30% of your purchase</strong> to help us support families battling pediatric cancer.
+          Every bite helps us make a difference. We can’t wait to see you there! 💛              
+                    
+                  </p>
+               
+                 <a style="font-size:22px;" href="https://www.zeffy.com/en-US/ticketing/2025-jazmines-journey-valentines-day-craft-fundraiser" target="_blank"><strong>Register now!</strong></a>  
+      
+                 
+           </p>
+          </div> 
+          <hr> 
+          -->
+
+    <!-- CnP Giveback 6/10 -->
+    <div class="container centerText" style="text-align:center;">
+    <a class="anchor" name="cnpgb"></a>
+    <div style="text-align:center;">
+        <img src="../../Assets/Fundraisers/cnplogo.png" style="width:200px;border-radius: 20px;" class="" alt="...">       
+    </div>   
+          <p>
+              <p> Monday, June 10th, 2025 </p>
+          <p class="event-titles">Chicken N Pickle Give Back Day! </p> 
+          <p>Location: Chicken N Pickle, 9330 W Hanna Ln, Glendale, AZ 85305</p>
+          <p class="section-text" style="font-size: 18px;">
+            
+            📅 When: Monday, June 10th, 2025
+            <br>
+            ⏰ Time: All Day
+            <br>
+            📍 Where: Chicken N Pickle, 9330 W Hanna Ln, Glendale, AZ 85305
+            <br>
+            Enjoy a fun day of delicious food  at Chicken N Pickle, and support Jazmine’s Journey!
+            <br>
+             🍗🥒 When you mention Jazmine’s Journey at checkout, a portion of your purchase will be donated to our mission of supporting families impacted by pediatric cancer.
+             <br>
+            It's a great way to dine out, have fun, and give back all in one day! Bring your friends and family for a day of community and support. 💛
+            We can’t wait to see you there!
+
+          
+    </p>
+  </div> 
+  <hr>
+       <!-- Bingo 6/22 -->
+       <div class="container centerText" style="text-align:center;">
+        <a class="anchor" name="bingojune"></a>
+        <div style="text-align:center;">
+            <img src="../../Assets/Fundraisers/bingologo.png" style="width:200px;border-radius: 20px;" class="" alt="...">       
+        </div>   
+              <p>
+                  <p> Saturday, June 22nd, 2025 6:00 PM - 8:00 PM </p>
+              <p class="event-titles">Jazmine's Bingo Night </p> 
+              <p>Location: Chicken N Pickle, 9330 W Hanna Ln, Glendale, AZ 85305</p>
+              <p class="section-text" style="font-size: 18px;">
+                
+                📅 When: Saturday, June 22nd, 2025
+                <br>
+                ⏰ Time: 6:00 PM - 8:00 PM
+                <br>
+                📍 Where: Chicken N Pickle, 9330 W Hanna Ln, Glendale, AZ 85305
+                <br>
+                🎉 Cost: $10 gets you a bingo card to play all 5 rounds. That’s 5 chances to win amazing prizes!
+                <br>
+                All proceeds support Jazmine’s Journey and our mission to help families impacted by pediatric cancer. Bring your friends and family for a night of fun, prizes, and making a difference!
+                <br>
+                We can’t wait to see you there! 💛
+                
+                         
+                  <br>
+                <a href="https://www.zeffy.com/ticketing/june-22-2025-bingo-fundraiser" target="_blank"><strong>Click here to register today!</strong></a> 
+  
+             
+       </p>
+      </div> 
+
+      <hr>
+      <!-- Bingo 8/12 -->
+      <div class="container centerText" style="text-align:center;">
+       <a class="anchor" name="bingooct"></a>
+       <div style="text-align:center;">
+           <img src="../../Assets/Fundraisers/bingologo.png" style="width:200px;border-radius: 20px;" class="" alt="...">       
+       </div>   
+             <p>
+                 <p> Monday, October 7th, 2025 6:00 PM - 8:00 PM </p>
+             <p class="event-titles">Jazmine's Bingo Night </p> 
+             <p>Location: Chicken N Pickle, 9330 W Hanna Ln, Glendale, AZ 85305</p>
+             <p class="section-text" style="font-size: 18px;">
+               
+               📅 When: Monday, October 7th, 2025
+               <br>
+               ⏰ Time: 6:00 PM - 8:00 PM
+               <br>
+               📍 Where: Chicken N Pickle, 9330 W Hanna Ln, Glendale, AZ 85305
+               <br>
+               🎉 Cost: $10 gets you a bingo card to play all 5 rounds. That’s 5 chances to win amazing prizes!
+               <br>
+               All proceeds support Jazmine’s Journey and our mission to help families impacted by pediatric cancer. Bring your friends and family for a night of fun, prizes, and making a difference!
+               <br>
+               We can’t wait to see you there! 💛
+               
+                        
+                 <br>
+               <a href="https://www.zeffy.com/ticketing/october-7-2025-bingo" target="_blank"><strong>Click here to register today!</strong></a> 
+ 
+            
+      </p>
+     </div> 
+<hr>
+      <!-- Jazmine's Hike 10.25 -->
+      <div class="container centerText" style="text-align:center;">
+        <a class="anchor" name="hike"></a>
+        <div style="text-align:center;">
+            <img src="../../Assets/jazjourneymountainlogo.png" style="width:200px;border-radius: 20px;" class="" alt="...">       
+        </div>   
+              <p>
+                  <p> October 25, 2025 7am to 10am</p>
+              <p class="event-titles">Jazmine’s Hike</p> 
+              <p>Location: North Mountain Visitor Center 12950 N 7th St, Phoenix, AZ 85022</p>
+              <p class="section-text" style="font-size: 18px;">
+                
+                Join us for <strong>Jazmine’s Hike: Her Unseen Journey to Cure Pediatric Cancer </strong>on Saturday, October 25th, from 7 AM to 10 AM at 12950 N 7th St, Phoenix, AZ 85022. We are taking the steps that Jazmine couldn’t, raising funds for <strong>Steele Children’s Cancer Research</strong>, with <strong>100% of proceeds donated</strong> to help advance pediatric cancer research.
+                <br>
+                ⛰️ <strong>Registration:</strong> $20 per participant
+               <br><br>
+             
+               &#9749;<strong> Enjoy complimentary coffee!</strong> Thanks to our generous sponsor, Serafina Coffee Roasters, all attendees can start their morning with a fresh cup of coffee.
+               Every step we take is a step toward hope. Join us as we honor Jazmine’s memory, support children battling cancer, and come together as a community for a great cause.
+       <br><br>
+       🚨<strong> Disclaimer: </strong>Participants acknowledge that they are voluntarily taking part in this event and assume all risks associated with hiking, including but not limited to terrain conditions, weather, and physical exertion. Jazmine’s Journey and event organizers are not responsible for any injuries, accidents, or lost items during the hike.
+       <br>
+       <strong>No refunds.</strong> All registration fees are considered a <strong>donation</strong>.
+       <br><br>
+       <strong>Register today and be part of something impactful!</strong>
+<strong>Steele Children’s Research Center</strong> is Arizona’s premier pediatric research institution, dedicated to advancing medical discoveries that improve the lives of children. As part of the <strong>University of Arizona College of Medicine</strong>, the center focuses on groundbreaking research in <strong>pediatric cancer, autoimmune diseases, genetics, and more</strong>, with the goal of developing better treatments and ultimately finding cures. <br>
+Their team of world-class physicians and scientists work tirelessly to transform research into real-life solutions, ensuring that children receive the most innovative and effective care possible. 
+<strong>By supporting Steele Children’s Research Center, we are helping to create a future where no child has to face life-threatening illnesses alone.</strong>
+
+ <br><br>
+Learn more about their mission at <a href="https://peds.arizona.edu/research" target="_blank">https://peds.arizona.edu/research </a>
+
+       </p>
+         <a style="font-size:24px;" href="https://www.zeffy.com/en-US/ticketing/jazmines-hike" target="_blank"><strong>Click here to register!</strong></a> 
+      
+      </div> 
+      <div style="text-align:center;">
+        <img src="../../Assets/Logo/serafinacoffee.jpg" style="width:200px;border-radius: 20px;" class="" alt="...">  
+        <img src="../../Assets/Logo/hihilogo.png" style="width:200px;border-radius: 20px;" class="" alt="...">     
+        <img src="../../Assets/Logo/uofasteele.jpg" style="width:200px;border-radius: 20px;" class="" alt="...">    
+    </div>  
+    </div>
+    <hr>
+
+    <!-- Rock painting 11/16 -->
+    <div class="container centerText" style="text-align:center;">
+      <a class="anchor" name="rocknov"></a>
+      <div style="text-align:center;">
+          <img src="../../Assets/100rock.jpg" style="width:200px;border-radius: 20px;" class="" alt="...">       
+      </div>   
+            <p>
+                <p> November 16, 2025 10:00am to 12:00pm</p>
+            <p class="event-titles">Jazmine's Rock Painting </p> 
+            <p>Location: Chicken N Pickle, 9330 W Hanna Ln, Glendale, AZ 85305</p>
+            <p class="section-text" style="font-size: 18px;">
+              
+              Join us on November 16, 2025, from 2:00 PM to 4:00 PM for a fun and creative Rock Painting Event to support Jazmine's Journey Nonprofit 501(c)(3)!
+              ​<br>
+              For just $10 per person, you’ll receive access to painting supplies (to use during the event) and rocks to decorate and take home. 
+              ​Let your creativity shine while supporting families affected by pediatric cancer.
+              ​<br>
+              This event is a fundraiser for Jazmine’s Journey, and all proceeds will go toward helping families in need.
+              We can’t wait to see you there! 💛 🎨
+            </p>
+              <br>
+              <ul style="text-align:left;">
+                <strong style="text-align:left;">👥 Details:</strong> 
+                <li> <strong>Cost: </strong>$10 per person</li>
+                <li><strong>Includes </strong> Rocks, painting supplies (for use during the event)</li>
+               
+            
+                  <p>Supplies are provided for use at the event and are not for keeping.</p>
+             <br>
+                       
+                <br>
+              <!-- <a href="/Assets/Fundraisers/Jazmine's Journey 01.24.25.pdf" target="_blank"><strong>Click here for more information on the flyer!</strong></a>  -->
+
+           
+     </p>
+    </div> 
+  </div>
+<hr>
+      <!-- Pickleball Tournament 12/17 -->
+      <div class="container centerText" style="text-align:center;">
+        <a class="anchor" name="pickleball"></a>
+        <div style="text-align:center;">
+            <img src="../../Assets/Fundraisers/pickleball.jpeg" style="width:200px;border-radius: 20px;" class="" alt="...">       
+        </div>   
+              <p>
+                  <p> December, 17 2025 6:00 PM to 9:00 PM</p>
+              <p class="event-titles">Jazmine’s Journey Second Annual Birthday Bash Pickleball Tournament</p> 
+              <p>Location: Chicken N Pickle, 9330 W Hanna Ln, Glendale, AZ 85305</p>
+              <p class="section-text" style="font-size: 18px;">
+                
+                Join us for an <strong>exciting evening of pickleball</strong>, fun, and giving back at <strong>Jazmine’s Journey Second Annual Birthday Bash Pickleball Tournament</strong>! This special event will occur on December 17, 2025, from 6:00 PM - 9:00 PM at Chicken N Pickle (9330 W Hanna Ln, Glendale, AZ 85305).
+            <br><br>
+                
+                <strong>Tournament Details:</strong>
+               
+                $30 per person (must register as a team of two)
+                <br>
+                Limited to 24 teams – secure your spot before it's too late!
+                <br>
+                The team name must be sent to info@jazminesjourney.com
+                <br><br>
+                <strong style="color:#cc6d27">Additional Activities:</strong><br>
+                <strong>Silent Auction</strong> with amazing items up for grabs. If you want to donate an item to our silent auction, please email info@jazminesjourney.com. We are always looking for donations to help us raise money!
+                <br><br>
+                <strong>Vendor Opportunities: </strong>4 spots available ($60 per vendor) – No food, drinks, or weapons. Vendors must be pre-approved. Please email info@jazminesjourney.com with details about your business before registering.
+                <br><br>
+               <strong>Raffle: </strong>Donate a new, unwrapped toy and receive a raffle ticket for a chance to win great prizes! The raffle will be drawn midway through the event, and the winner does not need to be present to claim their prize.
+
+                <br><br>
+                Click the registration link to learn more about Sponsorship and Volunteer opportunities! 
+       </p>
+         <a style="font-size:24px;" href=" https://www.zeffy.com/en-US/ticketing/second-annual-birthday-bash-pickleball-tournament?fbclid=IwZXh0bgNhZW0CMTAAAR0izD--cVE1Bt02NhiTpmjQSqGvJ57BSwsM-CDpChUZup1QgqSqwFdBJcg_aem_6cxt-PLzrbAZfdqj5Uu74Q" target="_blank"><strong>Click here to register!</strong></a> 
+      
+      </div> 
+    </div>
+
+                  <!-- <ul style="text-align:left;">
+              <strong style="text-align:left;">👥 Details:</strong> 
+              <li> <strong>Cost: </strong>$60 per team (2 people)</li>
+              <li><strong>Team Registration: </strong> You must register as a TEAM and create a <strong>TEAM NAME</strong></li>
+              <li><strong>Limited Spots:</strong> Only 24 teams will be able to participate—so don’t wait to sign up!
+              </li>
+              <li>
+                <strong>Registration Deadline: </strong>December 12th
+              </li>
+              <li>
+                <strong>Location: </strong>Chicken N Pickle, 9330 W Hanna Ln, Glendale, AZ 85305
+              </li>
+            </ul>
+<br>
+      -->
+
+      
+  <style>
+    .calendar {
+      width: 100% !important;
+      overflow:auto;
+    }
+    #calendar {
+      width: 90%;
+      margin: auto;
+    }
+    .fc-theme-standard .fc-list-day-cushion {
+      background-color: #dfeaed;
+      padding: 8px;
+    }
+   
+    .fc-list-event-dot {
+      display: none !important;
+    }
+    .fc-event-img img {
+      height: 65px;
+    }
+    .smallImg img {
+      margin-left: 10px;
+      height: 40px;
+    }
+    .fc-event-img {
+      text-align: center;
+    }
+    .fc-daygrid-day-top a {
+      color: rgb(204, 109, 39);
+      text-decoration: none;
+    }
+    .fc-scrollgrid-sync-inner a {
+      color: #cc6d27;
+    }
+    .fc-h-event .fc-event-title {
+      font-weight: 500;
+    }
+    .fc .fc-toolbar-title {
+      font-size: 2em;
+    }
+    .fc-listYear-view {
+      height: fit-content;
+    }
+.fc-prev-button{
+  display:none;
+}
+.fc-next-button{
+  display:none;
+}
+
+.fc-today-button{
+  display:none;
+} 
+.fc .fc-toolbar.fc-header-toolbar {
+    margin-bottom: 1.5em;
+}
+.fc-direction-ltr {
+    direction: ltr;
+    text-align: left;
+}
+.fc {
+    display: flex;
+    flex-direction: column;
+    font-size: 1em;
+}
+.fc-theme-standard .fc-list {
+    border: 1px solid #ddd;
+}
+.fc .fc-list-table{
+  width: -webkit-fill-available;
+}
+.fc-direction-ltr .fc-list-day-side-text, .fc-direction-rtl .fc-list-day-text {
+    float: right;
+}
+tr {
+  padding:8px;
+}
+.fc-list-event-time{
+  padding:8px;
+}
+.fc .fc-list-day-cushion {
+    padding: 8px 14px;
+}
+tr .fc-list-event{
+  padding: 8px !important;
+}
+.fc .fc-view-harness .fc-view-harness-active{
+  height:auto !important;
+}
+    @media only screen and (max-width: 600px) {
+      .fc-listYear-view {
+        height: inherit;
+      }
+      .fc-list-event-graphic {
+        display: none;
+      }
+      #calendar {
+        width: 100%;
+        margin: auto;
+      }
+      .fc .fc-scroller-liquid {
+        height: 100%;
+        overflow: auto !important;
+      }
+    }
+</style>
+
+  
+ 
+  
+<footer-component></footer-component>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
