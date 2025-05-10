@@ -836,3 +836,6 @@ label{
   height:auto !important;
 } */
 
+.accordion-item{
+  margin-bottom: 25px;
+}
