@@ -751,6 +751,7 @@ label{
               
 .sub-btn{
   border-radius:10px;
+  border:none;
   background-color:#fff;
   color:#cc6d27;
   margin-top: 10px;
