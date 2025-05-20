@@ -54,7 +54,7 @@ class Header extends HTMLElement {
                 </a>
                 <ul class="dropdown-menu">
 
-                 <li><a class="dropdown-item" href="./milesforjazmine.html" target="_blank">Miles for Jazmine</a></li>
+                 <li><a class="dropdown-item" href="./milesforjazmine.html">Miles for Jazmine</a></li>
                   <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="./SponsorStuffed.html" target="_blank">Sponsor a Stuffed Animal</a></li>
                          <li><hr class="dropdown-divider"></li>
