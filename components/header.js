@@ -56,6 +56,8 @@ class Header extends HTMLElement {
 
                  <li><a class="dropdown-item" href="./milesforjazmine.html">Miles for Jazmine</a></li>
                   <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="./AylaHopeGolf.html">Ayla Hope Golf Tournament</a></li>
+                  <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="./SponsorStuffed.html" target="_blank">Sponsor a Stuffed Animal</a></li>
                          <li><hr class="dropdown-divider"></li>
                           <li><a class="dropdown-item" href="./researchdonations.html" target="_blank">Pediatric Cancer Research</a></li>
