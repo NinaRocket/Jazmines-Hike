@@ -40,6 +40,8 @@ class Header extends HTMLElement {
           <li><hr class="dropdown-divider"></li>
           <li><a class="dropdown-item" href="./familySupport.html">Family Support Events</a></li> 
             <li><hr class="dropdown-divider"></li>          
+            <li><a class="dropdown-item" href="./futureevents.html">2026 Events</a></li>
+            <li><hr class="dropdown-divider"></li>          
             <li><a class="dropdown-item" href="./toydrive.html">Toy Drive</a></li>
                     
       
@@ -113,7 +115,7 @@ class Header extends HTMLElement {
                   </li>
                     <li><hr class="dropdown-divider"></li>
                   <li>
-                    <a class="dropdown-item" aria-current="page" href="./joinUs.html">About Us</a>
+                    <a class="dropdown-item" aria-current="page" href="./contact.html">About Us</a>
                   </li>
                   <li><hr class="dropdown-divider"></li>
                   <li>

@@ -379,9 +379,15 @@ label{
  
 }
 .contact-page-text{
-    padding:40px;
+    /* padding:40px; */
     text-align:center;
-    font-size:28px;
+    font-size:24px;
+    color:#492a0c;
+}
+.contact-email-text{
+    /* padding:40px; */
+    text-align:center;
+    font-size:24px;
     color:#492a0c;
 }
 .button{
