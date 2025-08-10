@@ -20,7 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
           }
   
           div.innerHTML = `
-            <a class="anchor" name="${event.id}"></a>
+            <a class="anchor" id="${(event.url || '#'+event.id).replace('#','')}"></a>
+
             <div style="text-align:center;">
               <img src="${event.postImage}" style="width:200px;border-radius: 20px;" alt="${event.postTitle}">
             </div>
@@ -63,11 +64,14 @@ document.addEventListener('DOMContentLoaded', () => {
               anchorElement.href = arg.event.url;
               anchorElement.style.display = 'flex';
               anchorElement.style.alignItems = 'center';
+              
   
               if (arg.event.title) {
                 let titleDiv = document.createElement('div');
                 titleDiv.innerHTML = arg.event.title;
-                titleDiv.classList = "fc-event-title fc-sticky";
+                // titleDiv.classList = "fc-event-title fc-sticky";
+                titleDiv.className = "fc-event-title";
+
                 anchorElement.appendChild(titleDiv);
               }
   

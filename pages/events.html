@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="../../Assets/Jazmines-Journey-Logo.PNG" />
+  <title>Jazmine's Journey</title>
+  <link rel="stylesheet" href="../../style.css">
   <title>Upcoming Events – Jazmine's Journey</title>
 
   <!-- Styles -->
@@ -29,9 +32,24 @@
 <body>
   <header-component></header-component>
 
-  <main class="container mt-5">
-    <h1 style="text-align:center;">Upcoming Events</h1>
-    <p style="text-align:center;">All the latest and upcoming events hosted by Jazmine's Journey.</p>
+  <main class="container">
+   <div class="row">
+    <div class="col section-header">
+      <h2>Jazmine's Journey</h2>
+      <h1 class="animate-character pulse">Upcoming Events </h1>
+    </div>
+    <p style="text-align:center;">There are always opportunities to support without attending an event! Visit our <a
+        href="./onlinefundraiser.html">online fundraising page!</a>
+    <p style="text-align:center;">Year Round <span class="animate-charcter" style="font-size:18px !important">Toy Drive
+      </span> information <a href="./toydrive.html">here.</a></p>
+    </p>
+
+    <p style="text-align:center;"><strong>Click on an event below to view details.</strong>
+      <br>
+      Thinking about 2026? Here are <a href="./futureevents.html">events planned </a> for 2026!
+    </p>
+
+  </div>
 
     <!-- Calendar container -->
     <div id="calendar" style="margin: 50px auto; width: 90%;"></div>
@@ -43,7 +61,13 @@
   <footer-component></footer-component>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
+   
+
+
 <style>
+  #calendar{
+    max-width:800px;
+  }
   /* 🎨 IMAGE STYLING */
   .fc-event-img {
     text-align: center;
@@ -59,14 +83,18 @@
   /* 🧢 EVENT TITLE */
   .fc-event-title {
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 18px;
     padding-left: 10px;
+  }
+  .fc-event-title a{
+
   }
 
   .fc-event-title.fc-sticky {
     display: inline-block;
     vertical-align: middle;
   }
+  .anchor { scroll-margin-top: 90px; }
 
   /* 🧭 HEADER TOOLBAR */
   .fc .fc-toolbar-title {
@@ -93,6 +121,25 @@
     box-shadow: none;
   }
 
+      @media only screen and (max-width: 600px) {
+      .fc-listYear-view {
+        height: inherit;
+      }
+
+      .fc-list-event-graphic {
+        display: none;
+      }
+
+      #calendar {
+        width: 100%;
+        margin: auto;
+      }
+
+      .fc .fc-scroller-liquid {
+        height: 100%;
+        overflow: auto !important;
+      }
+    }
   /* 📱 MOBILE STYLES */
   /* @media (max-width: 600px) {
     .fc .fc-list-event-title {
@@ -136,7 +183,10 @@
     font-size: 16px;
     white-space: normal !important;
   }
-
+.fc-scroller{
+  height: 300px;
+    overflow: scroll !important;
+}
   .fc-event-title.fc-sticky {
     display: block;
     width: 100%;
@@ -187,6 +237,46 @@
     border: none !important;
 }
 }
+
+/* --- Make FullCalendar list look like the old one --- */
+#calendar { width: 50%; margin: 0 auto; }              /* same width feel as old page */
+.fc .fc-list-event-graphic { display: none !important; }/* hide left dot column */
+
+.fc .fc-list-day-cushion {
+  background-color: #dfeaed !important;
+  padding: 8px;
+  font-weight: bold;
+}
+
+.fc .fc-list-event-time {
+  text-align: left;
+  vertical-align: middle;
+  width: 160px;                 /* gives you that narrow Time column */
+  padding: 8px 14px;
+  white-space: normal;          /* allow the time to wrap to 2 lines if needed */
+}
+
+.fc .fc-list-event-title {
+  vertical-align: middle;
+  padding: 8px 14px;
+}
+
+/* title cell contains the link (we render it ourselves) */
+.fc .fc-list-event-title a {
+  display: flex;
+  align-items: center;
+  text-decoration: underline;      
+}
+
+/* keep img small and aligned */
+.fc-event-img { text-align: right; }
+.fc-event-img img { max-height: 40px; max-width: 60px; }
+
+/* mobile: full width like before */
+@media (max-width: 600px) {
+  #calendar { width: 100%; }
+}
+
 
 </style>
 

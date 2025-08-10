@@ -1,58 +1,222 @@
 [
     {
-      "id": "blood",
-      "title": "Blood Drive",
-      "postTitle": "🩸 Jazmine’s Journey Blood Drive – In Honor of Jazmine 💛",
-      "date": "Saturday, May 10th, 2025",
-      "time": "9:00 AM – 2:00 PM",
-      "start": "2025-05-10T09:00:00-07:00",
-      "end": "2025-05-10T14:00:00-07:00",
-      "location": "1st Southern Baptist Church, 851 N Stapley Dr, Mesa, AZ 85203",
-      "image": "/Assets/redcrosslogo.png",
+      "id": "bingo",
+      "title": "Jazmine's Bingo Night",
+      "postTitle": "Jazmine's Bingo Night 💛",
+      "date": "Tuesday, August 12th, 2025",
+      "time": "6:00 PM - 8:00 PM",
+      "start": "2025-08-12T18:00:00-07:00",
+      "end": "2025-08-12T20:00:00-07:00",
+      "location": "Chicken N Pickle, 9330 W Hanna Ln, Glendale, AZ 85305",
+      "image": "/Assets/Fundraisers/bingologo.png",
       "textColor": "black",
       "backgroundColor": "white",
       "borderColor": "white",
       "classNames": "smallImg",
-      "url": "#blood",
-      "postImage": "/Assets/hospitalequip.jpg",
+      "url": "#bingoaug",
+      "postImage": "/Assets/Fundraisers/bingologo.png",
       "description": [
-        "We’re honored to host our 2nd Blood Drive in memory of sweet Jazmine.",
-        "Jazmine needed countless blood transfusions. Each one gave her more time.",
-        "💉 Be a part of her legacy. Help save lives!"
+          "🎉 Cost: $10 gets you a bingo card to play all 5 rounds. That’s 5 chances to win amazing prizes!",
+          "All proceeds support Jazmine’s Journey and our mission to help families impacted by pediatric cancer. Bring your friends and family for a night of fun, prizes, and making a difference!",
+          "We can’t wait to see you there! 💛"
       ],
       "listItems": [
-        "Wear your Jazmine’s Journey shirt or colors 💛",
-        "Share pics using #JazminesJourney"
       ],
-      "linkText": "Click Here and be a Hero",
-      "linkUrl": "https://www.redcrossblood.org/give.html/drive-results?zipSponsor=jazmine"
+      "linkText": "Click Here to Register",
+      "linkUrl": "https://www.zeffy.com/ticketing/august-12-2025-bingo-fundraiser"
     },
     {
-      "id": "rattlers",
-      "title": "AZ Rattlers Game Fundraiser",
-      "date": "Saturday, April 26, 2025",
-      "time": "6:05 PM – 9:00 PM",
-      "start": "2025-04-26T18:05:00-07:00",
-      "end": "2025-04-26T21:00:00-07:00",
-      "location": "Desert Diamond Arena, 9400 W Maryland Ave, Glendale, AZ 85305",
-      "image": "/Assets/Fundraisers/rattlerslogo.png",
+      "id": "smashburger",
+      "title": "Smashburger Giveback Day",
+      "postTitle": "Smashburger Giveback Day",
+      "date": "August 20th, 2025",
+      "time": "11:00 AM - 9:00 PM",
+      "start": "2025-08-20T11:00:00-07:00",
+      "end": "2025-08-20T21:00:00-07:00",
+      "location": "Smashburger at 3121 W Peoria Ave Phoenix, AZ",
+      "image": "/Assets/Fundraisers/Hamburger_Clipart.png",
       "textColor": "black",
       "backgroundColor": "white",
       "borderColor": "white",
       "classNames": "smallImg",
-      "url": "#rattlers",
+      "url": "#smash",
+      "postImage": "/Assets/Fundraisers/Hamburger_Clipart.png",
       "description": [
-        "Get ready for an exciting night of football and fun at the Arizona Rattlers vs Northern Arizona Wranglers!",
-        "🏈 A portion of ticket sales will be donated to Jazmine's Journey.",
-        "Bring your friends and family, enjoy the game, and support our cause!"
+    "We are so excited for you to join us for Smashburger's Giveback Day! Smashburger is donating back 20% to Jazmine's Journey! ",
+    "These funds help families impacted by childhood cancer! Your lunch or dinner can make a difference!",
+    "We can’t wait to see you there! 💛"
       ],
       "listItems": [
         "Wear your Jazmine’s Journey shirt or colors 💛",
         "Share pics using #JazminesJourney"
       ],
-      "linkText": "Click here for tickets!",
-      "linkUrl": "https://www.gofevo.com/event/Jazminesjourney21"
-    }
- 
-  ]
-  
+      "linkText": "Click here for details!",
+      "linkUrl": "https://www.groupraise.com/events/306844?utm_source=sendgrid&utm_medium=email&utm_campaign=o_event_automatic_confirmed"
+    },
+    
+  {
+    "id": "uno",
+    "title": "UNO Tournament",
+    "postTitle": "First Annual UNO Tournament ♥️💛💚💙",
+    "date": "Sunday, August 24th, 2025",
+    "time": "2:00 PM – 4:00 PM",
+    "start": "2025-08-24T14:00:00-07:00",
+    "end": "2025-08-24T16:00:00-07:00",
+    "location": "Chicken N Pickle, 9330 W Hanna Ln, Glendale, AZ 85305",
+    "image": "/Assets/Fundraisers/uno.png",
+    "textColor": "black",
+    "backgroundColor": "white",
+    "borderColor": "white",
+    "classNames": "smallImg",
+    "url": "#famuno",
+    "postImage": "/Assets/Fundraisers/uno.png",
+    "description": [
+      "Get ready for a fun-filled afternoon of strategy, smiles, and support at our First UNO Tournament benefiting pediatric cancer families!",
+      "Tournament format: Every player competes in 3 rounds of UNO with rotating players. Top 4 scorers advance to the Championship Round.",
+      "Awards for 1st, 2nd, and 3rd place!",
+      "Entry Fee: $30 (includes a soda). Funds raised support bill payment assistance for families affected by pediatric cancer.",
+      "BONUS: Bring an unwrapped toy or gift card and receive a raffle ticket—donations go to children currently undergoing cancer treatment.",
+      "Come play for a purpose and help us make a difference one card at a time!"
+    ],
+    "listItems": [
+      "Register now to secure your seat at the table!"
+    ],
+    "linkText": "Click here to register today!",
+    "linkUrl": "https://www.zeffy.com/ticketing/first-annual-uno-tournament"
+  },
+  {
+    "id": "golf",
+    "title": "Ayla Hope Golf Tournament",
+    "postTitle": "🏌️ Tee Up for Ayla Hope with Jazmine’s Journey: A Fight Against Childhood Cancer",
+    "date": "Saturday, October 4th, 2025",
+    "time": "Check-in 6:30 AM • Shotgun Start 8:00 AM",
+    "start": "2025-10-04T08:00:00-07:00",
+    "end": "2025-10-04T15:00:00-07:00",
+    "location": "Toka Sticks Golf Club, 6910 E Williams Field Rd, Mesa, AZ 85212",
+    "image": "/Assets/Fundraisers/TeeUpForAylaHopeLogo.png",
+    "textColor": "black",
+    "backgroundColor": "white",
+    "borderColor": "white",
+    "classNames": "smallImg",
+    "url": "#golf",
+    "postImage": "/Assets/Fundraisers/TeeUpForAylaHopeLogo.png",
+    "description": [
+      "Join us for a day of golf with purpose—supporting Ayla Hope and her family.",
+      "Entry Fee: $150 per golfer (includes green fee, cart, and lunch).",
+      "Contests & Prizes: Hole-in-One, Longest Drive Challenge, 1st–3rd place awards, and raffle drawings!",
+      "By participating, you’ll help ease the financial burden on Ayla’s family. Under “Add a donation for Jazmine's Journey,” any additional funds go directly to Ayla’s family.",
+      "For questions or sponsorship opportunities: info@jazminesjourney.com"
+    ],
+    "listItems": [],
+    "linkText": "Click here to register today!",
+    "linkUrl": "https://www.zeffy.com/en-US/ticketing/ayla-hope-golf-benefit-in-partnership-with-jazmines-journey"
+  },
+  {
+    "id": "bingooct",
+    "title": "Bingo Night",
+    "postTitle": "Jazmine's Bingo Night",
+    "date": "Tuesday, October 7th, 2025",
+    "time": "6:00 PM - 8:00 PM",
+    "start": "2025-10-07T18:00:00-07:00",
+    "end": "2025-10-07T20:00:00-07:00",
+    "location": "Chicken N Pickle, 9330 W Hanna Ln, Glendale, AZ 85305",
+    "image": "/Assets/Fundraisers/bingologo.png",
+    "textColor": "black",
+    "backgroundColor": "white",
+    "borderColor": "white",
+    "classNames": "smallImg",
+    "url": "#bingooct",
+    "postImage": "/Assets/Fundraisers/bingologo.png",
+    "description": [
+      "🎉 Cost: $10 gets you a bingo card to play all 5 rounds. That’s 5 chances to win amazing prizes!",
+      "All proceeds support Jazmine’s Journey and our mission to help families impacted by pediatric cancer. Bring your friends and family for a night of fun, prizes, and making a difference!",
+      "We can’t wait to see you there! 💛"
+    ],
+    "listItems": [],
+    "linkText": "Click here to register today!",
+    "linkUrl": "https://www.zeffy.com/ticketing/october-7-2025-bingo"
+  },
+  {
+    "id": "hike",
+    "title": "Jazmine’s Hike",
+    "postTitle": "Jazmine’s Hike: Her Unseen Journey to Cure Pediatric Cancer",
+    "date": "Saturday, October 25th, 2025",
+    "time": "7:00 AM – 10:00 AM",
+    "start": "2025-10-25T07:00:00-07:00",
+    "end": "2025-10-25T10:00:00-07:00",
+    "location": "North Mountain Visitor Center, 12950 N 7th St, Phoenix, AZ 85022",
+    "image": "/Assets/jazjourneymountainlogo.png",
+    "textColor": "black",
+    "backgroundColor": "white",
+    "borderColor": "white",
+    "classNames": "smallImg",
+    "url": "#hike",
+    "postImage": "/Assets/jazjourneymountainlogo.png",
+    "description": [
+      "We’re taking the steps Jazmine couldn’t—raising funds for Steele Children’s Cancer Research with 100% of proceeds donated.",
+      "Registration: $20 per participant.",
+      "Enjoy complimentary coffee thanks to Serafina Coffee Roasters!",
+      "Disclaimer: Participants acknowledge they are voluntarily taking part and assume all risks. Jazmine’s Journey and organizers are not responsible for injuries, accidents, or lost items. No refunds; all fees are considered a donation."
+    ],
+    "listItems": [
+      "Learn more about Steele Children’s Research Center: https://peds.arizona.edu/research"
+    ],
+    "linkText": "Click here to register!",
+    "linkUrl": "https://www.zeffy.com/en-US/ticketing/jazmines-hike"
+  },
+  {
+    "id": "rocknov",
+    "title": "Rock Painting",
+    "postTitle": "Jazmine's Rock Painting",
+    "date": "Sunday, November 16th, 2025",
+    "time": "10:00 AM – 12:00 PM",
+    "start": "2025-11-16T10:00:00-07:00",
+    "end": "2025-11-16T12:00:00-07:00",
+    "location": "Chicken N Pickle, 9330 W Hanna Ln, Glendale, AZ 85305",
+    "image": "/Assets/100rock.jpg",
+    "textColor": "black",
+    "backgroundColor": "white",
+    "borderColor": "white",
+    "classNames": "smallImg",
+    "url": "#rocknov",
+    "postImage": "/Assets/EventPics/rockpaintingpics.jpg",
+    "description": [
+      "Join us for a fun and creative Rock Painting event to support Jazmine’s Journey (501(c)(3)).",
+      "Cost: $10 per person — includes access to painting supplies (for use during the event) and rocks to decorate and take home.",
+      "Let your creativity shine while supporting families affected by pediatric cancer.",
+      "Supplies are provided for use at the event and are not for keeping."
+    ],
+    "listItems": [],
+    "linkText": "Click here to register!",
+    "linkUrl": "https://www.zeffy.com/ticketing/november-16-2025-rock-painting-fundraiser"
+  },
+  {
+    "id": "pickleball",
+    "title": "Birthday Bash Pickleball Tournament",
+    "postTitle": "Jazmine’s Journey Second Annual Birthday Bash Pickleball Tournament",
+    "date": "Wednesday, December 17th, 2025",
+    "time": "6:00 PM – 9:00 PM",
+    "start": "2025-12-17T18:00:00-07:00",
+    "end": "2025-12-17T21:00:00-07:00",
+    "location": "Chicken N Pickle, 9330 W Hanna Ln, Glendale, AZ 85305",
+    "image": "/Assets/Fundraisers/pickleball.jpeg",
+    "textColor": "black",
+    "backgroundColor": "white",
+    "borderColor": "white",
+    "classNames": "smallImg",
+    "url": "#pickleball",
+    "postImage": "/Assets/Fundraisers/pickleball.jpeg",
+    "description": [
+      "Join us for an exciting evening of pickleball, fun, and giving back!",
+      "Tournament: $30 per person (register as a team of two). Limited to 24 teams—secure your spot!",
+      "Team name must be sent to info@jazminesjourney.com.",
+      "Additional activities: Silent Auction, Vendor Opportunities (4 spots, $60 each—no food, drinks, or weapons; pre-approval required), and a Toy Raffle (bring a new, unwrapped toy for a raffle ticket).",
+      "Special Guest: Ariel Franz will sing the National Anthem.",
+      "Click the registration link to learn about Sponsorship and Volunteer opportunities."
+    ],
+    "listItems": [],
+    "linkText": "Click here to register!",
+    "linkUrl": "https://www.zeffy.com/en-US/ticketing/second-annual-birthday-bash-pickleball-tournament"
+  }
+]
+
