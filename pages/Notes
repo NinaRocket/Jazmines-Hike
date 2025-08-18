@@ -1,0 +1,26 @@
+    {
+      "id": "bingo",
+      "title": "Jazmine's Bingo Night",
+      "postTitle": "Jazmine's Bingo Night 💛",
+      "date": "Tuesday, August 12th, 2025",
+      "time": "6:00 PM - 8:00 PM",
+      "start": "2025-08-12T18:00:00-07:00",
+      "end": "2025-08-12T20:00:00-07:00",
+      "location": "Chicken N Pickle, 9330 W Hanna Ln, Glendale, AZ 85305",
+      "image": "/Assets/Fundraisers/bingologo.png",
+      "textColor": "black",
+      "backgroundColor": "white",
+      "borderColor": "white",
+      "classNames": "smallImg",
+      "url": "#bingoaug",
+      "postImage": "/Assets/Fundraisers/bingologo.png",
+      "description": [
+          "🎉 Cost: $10 gets you a bingo card to play all 5 rounds. That’s 5 chances to win amazing prizes!",
+          "All proceeds support Jazmine’s Journey and our mission to help families impacted by pediatric cancer. Bring your friends and family for a night of fun, prizes, and making a difference!",
+          "We can’t wait to see you there! 💛"
+      ],
+      "listItems": [
+      ],
+      "linkText": "Click Here to Register",
+      "linkUrl": "https://www.zeffy.com/ticketing/august-12-2025-bingo-fundraiser"
+    }
