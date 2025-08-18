@@ -115,7 +115,7 @@ class Header extends HTMLElement {
                   </li>
                     <li><hr class="dropdown-divider"></li>
                   <li>
-                    <a class="dropdown-item" aria-current="page" href="./contact.html">About Us</a>
+                    <a class="dropdown-item" aria-current="page" href="./Contact.html">About Us</a>
                   </li>
                   <li><hr class="dropdown-divider"></li>
                   <li>
