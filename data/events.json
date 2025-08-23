@@ -1,32 +1,4 @@
 [
-
-    {
-      "id": "smashburger",
-      "title": "Smashburger Giveback Day",
-      "postTitle": "Smashburger Giveback Day",
-      "date": "August 20th, 2025",
-      "time": "11:00 AM - 9:00 PM",
-      "start": "2025-08-20T11:00:00-07:00",
-      "end": "2025-08-20T21:00:00-07:00",
-      "location": "Smashburger at 3121 W Peoria Ave Phoenix, AZ",
-      "image": "/Assets/Fundraisers/Hamburger_Clipart.png",
-      "textColor": "black",
-      "backgroundColor": "white",
-      "borderColor": "white",
-      "classNames": "smallImg",
-      "url": "#smash",
-      "postImage": "/Assets/Fundraisers/Hamburger_Clipart.png",
-      "description": [
-    "We are so excited for you to join us for Smashburger's Giveback Day! Smashburger is donating back 20% to Jazmine's Journey! ",
-    "These funds help families impacted by childhood cancer! Your lunch or dinner can make a difference!",
-    "We can’t wait to see you there! 💛"
-      ],
-      "listItems": [
-     
-      ],
-      "linkText": "Click here for details!",
-      "linkUrl": "https://www.groupraise.com/events/306844?utm_source=sendgrid&utm_medium=email&utm_campaign=o_event_automatic_confirmed"
-    },
     
   {
     "id": "uno",
