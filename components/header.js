@@ -63,8 +63,6 @@ class Header extends HTMLElement {
                   <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="https://pa.exchange/marketplace/5a7cb570-416b-11f0-8b27-7f50132c281c/storefront/5a7cb73c-416b-11f0-839c-ada1beb63e34" target="_blank">Arizona Cardinals Tickets</a></li>
                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="https://www.zeffy.com/en-US/ticketing/jazmines-journey-second-leagues--2025" target="_blank">Fantasy Football</a></li>
-                   <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="./SponsorStuffed.html" target="_blank">Sponsor a Stuffed Animal</a></li>
                          <li><hr class="dropdown-divider"></li>
                           <li><a class="dropdown-item" href="./researchdonations.html" target="_blank">Pediatric Cancer Research</a></li>
