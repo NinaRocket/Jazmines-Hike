@@ -71,7 +71,6 @@ class Header extends HTMLElement {
                   <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="https://www.zeffy.com/en-US/fundraising/support-jazmines-journeys-mission--2025" target="_blank">Link to General Donation</a></li>
                   
-               
                 </ul>
               </li>
 
@@ -98,10 +97,12 @@ class Header extends HTMLElement {
                   <li><a class="dropdown-item" href="./giving.html">Your Impact</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" aria-current="page" href="./thankyou.html">Thank You</a></li> 
+                   <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="./volunteer.html">Volunteer</a></li>
+                 
                 </ul>
               </li>
 
-      
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   About Jazmine's Journey
