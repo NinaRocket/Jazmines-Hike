@@ -846,3 +846,91 @@ label{
 .accordion-item{
   margin-bottom: 25px;
 }
+
+/* Jazmine’s Journey Pickleball — scoped styles */
+#jj-pickleball-title{
+text-align:center;
+}
+.jj-pickleball { padding: 2.5rem 1rem; }
+.jj-pickleball .jj-wrap { max-width: 980px; margin: 0 auto; }
+
+.jj-pickleball .jj-hero { padding: 1.5rem; border: 1px solid rgba(0,0,0,.12); border-radius: 16px; }
+.jj-pickleball .jj-eyebrow { letter-spacing: .08em; text-transform: uppercase; font-size: .85rem; margin: 0 0 .5rem; opacity: .8; }
+.jj-pickleball .jj-title { margin: 0 0 .5rem; font-size: 2rem; line-height: 1.2; }
+.jj-pickleball .jj-subtitle { margin: 0; font-size: 1.05rem; opacity: .92; }
+
+.jj-pickleball .jj-cta { margin-top: 1.25rem; display: flex; gap: .75rem; align-items: center; flex-wrap: wrap; }
+.jj-pickleball .jj-small { margin: 0; font-size: .92rem; opacity: .85; }
+
+.jj-pickleball .jj-btn {
+  display: inline-block;
+  padding: .85rem 1.05rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  border: 1px solid rgba(0,0,0,.15);
+}
+.jj-pickleball .jj-btn:hover { transform: translateY(-1px); }
+.jj-pickleball .jj-btn-secondary { opacity: .95; }
+
+.jj-pickleball .jj-grid {
+  margin-top: 1.25rem;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+}
+.jj-pickleball .jj-card {
+  grid-column: span 12;
+  padding: 1.25rem;
+  border: 1px solid rgba(0,0,0,.12);
+  border-radius: 16px;
+}
+@media (min-width: 860px) {
+  .jj-pickleball .jj-card { grid-column: span 4; }
+}
+
+.jj-pickleball .jj-card-title { margin: 0 0 .75rem; font-size: 1.25rem; }
+.jj-pickleball .jj-list { margin: .25rem 0 0; padding-left: 1.1rem; }
+.jj-pickleball .jj-list li { margin: .35rem 0; }
+
+.jj-pickleball .jj-callout {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 14px;
+  border: 1px dashed rgba(0,0,0,.25);
+}
+.jj-pickleball .jj-callout-title { margin: 0 0 .5rem; font-size: 1.05rem; }
+.jj-pickleball .jj-code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; padding: .15rem .4rem; border-radius: 8px; border: 1px solid rgba(0,0,0,.18); }
+
+.jj-pickleball .jj-sponsors { margin-top: 2rem; }
+.jj-pickleball .jj-section-head { margin-bottom: .75rem; }
+.jj-pickleball .jj-section-title { margin: 0 0 .35rem; font-size: 1.5rem; }
+.jj-pickleball .jj-section-subtitle { margin: 0; opacity: .9; }
+
+.jj-pickleball .jj-sponsor-grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+}
+.jj-pickleball .jj-sponsor-card {
+  grid-column: span 12;
+  padding: 1.25rem;
+  border: 1px solid rgba(0,0,0,.12);
+  border-radius: 16px;
+}
+@media (min-width: 860px) {
+  .jj-pickleball .jj-sponsor-card { grid-column: span 6; }
+}
+
+.jj-pickleball .jj-sponsor-title {
+  margin: 0 0 .75rem;
+  display: flex;
+  justify-content: space-between;
+  gap: .75rem;
+  align-items: baseline;
+}
+.jj-pickleball .jj-price { font-weight: 800; white-space: nowrap; }
+
+.jj-pickleball .jj-divider { margin: 1.75rem 0; height: 1px; background: rgba(0,0,0,.12); }
+.jj-pickleball .jj-cta-bottom { margin-top: 1.25rem; justify-content: flex-start; }
