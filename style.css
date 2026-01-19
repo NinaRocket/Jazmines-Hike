@@ -839,9 +839,10 @@ label{
   height: 100%;
 }
 
-/* .fc-view-harness{
-  height:auto !important;
-} */
+.fc-view-harness{
+ height: fit-content !important;
+    padding-bottom: 25px;
+}
 
 .accordion-item{
   margin-bottom: 25px;

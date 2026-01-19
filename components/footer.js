@@ -32,7 +32,7 @@ class Footer extends HTMLElement {
         </div>
         
           <p class="d-flex justify-content-center align-items-center">
-            <span class="me-3">Copyright © 2025 Jazmine's Journey</span>
+            <span class="me-3">Copyright © 2026 Jazmine's Journey</span>
             
           </p>
           <p class="d-flex justify-content-center align-items-center">

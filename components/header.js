@@ -23,7 +23,7 @@ class Header extends HTMLElement {
           <button style="    border-radius: 32px;
     background-color: white; border-color: orange;">
             <a class="dropdown-item pulse" style="padding: 10px;
-    font-weight: 600;" href="https://www.zeffy.com/fundraising/support-jazmines-journeys-mission--2025" target="_blank">Donate</a>
+    font-weight: 600;" href="https://www.zeffy.com/en-US/donation-form/2026-jazmines-journey-donations" target="_blank">Donate</a>
           </button>
          
         </li>
@@ -70,7 +70,7 @@ class Header extends HTMLElement {
                              <li><hr class="dropdown-divider"></li>
                      <li><a class="dropdown-item" href="./agentsvscancer.html" target="_blank">Agents Vs. Cancer</a></li>
                   <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="https://www.zeffy.com/en-US/fundraising/support-jazmines-journeys-mission--2025" target="_blank">Link to General Donation</a></li>
+                    <li><a class="dropdown-item" href="https://www.zeffy.com/en-US/donation-form/2026-jazmines-journey-donations" target="_blank">Link to General Donation</a></li>
                   
                 </ul>
               </li>
@@ -133,7 +133,7 @@ class Header extends HTMLElement {
                   </li>
                 </ul>
               </li>
-              <li class="nav-item"><a class="nav-link active" href="https://us21.list-manage.com/survey?u=b84b865ea6ed9e8e3894bb424&id=5669a6442e&attribution=false" target="_blank">Family Application</a></li>
+              <li class="nav-item"><a class="nav-link active" href="https://us21.list-manage.com/survey?u=b84b865ea6ed9e8e3894bb424&id=e815e3eea3&attribution=false" target="_blank"><strong>Family Application</strong></a></li>
 
         </ul>
 
