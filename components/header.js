@@ -125,6 +125,10 @@ class Header extends HTMLElement {
                   <li>
                     <a class="dropdown-item" aria-current="page" href="./support.html">Support</a>
                   </li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li>
+                    <a class="dropdown-item" aria-current="page" href="https://us21.list-manage.com/survey?u=b84b865ea6ed9e8e3894bb424&id=79aa480cff&attribution=false" target="_blank">Join Jazmine's Journey</a>
+                  </li>
                    <li><hr class="dropdown-divider"></li>
                   <li>
                     <a class="dropdown-item" aria-current="page" href="https://jazminesjourneyblog.wordpress.com/" target="_blank">Blog</a>
