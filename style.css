@@ -1120,3 +1120,77 @@ text-align:center;
   width: calc(100% - 24px);
   z-index: 999;
 }
+
+
+/* ===== ODOMETER BLOCK STYLE ===== */
+
+.donation-odometer-wrapper h4 {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.odometer {
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+}
+
+
+.digit-box {
+    background: #ffffff;
+    border-radius: 10px;
+    width: 60px;
+    height: 80px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 
+        0 4px 10px rgba(0,0,0,0.08),
+        inset 0 -3px 6px rgba(0,0,0,0.05);
+    border: 1px solid #e6e6e6;
+}
+
+.digit-track {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: transform 2s cubic-bezier(.19,1,.22,1);
+}
+
+.digit-track span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #CC6D27;
+}
+
+.comma {
+    display: flex;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    padding: 0 4px;
+    color: #CC6D27;
+}
+
+.currency-box {
+    background: #ffffff;
+    border-radius: 10px;
+    width: 60px;
+    height: 80px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #CC6D27;
+    box-shadow: 
+        0 4px 10px rgba(0,0,0,0.08),
+        inset 0 -3px 6px rgba(0,0,0,0.05);
+    border: 1px solid #e6e6e6;
+}
+
