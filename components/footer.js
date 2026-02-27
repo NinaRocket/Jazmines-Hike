@@ -47,6 +47,10 @@ class Footer extends HTMLElement {
           <span class="me-3"><a href="/pages/minutes.html">Meeting Minutes, Tax Exempt Letter and Documents</a></span>
           
         </p>
+
+        <p class="d-flex justify-content-center align-items-center">
+  <span class="me-3"><a href="/install.html">Install Jazmine’s Journey App (PWA)</a></span>
+</p>
         </section>
         <!-- Section: CTA -->
       </div>

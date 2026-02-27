@@ -30,7 +30,45 @@
       myModal.show();
     };
   </script>
-  
+ <script>
+  // --- PWA: inject manifest + meta tags once ---
+if (!document.querySelector('link[rel="manifest"]')) {
+  const manifestLink = document.createElement("link");
+  manifestLink.rel = "manifest";
+  manifestLink.href = "/manifest.webmanifest";
+  document.head.appendChild(manifestLink);
+}
+
+if (!document.querySelector('meta[name="theme-color"]')) {
+  const theme = document.createElement("meta");
+  theme.name = "theme-color";
+  theme.content = "#ff9507";
+  document.head.appendChild(theme);
+}
+
+// iOS nice-to-haves
+if (!document.querySelector('link[rel="apple-touch-icon"]')) {
+  const appleIcon = document.createElement("link");
+  appleIcon.rel = "apple-touch-icon";
+  appleIcon.href = "/Assets/icons/apple-touch-icon.png";
+  document.head.appendChild(appleIcon);
+}
+
+if (!document.querySelector('meta[name="apple-mobile-web-app-capable"]')) {
+  const cap = document.createElement("meta");
+  cap.name = "apple-mobile-web-app-capable";
+  cap.content = "yes";
+  document.head.appendChild(cap);
+}
+
+// --- PWA: register service worker ---
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("/sw.js").catch(console.error);
+  });
+}
+
+ </script>  
 </head>
 
 
@@ -414,6 +452,10 @@
             <span class="me-3"><a href="/pages/minutes.html">Meeting Minutes, Tax Exempt Letter and Documents</a></span>
 
           </p>
+
+          <p class="d-flex justify-content-center align-items-center">
+  <span class="me-3"><a href="/install.html">Install Jazmine’s Journey App (PWA)</a></span>
+</p>
         </section>
         <!-- Section: CTA -->
       </div>

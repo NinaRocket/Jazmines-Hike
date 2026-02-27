@@ -143,6 +143,51 @@ class Header extends HTMLElement {
     </div>
   </nav>
     `;
+     this.initPWA();
+  }
+
+initPWA() {
+    // Prevent duplicates across pages
+    if (window.__JJ_PWA_INIT__) return;
+    window.__JJ_PWA_INIT__ = true;
+
+    // Manifest
+    if (!document.querySelector('link[rel="manifest"]')) {
+      const l = document.createElement("link");
+      l.rel = "manifest";
+      l.href = "/manifest.webmanifest";
+      document.head.appendChild(l);
+    }
+
+    // Theme color (matches your orange)
+    if (!document.querySelector('meta[name="theme-color"]')) {
+      const m = document.createElement("meta");
+      m.name = "theme-color";
+      m.content = "#ff9507";
+      document.head.appendChild(m);
+    }
+
+    // iOS niceties
+    if (!document.querySelector('link[rel="apple-touch-icon"]')) {
+      const a = document.createElement("link");
+      a.rel = "apple-touch-icon";
+      a.href = "/Assets/icons/apple-touch-icon.png";
+      document.head.appendChild(a);
+    }
+
+    if (!document.querySelector('meta[name="apple-mobile-web-app-capable"]')) {
+      const cap = document.createElement("meta");
+      cap.name = "apple-mobile-web-app-capable";
+      cap.content = "yes";
+      document.head.appendChild(cap);
+    }
+
+    // Service worker
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("/sw.js").catch(console.error);
+      });
+    }
   }
 }
 

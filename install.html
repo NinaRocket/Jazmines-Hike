@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Install Jazmine’s Journey App</title>
+
+  <!-- Optional: use your site-wide stylesheet if you have one at root -->
+  <link rel="stylesheet" href="/style.css" />
+
+  <style>
+    /* Minimal styling so this page looks good even if /style.css changes */
+    :root { --max: 860px; }
+    body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height: 1.45; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 24px 16px 48px; }
+    .card { border: 1px solid rgba(0,0,0,.12); background:white !important; border-radius: 14px; padding: 18px; margin: 14px 0; }
+    h1 { margin: 6px 0 8px; font-size: 1.9rem; }
+    p { margin: 10px 0; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      border-radius: 12px; border: 0; padding: 12px 16px;
+      font-size: 1rem; font-weight: 700; cursor: pointer;
+      background: #111; color: #fff; text-decoration: none;
+    }
+    .btn:disabled { opacity: .55; cursor: not-allowed; }
+    .muted { opacity: .75; font-size: .95rem; }
+    .steps { margin: 10px 0 0; padding-left: 18px; }
+    .hide { display: none; }
+    .toplink { display:inline-block; margin-top: 8px; }
+    .pill { display:inline-block; padding: 4px 10px; border-radius: 999px; border:1px solid rgba(0,0,0,.14); font-size:.9rem; margin-left: 6px; }
+    .ok { background: rgba(0,128,0,.08); }
+  </style>
+</head>
+
+<body>
+  <main class="wrap">
+    <a class="toplink" href="/">← Back to Jazmine’s Journey</a>
+
+    <h1>Install the Jazmine’s Journey App <span id="installedPill" class="pill ok hide">Installed</span></h1>
+    <p class="muted">
+      This installs a shortcut “app” on your phone so Jazmine’s Journey opens fast from your home screen - no app store needed!
+    </p>
+
+    <!-- Already installed message -->
+    <div id="alreadyInstalled" class="card hide">
+      <p><strong>Looks like it’s already installed 🎉</strong></p>
+      <p class="muted">If you don’t see it, try searching your home screen for “Jazmine’s Journey.”</p>
+    </div>
+
+    <!-- Android/Desktop install button -->
+    <div id="installCard" class="card hide">
+      <p><strong>Install on your device</strong></p>
+      <p class="muted">Tap the button below and confirm “Install.”</p>
+      <button id="installBtn" class="btn" type="button">Install App</button>
+      <p id="installStatus" class="muted"></p>
+    </div>
+
+    <!-- iOS instructions -->
+    <div id="iosCard" class="card hide">
+      <p><strong>Install on iPhone / iPad</strong></p>
+      <p class="muted">Apple doesn’t allow a pop-up install button. Do this instead:</p>
+      <ol class="steps">
+        <li>Open this page in <strong>Safari</strong> (not inside another app’s browser).</li>
+        <li>Tap the <strong>Share</strong> icon (square with an up arrow).</li>
+        <li>Scroll and tap <strong>Add to Home Screen</strong>.</li>
+        <li>Name it (or keep the default), then tap <strong>Add</strong>.</li>
+      </ol>
+    </div>
+
+    <!-- Fallback manual instructions -->
+    <div id="manualCard" class="card">
+      <p><strong>Don’t see an Install button?</strong></p>
+      <p class="muted">No worries—some browsers require using the menu:</p>
+      <ul class="steps">
+        <li><strong>Android (Chrome):</strong> tap <strong>⋮</strong> → <strong>Install app</strong> / <strong>Add to Home screen</strong></li>
+        <li><strong>Desktop (Chrome/Edge):</strong> look for an <strong>Install</strong> icon in the address bar, or use the menu</li>
+      </ul>
+      <p class="muted" id="pwaNote"></p>
+    </div>
+  </main>
+
+  <script>
+    (function () {
+      const installCard = document.getElementById("installCard");
+      const installBtn = document.getElementById("installBtn");
+      const installStatus = document.getElementById("installStatus");
+      const iosCard = document.getElementById("iosCard");
+      const manualCard = document.getElementById("manualCard");
+      const pwaNote = document.getElementById("pwaNote");
+
+      const alreadyInstalled = document.getElementById("alreadyInstalled");
+      const installedPill = document.getElementById("installedPill");
+
+      let deferredPrompt = null;
+
+      // Detect iOS
+      const ua = navigator.userAgent || "";
+      const isIOS = /iPhone|iPad|iPod/i.test(ua);
+
+      // Detect standalone (installed) mode
+      const isStandalone = window.matchMedia("(display-mode: standalone)").matches
+        || (typeof navigator.standalone !== "undefined" && navigator.standalone === true);
+
+      if (isStandalone) {
+        alreadyInstalled.classList.remove("hide");
+        installedPill.classList.remove("hide");
+        // If installed, no need to show install UI
+        installCard.classList.add("hide");
+        iosCard.classList.add("hide");
+        pwaNote.textContent = "";
+        return;
+      }
+
+      if (isIOS) {
+        iosCard.classList.remove("hide");
+      }
+
+      // This only fires when your PWA criteria is met (manifest + service worker + HTTPS + etc.)
+      window.addEventListener("beforeinstallprompt", (e) => {
+        e.preventDefault(); // stop the mini-infobar
+        deferredPrompt = e;
+
+        // Show the install UI for supported browsers
+        installCard.classList.remove("hide");
+        installStatus.textContent = "";
+      });
+
+      installBtn.addEventListener("click", async () => {
+        if (!deferredPrompt) return;
+
+        installBtn.disabled = true;
+        installStatus.textContent = "Opening install prompt…";
+
+        deferredPrompt.prompt();
+        const choice = await deferredPrompt.userChoice;
+
+        if (choice && choice.outcome) {
+          installStatus.textContent = (choice.outcome === "accepted")
+            ? "Installed! 🎉 You can now open Jazmine’s Journey from your home screen."
+            : "No worries—install was canceled. You can try again anytime.";
+        } else {
+          installStatus.textContent = "Done. If you don’t see it installed, use your browser menu to add it.";
+        }
+
+        deferredPrompt = null;
+        installBtn.disabled = false;
+      });
+
+      // Friendly note for now (until we add manifest + SW)
+      pwaNote.textContent =
+        "If the install option still doesn’t show up, it usually means the site isn’t fully PWA-enabled yet (manifest + offline support). We’ll add that next.";
+    })();
+  </script>
+</body>
+</html>
