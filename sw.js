@@ -9,10 +9,10 @@ const PRECACHE_URLS = [
   "/style.css",
   "/index.js",
   "/install.html",
-  "/offline.html"
+  "/offline.html",
   // Optional: add your most-visited pages, e.g.
-  // "/pages/upcomingEvents.html",
-  // "/pages/support.html"
+  "/pages/upcomingEvents.html",
+  "/pages/support.html"
 ];
 
 self.addEventListener("install", (event) => {
