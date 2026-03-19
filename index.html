@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="mobile-web-app-capable" content="yes">
+<script src="./components/header.js" type="text/javascript" defer></script>
+<script src="./components/footer.js" type="text/javascript" defer></script>
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-D0LTW2B42M"></script>
 <script>
@@ -21,8 +24,8 @@
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/d7fb344c9c.js" crossorigin="anonymous"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-  <script src="components/header.js" type="text/javascript" defer></script>
-  <script src="components/footer.js" type="text/javascript" defer></script>
+  <!-- <script src="components/header.js" type="text/javascript" defer></script>
+  <script src="components/footer.js" type="text/javascript" defer></script> -->
   <script>
     // Show the modal on page load
     window.onload = function() {
@@ -73,7 +76,7 @@ if ("serviceWorker" in navigator) {
 
 
 <body class="home">
-
+<header-component></header-component>
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -136,148 +139,7 @@ if ("serviceWorker" in navigator) {
 
 <!-- floating support us button -->
   <button class="floating-btn"> <a href="/pages/support.html">Support Us</a></button>
- <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg sticky-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="./index.html">Jazmine's <img src="./Assets/Jazmines-Journey-Logo.PNG"
-          height="45px;"> Journey</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-        </ul>
-
-      <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
-        <li>
-          <button style="    border-radius: 32px;
-    background-color: white; border-color: orange;">
-            <a class="dropdown-item pulse" style="padding: 10px;
-    font-weight: 600;" href="https://www.zeffy.com/en-US/donation-form/2026-jazmines-journey-donations" target="_blank">Donate</a>
-          </button>
-         
-        </li>
-        </ul>
-
-        <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
-        
-             
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Events
-            </a>
-            <ul class="dropdown-menu">
-              <!-- <li><a class="dropdown-item" href="/pages/JazminesHike.html">Jazmine's Hike</a></li>
-              <li><hr class="dropdown-divider"></li> -->
-              <li><a class="dropdown-item" href="/pages/upcomingEvents.html">Upcoming Events</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="/pages/familySupport.html">Family Support Events</a></li>
-               <li><hr class="dropdown-divider"></li>
-               <li><a class="dropdown-item" href="/pages/pickleball.html">2026 Pickleball Tournament</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="/pages/toydrive.html">Toy Drive</a></li>
-              <!-- <li><hr class="dropdown-divider"></li> -->
-              <!-- <li><a class="dropdown-item" href="/pages/bloodDrive.html">Blood Drive</a></li>      -->
-            
-            </ul>
-          </li>
-
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                 Fundraisers
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="/pages/onlinefundraiser.html">Online & Ongoing Fundraisers</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="https://milesforjazmine.com">Miles for Jazmine</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                   <li><a class="dropdown-item" href="https://pa.exchange/marketplace/5a7cb570-416b-11f0-8b27-7f50132c281c/storefront/5a7cb73c-416b-11f0-839c-ada1beb63e34" target="_blank">Arizona Cardinals Tickets</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                   <li><a class="dropdown-item" href="/pages/SponsorStuffed.html" target="_blank">Sponsor a Stuffed Animal</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="/pages/researchdonations.html" target="_blank">Pediatric Cancer Research</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="/pages/agentsvscancer.html" target="_blank">Agents Vs. Cancer</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="https://www.zeffy.com/en-US/donation-form/2026-jazmines-journey-donations" target="_blank">Link to General Donation</a></li>
-                </ul>
-              </li>
-
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                 Families
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="/pages/familySupport.html">Family Support Events</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="/pages/feedtubeport.html">Feeding Tube & Port Cover</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="/pages/resources.html">Resources</a></li>
-       
-               
-                </ul>
-              </li>
-
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Impact
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="/pages/familySupport.html">Family Support Events</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="/pages/giving.html">Your Impact</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" aria-current="page" href="/pages/thankyou.html">Thank You</a></li> 
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" aria-current="page" href="/pages/volunteer.html">Volunteer</a></li> 
-                </ul>
-              </li>
-
-      
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  About Jazmine's Journey
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="/pages/JazminesStory.html">Jazmine's
-                    Story</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li>
-                    <a class="dropdown-item" aria-current="page" href="/pages/NewsAndUpdates.html">News</a>
-                  </li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li>
-                    <a class="dropdown-item" aria-current="page" href="/pages/Contact.html">About Us</a>
-                  </li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li>
-                    <a class="dropdown-item" aria-current="page" href="/pages/Contact.html">Contact & Subscribe</a>
-                  </li>
-                  <li><hr class="dropdown-divider"></li>
-                   <li>
-                    <a class="dropdown-item" aria-current="page" href="https://us21.list-manage.com/survey?u=b84b865ea6ed9e8e3894bb424&id=79aa480cff&attribution=false" target="_blank">Join Jazmine's Journey</a>
-                  </li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li>
-                    <a class="dropdown-item" aria-current="page" href="/pages/support.html">Support</a>
-                  </li>
-                  <li><hr class="dropdown-divider"></li>
-                   <li>
-                    <a class="dropdown-item" aria-current="page" href="https://jazminesjourneyblog.wordpress.com/" target="_blank">Blog</a>
-                  </li>
-                </ul>
-              </li>
-
-              <li class="nav-item"><a class="nav-link active" href="https://us21.list-manage.com/survey?u=b84b865ea6ed9e8e3894bb424&id=e815e3eea3&attribution=false " target="_blank"><strong>Family Application</strong></a></li>
-        
-        </ul>
-
-      </div>
-    </div>
-  </nav>
-<!-- Navbar End -->
 
 <!-- Title heading -->
   <div class="container">
@@ -417,59 +279,7 @@ if ("serviceWorker" in navigator) {
   </div>
 
   <!-- footer -->
-  <section class="footer">
-    <!-- Footer -->
-    <footer class="text-center text-white" style="background-color: #ff9507">
-      <!-- Grid container -->
-      <div class="container p-4 pb-0">
-        <!-- Section: CTA -->
-        <section class="">
-          Follow Us on Social Media
-          <div style="padding: 5px;">
-          <a href="https://www.youtube.com/@_jazminesjourney_" target="_blank"><i class="fa-brands fa-youtube" style="color:red;font-size:25px;padding: 5px;"></i></a>
-          <a href="https://www.instagram.com/_jazminesjourney_/#" target="_blank"><i class="fa-brands fa-instagram" style="color:purple;font-size:25px;padding: 5px;"></i></a>
-          <a href="https://jazminesjourneyblog.wordpress.com" target="_blank"><i class="fa-brands fa-wordpress" style="color:darkblue;font-size:25px;padding: 5px;"></i></a>
-          <a href="https://www.tiktok.com/@jazminesjourney1" target="_blank"><i class="fa-brands fa-tiktok" style="color:white;font-size:25px;padding: 5px;"></i></a>
-          <a href="https://www.facebook.com/JazminesJourney" target="_blank"><i class="fa-brands fa-facebook" style="color:blue;font-size:25px;padding: 5px;"></i></a>
-     
-        </div>
-  
-          <p class="d-flex justify-content-center align-items-center">
-            <span class="me-3">Copyright © 2026 Jazmine's Journey</span>
-
-          </p>
-      
-
-          <p class="d-flex justify-content-center align-items-center">
-            <span class="me-3">P.O. Box 38091 Phoenix, AZ 85069</span>
-
-          </p>
-          <p class="d-flex justify-content-center align-items-center">
-            <span class="me-3"> <span class="me-3">a 501(c)3 nonprofit </span>
-
-          </p>
-          <p class="d-flex justify-content-center align-items-center">
-            <span class="me-3"><a href="/pages/minutes.html">Meeting Minutes, Tax Exempt Letter and Documents</a></span>
-
-          </p>
-
-          <p class="d-flex justify-content-center align-items-center">
-  <span class="me-3"><a href="/install.html">Install Jazmine’s Journey App (PWA)</a></span>
-</p>
-        </section>
-        <!-- Section: CTA -->
-      </div>
-      <!-- Grid container -->
-
-      <!-- Copyright -->
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-        <span class="me-3">Created by enRocket Dev <img src="./Assets/Nina Rocket Icon Black.png"
-            style="height:30px;"></span>
-      </div>
-      <!-- Copyright -->
-    </footer>
-    <!-- Footer -->
-  </section>
+<footer-component></footer-component>
 
   <style>
     .footer {

@@ -1,157 +1,176 @@
 class Header extends HTMLElement {
-    constructor() {
-      super();
-    }
+  constructor() {
+    super();
+  }
 
   connectedCallback() {
     this.innerHTML = `
     <nav class="navbar navbar-expand-lg sticky-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="../../index.html">Jazmine's <img src="../../Assets/Jazmines-Journey-Logo.PNG"
-          height="45px;"> Journey</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-        </ul>
-
-     <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
-        <li>
-          <button style="    border-radius: 32px;
-    background-color: white; border-color: orange;">
-            <a class="dropdown-item pulse" style="padding: 10px;
-    font-weight: 600;" href="https://www.zeffy.com/en-US/donation-form/2026-jazmines-journey-donations" target="_blank">Donate</a>
-          </button>
-         
-        </li>
-        </ul>
-
-        <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
-             
-        <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Events
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+          Jazmine's
+          <img src="/Assets/Jazmines-Journey-Logo.PNG" height="45" alt="Jazmine's Journey logo">
+          Journey
         </a>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="./upcomingEvents.html">Upcoming Events</a></li>
-          <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item" href="./familySupport.html">Family Support Events</a></li> 
-             <li><hr class="dropdown-divider"></li>  
-             <li><a class="dropdown-item" href="./pickleball.html">2026 Pickleball Tournament</a></li>
-            <li><hr class="dropdown-divider"></li>          
-            <li><a class="dropdown-item" href="./toydrive.html">Toy Drive</a></li>
-                    
-      
 
-       
-        </ul>
-      </li>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                 Fundraisers
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+
+          <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+            <li>
+              <button style="border-radius: 32px; background-color: white; border-color: orange;">
+                <a
+                  class="dropdown-item pulse"
+                  style="padding: 10px; font-weight: 600;"
+                  href="https://www.zeffy.com/en-US/donation-form/2026-jazmines-journey-donations"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Donate
                 </a>
-                <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="./onlinefundraiser.html">Online & Ongoing Fundraisers</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                 <li><a class="dropdown-item" href="https://milesforjazmine.com">Miles for Jazmine</a></li>
-                  <li><hr class="dropdown-divider"></li>
-    
-                    <li><a class="dropdown-item" href="https://pa.exchange/marketplace/5a7cb570-416b-11f0-8b27-7f50132c281c/storefront/5a7cb73c-416b-11f0-839c-ada1beb63e34" target="_blank">Arizona Cardinals Tickets</a></li>
-                   <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="./SponsorStuffed.html" target="_blank">Sponsor a Stuffed Animal</a></li>
-                         <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="./researchdonations.html" target="_blank">Pediatric Cancer Research</a></li>
-                             <li><hr class="dropdown-divider"></li>
-                     <li><a class="dropdown-item" href="./agentsvscancer.html" target="_blank">Agents Vs. Cancer</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="https://www.zeffy.com/en-US/donation-form/2026-jazmines-journey-donations" target="_blank">Link to General Donation</a></li>
-                  
-                </ul>
-              </li>
+              </button>
+            </li>
+          </ul>
 
-           <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Families
-                </a>
-                <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="./familySupport.html">Family Support Events</a></li>
-                 <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="./feedtubeport.html">Feeding Tube & Port Cover</a></li>
+          <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Events
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/pages/upcomingEvents.html">Upcoming Events</a></li>
                 <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="./resources.html">Resources</a></li>
-                 
-                </ul>
-              </li>
+                <li><a class="dropdown-item" href="/pages/familySupport.html">Family Support Events</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/pages/pickleball.html">2026 Pickleball Tournament</a></li>
+         
+              </ul>
+            </li>
 
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Impact
-                </a>
-                <ul class="dropdown-menu">
-        
-                  <li><a class="dropdown-item" href="./giving.html">Your Impact</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" aria-current="page" href="./thankyou.html">Thank You</a></li> 
-                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="./volunteer.html">Volunteer</a></li>
-                 
-                </ul>
-              </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Fundraisers
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/pages/onlinefundraiser.html">Online & Ongoing Fundraisers</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="https://milesforjazmine.com" target="_blank" rel="noopener noreferrer">Miles for Jazmine</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/pages/SponsorStuffed.html">Sponsor a Stuffed Animal</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/pages/researchdonations.html">Pediatric Cancer Research</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/pages/agentsvscancer.html">Agents Vs. Cancer</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="https://www.zeffy.com/en-US/donation-form/2026-jazmines-journey-donations"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Link to General Donation
+                  </a>
+                </li>
+              </ul>
+            </li>
 
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  About Jazmine's Journey
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="./JazminesStory.html">Jazmine's
-                    Story</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                     <li>
-                    <a class="dropdown-item" aria-current="page" href="./NewsAndUpdates.html">News</a>
-                  </li>
-                    <li><hr class="dropdown-divider"></li>
-                  <li>
-                    <a class="dropdown-item" aria-current="page" href="./Contact.html">About Us</a>
-                  </li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li>
-                    <a class="dropdown-item" aria-current="page" href="./Contact.html">Contact & Subscribe</a>
-                  </li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li>
-                    <a class="dropdown-item" aria-current="page" href="./support.html">Support</a>
-                  </li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li>
-                    <a class="dropdown-item" aria-current="page" href="https://us21.list-manage.com/survey?u=b84b865ea6ed9e8e3894bb424&id=79aa480cff&attribution=false" target="_blank">Join Jazmine's Journey</a>
-                  </li>
-                   <li><hr class="dropdown-divider"></li>
-                  <li>
-                    <a class="dropdown-item" aria-current="page" href="https://jazminesjourneyblog.wordpress.com/" target="_blank">Blog</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item"><a class="nav-link active" href="https://us21.list-manage.com/survey?u=b84b865ea6ed9e8e3894bb424&id=e815e3eea3&attribution=false" target="_blank"><strong>Family Application</strong></a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Families
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/pages/familySupport.html">Family Support Events</a></li>
+                <li><hr class="dropdown-divider"></li>
+                   <li><a class="dropdown-item" href="/pages/birthdayclub.html">Birthday Club</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/pages/feedtubeport.html">Feeding Tube & Port Cover</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/pages/resources.html">Resources</a></li>
+              </ul>
+            </li>
 
-        </ul>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Impact
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/pages/giving.html">Your Impact</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" aria-current="page" href="/pages/thankyou.html">Thank You</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/pages/volunteer.html">Volunteer</a></li>
+              </ul>
+            </li>
 
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                About Jazmine's Journey
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/pages/JazminesStory.html">Jazmine's Story</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" aria-current="page" href="/pages/NewsAndUpdates.html">News</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" aria-current="page" href="/pages/Contact.html">About Us</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" aria-current="page" href="/pages/Contact.html">Contact & Subscribe</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" aria-current="page" href="/pages/support.html">Support</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    aria-current="page"
+                    href="https://us21.list-manage.com/survey?u=b84b865ea6ed9e8e3894bb424&id=79aa480cff&attribution=false"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Join Jazmine's Journey
+                  </a>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    aria-current="page"
+                    href="https://jazminesjourneyblog.wordpress.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Blog
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                href="https://us21.list-manage.com/survey?u=b84b865ea6ed9e8e3894bb424&id=e815e3eea3&attribution=false"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <strong>Family Application</strong>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
     `;
-     this.initPWA();
+    this.initPWA();
   }
 
-initPWA() {
-    // Prevent duplicates across pages
+  initPWA() {
     if (window.__JJ_PWA_INIT__) return;
     window.__JJ_PWA_INIT__ = true;
 
-    // Manifest
     if (!document.querySelector('link[rel="manifest"]')) {
       const l = document.createElement("link");
       l.rel = "manifest";
@@ -159,7 +178,6 @@ initPWA() {
       document.head.appendChild(l);
     }
 
-    // Theme color (matches your orange)
     if (!document.querySelector('meta[name="theme-color"]')) {
       const m = document.createElement("meta");
       m.name = "theme-color";
@@ -167,7 +185,6 @@ initPWA() {
       document.head.appendChild(m);
     }
 
-    // iOS niceties
     if (!document.querySelector('link[rel="apple-touch-icon"]')) {
       const a = document.createElement("link");
       a.rel = "apple-touch-icon";
@@ -182,7 +199,6 @@ initPWA() {
       document.head.appendChild(cap);
     }
 
-    // Service worker
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", () => {
         navigator.serviceWorker.register("/sw.js").catch(console.error);
@@ -191,6 +207,4 @@ initPWA() {
   }
 }
 
-  customElements.define('header-component', Header);
-
- 
+customElements.define('header-component', Header);
