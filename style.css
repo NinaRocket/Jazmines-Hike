@@ -1194,3 +1194,99 @@ text-align:center;
     border: 1px solid #e6e6e6;
 }
 
+/* butterfly circle page */
+
+.butterfly-circle-section {
+  background: linear-gradient(180deg, #fffafc 0%, #f7f6ff 100%);
+}
+
+.butterfly-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #7a2c6b;
+}
+
+.butterfly-intro {
+  font-size: 1.1rem;
+  color: #5c4b5f;
+  line-height: 1.8;
+}
+
+.butterfly-highlight {
+  font-size: 1.15rem;
+  color: #b24592;
+  line-height: 1.8;
+}
+
+.butterfly-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 10px 30px rgba(122, 44, 107, 0.08);
+  border: 1px solid rgba(178, 69, 146, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.butterfly-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(122, 44, 107, 0.15);
+}
+
+.butterfly-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.butterfly-level {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #7a2c6b;
+  margin-bottom: 0.75rem;
+}
+
+.butterfly-price {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #b24592;
+  margin-bottom: 1rem;
+}
+
+.butterfly-price span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #7b6a7d;
+}
+
+.butterfly-card p {
+  color: #5c4b5f;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.butterfly-cta-box {
+  background: linear-gradient(135deg, #b24592 0%, #f15f79 100%);
+  color: #ffffff;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 12px 35px rgba(177, 69, 146, 0.2);
+}
+
+.butterfly-cta-box h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.butterfly-cta-box p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .butterfly-title {
+    font-size: 2rem;
+  }
+
+  .butterfly-card {
+    padding: 1.5rem 1.25rem;
+  }
+}
