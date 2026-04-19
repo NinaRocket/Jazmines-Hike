@@ -20,8 +20,8 @@
     gtag('config', 'G-D0LTW2B42M');
   </script>
 
-  <style>
-    .birthday-hero {
+<style>
+ .birthday-hero {
       text-align: center;
       padding: 40px 20px 20px;
     }
@@ -122,7 +122,10 @@
         border-radius: 18px;
       }
     }
-  </style>
+  
+</style>
+
+   
 </head>
 <body>
   <header-component></header-component>
@@ -132,6 +135,23 @@
     <h1 class="birthday-title">Jazmine’s Journey Birthday Club</h1>
     <p class="birthday-subtitle">Celebrating pediatric cancer warriors on their special day</p>
   </section>
+
+  <!-- Birthday Club Ticker -->
+<div class="bday-ticker" aria-label="Birthday gifts delivered counter">
+  <div class="bday-ticker-inner">
+    <div class="bday-ticker-left">
+      <span class="bday-ticker-emoji" aria-hidden="true">🎁</span>
+      <div class="bday-ticker-text">
+        <div class="bday-ticker-label">Birthday gifts delivered</div>
+        <div class="bday-ticker-sub">Celebrating brave warriors 💛</div>
+      </div>
+    </div>
+
+    <div class="bday-ticker-count" role="status" aria-live="polite">
+      <span id="bdayCount" data-target="4">0</span><span class="bday-ticker-plus">+</span>
+    </div>
+  </div>
+</div>
 
   <section class="birthday-intro">
     <p>
@@ -153,5 +173,44 @@ We are so excited to celebrate your child’s special day! By joining the Birthd
   <footer-component></footer-component>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script>
+(() => {
+  const el = document.getElementById("bdayCount");
+  if (!el) return;
+
+  const target = parseInt(el.dataset.target, 10) || 0;
+  const durationMs = 900;
+
+  const format = (n) => n.toLocaleString();
+  const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
+
+  const animateToTarget = () => {
+    const start = performance.now();
+
+    const step = (now) => {
+      const t = Math.min(1, (now - start) / durationMs);
+      const value = Math.round(target * easeOutCubic(t));
+      el.textContent = format(value);
+      if (t < 1) requestAnimationFrame(step);
+    };
+
+    requestAnimationFrame(step);
+  };
+
+  // animate once when visible
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver((entries) => {
+      if (entries.some(e => e.isIntersecting)) {
+        animateToTarget();
+        io.disconnect();
+      }
+    }, { threshold: 0.35 });
+
+    io.observe(el);
+  } else {
+    animateToTarget();
+  }
+})();
+</script>
 </body>
 </html>

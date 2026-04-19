@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="../../Assets/Jazmines-Journey-Logo.PNG" />
+  <title>Jazmine's Journey</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="../components/header.js" type="text/javascript" defer></script>
+  <script src="../components/footer.js" type="text/javascript" defer></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D0LTW2B42M"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-D0LTW2B42M');
+  </script>
+
+  <style>
+        body {
+            background: linear-gradient(180deg, #fffaf7 0%, #ffffff 100%);
+            color: #2f2f2f;
+        }
+
+        .adopt-section {
+            padding: 40px 0;
+        }
+
+        .adopt-hero {
+            position: relative;
+            overflow: hidden;
+            border-radius: 32px;
+            padding: 40px 10px;
+            background:
+                radial-gradient(circle at top left, rgba(255, 184, 140, 0.28), transparent 35%),
+                radial-gradient(circle at bottom right, rgba(255, 214, 189, 0.3), transparent 35%),
+                linear-gradient(135deg, #fff4ee 0%, #ffffff 100%);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+        }
+
+        .adopt-hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.25), rgba(255,255,255,0));
+            pointer-events: none;
+        }
+
+        .hero-inner {
+            position: relative;
+            z-index: 2;
+            max-width: 850px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #cc6d27;
+            background: rgba(255,255,255,0.7);
+            padding: 8px 14px;
+            border-radius: 999px;
+            margin-bottom: 20px;
+        }
+
+        .adopt-hero h1 {
+            font-size: 26px;
+            font-weight: 800;
+            color: #1f1f1f;
+            margin-bottom: 18px;
+            line-height: 1.05;
+        }
+
+        .adopt-hero .lead {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #555;
+            max-width: 760px;
+            margin: 0 auto 30px;
+        }
+
+        .cta-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px;
+            margin-top: 20px;
+        }
+
+        .primary-btn,
+        .secondary-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 999px;
+            font-weight: 700;
+            transition: all 0.25s ease;
+        }
+
+        .primary-btn {
+            background: linear-gradient(135deg, #cc6d27 0%, #e3823b 100%);
+            color: #fff;
+            box-shadow: 0 12px 24px rgba(204, 109, 39, 0.22);
+        }
+
+        .primary-btn:hover {
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 16px 28px rgba(204, 109, 39, 0.28);
+        }
+
+        .secondary-btn {
+            background: rgba(255,255,255,0.9);
+            color: #cc6d27;
+            border: 1px solid rgba(204, 109, 39, 0.18);
+        }
+
+        .secondary-btn:hover {
+            color: #b85f20;
+            transform: translateY(-2px);
+            background: #fff;
+        }
+
+        .stats-strip {
+            margin-top: 32px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        .stat-pill {
+            background: rgba(255,255,255,0.86);
+            backdrop-filter: blur(6px);
+            border: 1px solid rgba(0,0,0,0.04);
+            border-radius: 22px;
+            padding: 18px 24px;
+            min-width: 200px;
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
+        }
+
+        .stat-pill .number {
+            display: block;
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #cc6d27;
+            line-height: 1.1;
+            margin-bottom: 6px;
+        }
+
+        .stat-pill .label {
+            font-size: 0.98rem;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        .content-grid {
+            margin-top: 36px;
+        }
+
+        .modern-card {
+            height: 100%;
+            background: rgba(255,255,255,0.9);
+            border: 1px solid rgba(0,0,0,0.05);
+            border-radius: 28px;
+            padding: 32px;
+            box-shadow: 0 14px 30px rgba(0, 0, 0, 0.06);
+        }
+
+        .modern-card h2 {
+            font-size: 1.45rem;
+            font-weight: 800;
+            color: #1f1f1f;
+            margin-bottom: 16px;
+        }
+
+        .modern-card p {
+            color: #595959;
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        .soft-highlight {
+            background: linear-gradient(135deg, #fff2e8 0%, #fff8f4 100%);
+            border-radius: 22px;
+            padding: 22px;
+            margin-top: 20px;
+        }
+
+        .soft-highlight strong {
+            color: #cc6d27;
+            font-size: 1.15rem;
+        }
+
+        .goal-panel {
+            text-align: center;
+            background: linear-gradient(135deg, #ffffff 0%, #fff7f1 100%);
+        }
+
+        .goal-amount {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            color: #cc6d27;
+            margin: 18px 0 10px;
+            line-height: 1.1;
+        }
+
+        .mission-panel {
+            margin-top: 36px;
+            background:
+                radial-gradient(circle at top right, rgba(255, 197, 163, 0.22), transparent 25%),
+                #ffffff;
+        }
+
+        .closing-text {
+            font-size: 1.1rem;
+            margin-bottom: 24px;
+        }
+
+        @media (max-width: 768px) {
+            .adopt-section {
+                padding: 50px 0;
+            }
+
+            .adopt-hero {
+                padding: 56px 22px;
+                border-radius: 24px;
+            }
+
+            .modern-card {
+                padding: 24px;
+                border-radius: 22px;
+            }
+
+            .stat-pill {
+                width: 100%;
+                max-width: 340px;
+            }
+        }
+    </style>
+</head>
+<body>
+ <header-component></header-component>
+
+    <main class="container adopt-section">
+
+        <div class="section-header" style="padding-top: 5px !important;">
+          <h2>Jazmine's Journey</h2>
+          <p class="pulse">Adopt a <span>Family</span></p>
+        </div>
+        <section class="adopt-hero">
+            <div class="hero-inner">
+                <p class="lead">
+                    When a child is battling pediatric cancer, everyday life can become incredibly heavy.
+                    Your support helps Arizona families with essentials like groceries, gas, utility bills,
+                    and the day-to-day needs that don’t stop during treatment.
+                </p>
+
+                <div class="cta-row">
+                    <a href="https://www.zeffy.com/en-US/donation-form/adopt-an-arizona-pediatric-cancer-family" target="_blank" class="primary-btn">
+                        Help a Family Now
+                    </a>
+             
+                </div>
+
+                <div class="stats-strip">
+                    <div class="stat-pill">
+                        <span class="number">$500</span>
+                        <span class="label">supports one family with immediate relief</span>
+                    </div>
+                    <div class="stat-pill">
+                        <span class="number">$5,000</span>
+                        <span class="label">helps us support 10 families each month</span>
+                    </div>
+                    <div class="stat-pill">
+                        <span class="number">100%</span>
+                        <span class="label">volunteer-run, with every dollar helping families</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="learn-more" class="content-grid">
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="modern-card">
+                        <h2>🧡 What Your Support Does</h2>
+                        <p>
+                            Every day, families across Arizona are facing the unimaginable — a child battling pediatric cancer.
+                            Between hospital visits, treatments, and time away from work, the financial burden can quickly
+                            become overwhelming.
+                        </p>
+                        <p>
+                            Jazmine’s Journey steps in to help ease that burden by providing support for essential needs,
+                            giving families one less thing to worry about during one of the hardest seasons of their lives.
+                        </p>
+
+                        <div class="soft-highlight">
+                            <strong>$500 supports one family</strong>
+                            <p class="mb-0 mt-2">
+                                Providing help with basics like groceries, gas for treatment, utility bills,
+                                and everyday necessities.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="modern-card goal-panel">
+                        <h2>🎯 Our Monthly Goal</h2>
+                        <p>
+                            Each month, we aim to support <strong>10 Arizona families</strong> through this program.
+                        </p>
+                        <div class="goal-amount">$5,000</div>
+                        <p>
+                            That’s enough to provide meaningful, immediate relief to families navigating pediatric cancer.
+                        </p>
+                        <p class="mb-0">
+                            Every donation matters. Any amount counts and brings us closer to our goal.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modern-card mission-panel">
+                <h2>🤝 Why It Matters</h2>
+                <p>
+                    Jazmine’s Journey is <strong>100% volunteer-run</strong>, which means every dollar goes directly toward
+                    helping families and supporting our mission.
+                </p>
+                <p>
+                    This is more than a donation — it’s a way to step in during a family’s most difficult moments and remind
+                    them they are seen, supported, and not alone.
+                </p>
+                <p class="closing-text">
+                    <strong>Whether you choose to adopt one family or give what you can, your support creates real, immediate impact.</strong>
+                </p>
+
+                <div class="cta-row justify-content-start">
+                    <a href="https://www.zeffy.com/en-US/donation-form/adopt-an-arizona-pediatric-cancer-family" target="_blank" class="primary-btn">
+                        Adopt a Family
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+ 
+  <footer-component></footer-component>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
