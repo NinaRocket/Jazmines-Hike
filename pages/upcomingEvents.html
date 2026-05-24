@@ -56,27 +56,39 @@
 
   </div>
 
-  <script>
+  <!-- <script>
     document.addEventListener('DOMContentLoaded', function () {
       const { DateTime } = luxon;
       const calendarEl = document.getElementById('calendar');
 
       // events array
       const events = [
-
-
+{
+  title: "Jazmine’s Journey Hike Meet-Up 🌄🥾",
+  daysOfWeek: [0],             
+  startTime: '06:00:00',
+  endTime: '08:00:00',          
+  startRecur: '2026-05-24',      
+  endRecur: '2027-01-01',        
+  textColor: 'black',
+  backgroundColor: 'white',
+  borderColor: 'white',
+  classNames: 'smallImg',
+  url: '#hikemeetupSunday',
+  
+},
+{
+  title: "Dave & Buster’s Giveback 🎮💛 Month of May",
+  start: '2026-05-01T00:00:00-07:00',
+  end: '2026-05-01T00:00:00-07:00', 
+  textColor: 'black',
+  backgroundColor: 'white',
+  borderColor: 'white',
+  classNames: 'smallImg',
+  url: '#dnb05012026',
+  
+},
         {
-          title: "Jazmine’s Journey Annual Blood Drive ❤️🩸",
-          start: '2026-05-09T09:00:00-07:00',
-          end: '2026-05-09T14:00:00-07:00',
-          textColor: 'black',
-          backgroundColor: 'white',
-          borderColor: 'white',
-          classNames: 'smallImg',
-          url: '#blooddrive05092026',
-         
-        },
-                {
           title: 'May Bingo Fundraiser 🎉🎟️',
           start: '2026-05-24T18:00:00-07:00',
           end: '2026-05-24T20:00:00-07:00',
@@ -121,17 +133,6 @@
           image_url: '/Assets/Fundraisers/pickleball.jpeg'
         },
 
-        // {
-        //   title: 'Dice Dames & Dough Bunco',
-        //   start: '2025-10-18T13:00:00-07:00',
-        //   end: '2025-10-18T16:00:00-07:00',
-        //   textColor: 'black',
-        //   backgroundColor: 'white',
-        //   borderColor: 'white',
-        //   classNames: 'smallImg',
-        //   url: '#dice',
-        //   image_url: '/Assets/Fundraisers/DiceDames.jpg'
-        // },
 
       ];
 
@@ -192,7 +193,205 @@
 
       calendar.render();
     });
-  </script>
+
+  </script> -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const { DateTime } = luxon;
+    const calendarEl = document.getElementById('calendar');
+
+    // =========================================================
+    // 1) Base events (keep adding your one-off events here)
+    // =========================================================
+    const events = [
+      {
+        title: "Dave & Buster’s Giveback 🎮💛 Month of May",
+        start: '2026-05-01T00:00:00-07:00',
+        end: '2026-05-01T00:00:00-07:00', // shows through May 31
+        textColor: 'black',
+        backgroundColor: 'white',
+        borderColor: 'white',
+        classNames: 'smallImg',
+        url: '#dnb05012026',
+       
+      },
+      {
+        title: 'May Bingo Fundraiser 🎉🎟️',
+        start: '2026-05-24T18:00:00-07:00',
+        end: '2026-05-24T20:00:00-07:00',
+        textColor: 'black',
+        backgroundColor: 'white',
+        borderColor: 'white',
+        classNames: 'smallImg',
+        url: '#bingo05242026',
+        image_url: '/Assets/Fundraisers/bingologo.png'
+      },
+      {
+        title: "Jeni’s Ice Cream Giveback 🍦💛",
+        start: '2026-06-24T16:00:00-07:00',
+        end: '2026-06-24T19:00:00-07:00',
+        textColor: 'black',
+        backgroundColor: 'white',
+        borderColor: 'white',
+        classNames: 'smallImg',
+        url: '#jenis06242026',
+        // image_url: '/Assets/Fundraisers/jenislogo.png'
+      },
+      {
+  title: "Kroc Center Summer Fundraiser 💛🎉",
+  start: '2026-07-26T13:00:00-07:00',
+  end: '2026-07-26T16:00:00-07:00',
+  textColor: 'black',
+  backgroundColor: 'white',
+  borderColor: 'white',
+  classNames: 'smallImg',
+  url: '#kroc07262026',
+  // image_url: '/Assets/Fundraisers/kroc.png'
+},
+      {
+        title: "Jazmine’s Journey Hike",
+        start: '2026-11-07T06:45:00-07:00',
+        end: '2026-11-07T10:00:00-07:00',
+        textColor: 'black',
+        backgroundColor: 'white',
+        borderColor: 'white',
+        classNames: 'smallImg',
+        url: '#hike11072026',
+        image_url: '/Assets/jazjourneymountainlogo.png'
+      },
+      {
+        title: "Jazmine's Pickleball",
+        start: '2026-12-17T18:00:00-07:00',
+        end: '2026-12-17T21:00:00-07:00',
+        textColor: 'black',
+        backgroundColor: 'white',
+        borderColor: 'white',
+        classNames: 'smallImg',
+        url: '#pickleball12172026',
+        image_url: '/Assets/Fundraisers/pickleball.jpeg'
+      },
+      {
+  title: "Christmas Party 🎅🎄💛",
+  start: '2026-12-06T16:00:00-07:00',
+  end: '2026-12-06T19:00:00-07:00',
+  textColor: 'black',
+  backgroundColor: 'white',
+  borderColor: 'white',
+  classNames: 'smallImg',
+  url: '#christmasparty12062026',
+  // image_url: '/Assets/Fundraisers/christmasparty.png'
+},
+    ];
+
+    // =========================================================
+    // 2) Add ONLY the next 2 Sundays for the weekly hike meetup
+    //    (prevents the calendar from getting bloated)
+    // =========================================================
+    const PHX_OFFSET = '-07:00'; // Phoenix is always -07:00
+
+    function formatYMD(d) {
+      const yyyy = d.getFullYear();
+      const mm = String(d.getMonth() + 1).padStart(2, '0');
+      const dd = String(d.getDate()).padStart(2, '0');
+      return `${yyyy}-${mm}-${dd}`;
+    }
+
+    function getNextTwoSundayMeetups() {
+      const now = new Date();
+
+      // find next Sunday at 6:00 AM (or today if before 6am)
+      let first = new Date(now);
+      const daysUntilSunday = (7 - first.getDay()) % 7; // Sunday=0
+      first.setDate(first.getDate() + daysUntilSunday);
+      first.setHours(6, 0, 0, 0);
+
+      // if already past 6am on a Sunday, bump to next week
+      if (first < now) first.setDate(first.getDate() + 7);
+
+      const second = new Date(first);
+      second.setDate(second.getDate() + 7);
+
+      const makeEvent = (d) => {
+        const day = formatYMD(d);
+        return {
+          title: "Jazmine’s Journey Sunday Hike Meet-Up 🌄🥾",
+          start: `${day}T06:00:00${PHX_OFFSET}`,
+          end: `${day}T08:00:00${PHX_OFFSET}`,
+          textColor: 'black',
+          backgroundColor: 'white',
+          borderColor: 'white',
+          classNames: 'smallImg',
+          url: '#hikemeetupSunday',
+          // image_url: '/Assets/Fundraisers/hikelogo.png'
+        };
+      };
+
+      return [makeEvent(first), makeEvent(second)];
+    }
+
+    // Push the two generated Sunday events into your events array
+    events.push(...getNextTwoSundayMeetups());
+
+    // =========================================================
+    // 3) Parse only ISO start/end strings with Luxon (safe)
+    // =========================================================
+    const parsedEvents = events.map((event) => {
+      if (typeof event.start === 'string') {
+        const start = DateTime.fromISO(event.start).toISO();
+        const end =
+          typeof event.end === 'string' ? DateTime.fromISO(event.end).toISO() : null;
+
+        return { ...event, start, end };
+      }
+      return event;
+    });
+
+    // =========================================================
+    // 4) FullCalendar init
+    // =========================================================
+    const calendar = new FullCalendar.Calendar(calendarEl, {
+      initialView: 'listYear',
+      events: parsedEvents,
+
+      eventContent: function (arg) {
+        let arrayOfDomNodes = [];
+
+        // Create anchor element for the URL (hash anchors work great)
+        let anchorElement = document.createElement('a');
+        anchorElement.href = arg.event.url || '#';
+        anchorElement.style.display = 'flex';
+        anchorElement.style.alignItems = 'center';
+
+        // Title
+        if (arg.event.title) {
+          let titleEvent = document.createElement('div');
+          titleEvent.innerHTML = arg.event.title;
+          titleEvent.classList = "fc-event-title fc-sticky";
+          anchorElement.appendChild(titleEvent);
+        }
+
+        // Image (from extendedProps.image_url)
+        if (arg.event.extendedProps && arg.event.extendedProps.image_url) {
+          let imgEvent = document.createElement('img');
+          imgEvent.src = arg.event.extendedProps.image_url;
+          imgEvent.classList = "fc-event-img";
+          anchorElement.appendChild(imgEvent);
+        }
+
+        arrayOfDomNodes.push(anchorElement);
+        return { domNodes: arrayOfDomNodes };
+      },
+
+      eventTimeFormat: {
+        hour: 'numeric',
+        minute: '2-digit',
+        meridiem: 'short'
+      }
+    });
+
+    calendar.render();
+  });
+</script>
 
   <br>
   <div class="row container calendar" style="width:50%; margin:auto;">
@@ -202,15 +401,91 @@
     </div>
   </div>
   <!-- <div class="row container" style="margin:auto; margin-top: 50px;"> -->
+<!-- Free Event Attendance Policy (place once on the Events page) -->
+<div class="container centerText" style="text-align:center; margin-top: 25px;">
+  <a class="anchor" name="attendancePolicy"></a>
 
+  <div class="alert alert-warning" style="max-width: 900px; margin: 0 auto; border-radius: 18px;">
+    <p class="event-title" style="margin-bottom: 10px;font-size:18px;"><strong>Pediatric Cancer Families Free Event Attendance Policy 💛 </strong></p>
 
-<!-- Annual Blood Drive May -->
+    <p class="section-text" style="font-size: 14px; margin-bottom: 0;">
+      Jazmine’s Journey proudly provides free events and experiences for Arizona pediatric cancer families through the generosity of donors, sponsors, and community supporters.
+      Because space, supplies, and funding are limited, registration spots are reserved specifically for families who plan to attend.<br><br>
+
+      If your family is no longer able to attend an event, we kindly ask that you notify Jazmine’s Journey as soon as possible so the opportunity may be offered to another family.<br><br>
+
+      Please note that repeated no call/no show attendance may result in limited eligibility for future free Jazmine’s Journey events and programs.
+      This policy helps ensure that available resources are used responsibly and that as many pediatric cancer families as possible have the opportunity to participate.
+    </p>
+  </div>
+</div>
+<!-- Sunday Hike Meet-Up -->
 <div class="container centerText" style="text-align:center;">
+  <a class="anchor" name="hikemeetupSunday"></a>
+
+  <div style="text-align:center;">
+    <img src="../../Assets/jazjourneymountainlogo.png" style="width:200px;border-radius: 20px; margin-bottom: 15px;" alt="Jazmine’s Journey Hike Meet-Up">
+  </div>
+
+  <p>Every Sunday | 6:00 AM</p>
+  <p class="event-titles">Jazmine’s Journey Hike Meet-Up 🌄🥾</p>
+  <p>Location: North Mountain Visitor Center, Phoenix, Arizona</p>
+
+  <p class="section-text" style="font-size: 18px;">
+    Join us every Sunday at <strong>6:00 AM</strong> for our Jazmine’s Journey Hike Meet-Up at <strong>North Mountain Visitor Center</strong> in Phoenix.<br><br>
+
+    This is a <strong>free, community-driven hike</strong> open to anyone looking to get outside, move their body, and connect with others — all experience levels welcome.<br><br>
+
+    But this is more than just a hike. This is about <strong>community, connection, and purpose</strong>.<br><br>
+
+    Together, we’re taking steps for Jazmine — the steps she didn’t get to take. Each mile is in her honor and in support of her unseen journey to cure pediatric cancer.<br><br>
+
+    <strong>Bring water, show up, and start your morning with intention.</strong><br><br>
+
+    💛 Cost: <strong>Free</strong><br>
+    🕕 Time: <strong>Sundays at 6:00 AM</strong><br><br>
+
+    Come walk with us. Come be part of something bigger. Come take steps for Jazmine.
+  </p>
+</div>
+<hr>
+<!-- Dave & Buster’s Fundraising Campaign May -->
+<div class="container centerText" style="text-align:center;">
+  <a class="anchor" name="dnb05012026"></a>
+
+ 
+  <p class="event-titles">Dave &amp; Buster’s Fundraising Campaign 🎮💛</p>
+ <p>May 1 – May 31, 2026</p>
+  <p class="section-text" style="font-size: 18px;">
+    <strong>Ready… Set… Play! 🚦</strong><br><br>
+
+    Jazmine’s Journey is excited to launch our <strong>Dave &amp; Buster’s Fundraising Campaign</strong>!<br><br>
+
+    Get a <strong>$20 Power Card</strong>, and <strong>50% of your purchase</strong> will be donated to <strong>Jazmine’s Journey</strong>.<br><br>
+
+    🕹️ Whether it’s a family day or a fun date night, you can play games, win prizes, and have endless fun while supporting a great cause!<br><br>
+
+    <strong>🎉 How it works:</strong><br>
+    1️⃣ Purchase online via our campaign page<br>
+    2️⃣ Redeem your Power Card at your nearest <strong>Dave &amp; Buster’s</strong><br>
+    3️⃣ Play and enjoy!<br><br>
+
+    <strong>🗓️ Campaign ends May 31, 2026.</strong><br><br>
+
+    <a href="https://www.groupraise.com/oc/77073?utm_campaign=ocmp_copy_url&utm_medium=social&utm_source=offers_promo"
+       target="_blank" rel="noopener noreferrer"
+       style="display:inline-block; margin-top:10px; padding:12px 18px; border-radius:14px; background:#ffe066; color:#111; font-weight:700; text-decoration:none; box-shadow:0 6px 18px rgba(0,0,0,.15);">
+      🎮 Get Your $20 Power Card &amp; Support Jazmine’s Journey →
+    </a>
+  </p>
+</div>
+<hr>
+<!-- Annual Blood Drive May -->
+<!-- <div class="container centerText" style="text-align:center;">
   <a class="anchor" name="blooddrive05092026"></a>
 
   <div style="text-align:center;">
-    <!-- Swap this image path to your actual asset -->
-    <!-- <img src="../../Assets/blooddrive.jpg" style="width:200px;border-radius: 20px; margin-bottom: 15px;" alt="Jazmine’s Journey Annual Blood Drive with the American Red Cross"> -->
+
   </div>
 
   <p>Saturday, May 9, 2026 | Save the Date</p>
@@ -242,7 +517,7 @@
     </a>
   </p>
 </div>
-<hr>
+<hr> -->
 
 <!-- May Bingo Fundraiser -->
 <div class="container centerText" style="text-align:center;">
@@ -262,7 +537,7 @@
 
     <strong>Tickets:</strong><br>
     🎟 <strong>$20</strong> — 5 rounds of Bingo (per person)<br>
-    💛 <strong>FREE</strong> — Pediatric Cancer Family Ticket (per person)<br><br>
+    💛 <strong>FREE</strong> — Pediatric Cancer Family Ticket (per person)  💛 Please review our <a href="#attendancePolicy"><strong>Free Event Attendance Policy</strong></a> if your plans change.<br><br>
 
     Spots are limited — grab your seat and come play for a cause!<br><br>
 
@@ -304,6 +579,46 @@
   </p>
 </div>
 <hr>
+
+<!-- Kroc Center Summer Fundraiser July -->
+<div class="container centerText" style="text-align:center;">
+  <a class="anchor" name="kroc07262026"></a>
+
+  <div style="text-align:center;">
+    <!-- Swap this image path to your actual asset -->
+    <img src="../../Assets/Fundraisers/kroc.png" class="img-fluid" style="width:800px;border-radius: 20px; margin-bottom: 15px;" alt="Jazmine’s Journey Summer Fundraiser at the Kroc Center">
+  </div>
+
+  <p>July 26, 2026 | 1:00 PM – 4:00 PM</p>
+  <p class="event-titles">Jazmine’s Journey Summer Fundraiser 💛🎉</p>
+  <p>Location: The Salvation Army Kroc Center</p>
+
+  <p class="section-text" style="font-size: 18px;">
+    We’re so excited to bring our community together for a day filled with fun, connection, and purpose — all in honor of Jazmine.<br><br>
+
+    <strong>✨ What to expect:</strong><br>
+    🍕 Pizza generously donated by <strong>J&amp;M Catering Services</strong><br>
+    🎁 Goodie bags for the kids<br>
+    💛 A welcoming space to connect, laugh, and just be together<br><br>
+
+    <strong>🎗️ Special Invitation:</strong><br>
+    This event is <strong>FREE</strong> for <strong>pediatric cancer patients</strong> and <strong>one parent/guardian/caregiver</strong> — because this day is truly for YOU. 
+  💛 Please review our <a href="#attendancePolicy"><strong>Free Event Attendance Policy</strong></a> if your plans change.</p>
+
+    <strong>🎟️ General Admission:</strong> <strong>$20 per person</strong><br>
+    <em>All proceeds go directly to supporting pediatric cancer families and funding research through Jazmine’s Journey.</em><br><br>
+
+    This is more than just a fundraiser… it’s a chance to build community, create joyful moments, and remind families they are not alone on this journey.<br><br>
+
+    <a href="https://www.zeffy.com/en-US/ticketing/jazmines-journey-kroc-center-summer-fundraiser"
+       target="_blank" rel="noopener noreferrer"
+       style="display:inline-block; margin-top:10px; padding:12px 18px; border-radius:14px; background:#ffe066; color:#111; font-weight:700; text-decoration:none; box-shadow:0 6px 18px rgba(0,0,0,.15);">
+      🎉 Grab Your Tickets on Zeffy →
+    </a>
+  </p>
+</div>
+<hr>
+
     <!-- Hike for Pediatric Cancer Research November -->
 <div class="container centerText" style="text-align:center;">
   <a class="anchor" name="hike11072026"></a>
@@ -446,7 +761,45 @@
     Come play, connect, and help us make this third year even more memorable. We look forward to seeing you on the courts in December 2026!
   </p>
 </div>
+<hr>
+<!-- Pediatric Cancer Family Christmas Party Dec -->
+<div class="container centerText" style="text-align:center;">
+  <a class="anchor" name="christmasparty12062026"></a>
 
+  <div style="text-align:center;">
+    <!-- Swap this image path to your actual asset -->
+    <img src="../../Assets/Fundraisers/xmasparty26.png" class="img-fluid" style="width:5500px;border-radius: 20px; margin-bottom: 15px;" alt="Jazmine’s Journey Pediatric Cancer Family Christmas Party">
+  </div>
+
+  <p>Saturday, December 6, 2026 | 4:00 PM – 7:00 PM</p>
+  <p class="event-titles">Jazmine’s Journey Pediatric Cancer Family Christmas Party 🎅🎄💛</p>
+  <p>Location: Chicken N Pickle – Glendale, 9330 W Hanna Ln, Glendale, AZ 85305</p>
+
+  <p class="section-text" style="font-size: 18px;">
+    Join Jazmine’s Journey for a <strong>magical evening</strong> filled with holiday fun, smiles, and special memories created just for Arizona pediatric cancer families. 🎁✨<br><br>
+
+    <strong>FREE EVENT FOR ARIZONA PEDIATRIC CANCER FAMILIES</strong> <br>
+    (Pediatric cancer child, sibling, and parents/guardian)  💛 Please review our <a href="#attendancePolicy"><strong>Free Event Attendance Policy</strong></a> if your plans change.<br><br>
+
+    <strong>What to expect:</strong><br>
+    🍽️ Food served around <strong>5:00 PM</strong><br>
+    🎅 Santa appearance at <strong>6:00 PM</strong><br>
+    🎨 Face painting<br>
+    🧩 Crafts<br>
+    🎄 Holiday fun &amp; family memories<br><br>
+
+    This special evening is all about bringing <strong>joy, connection, and hope</strong> to families walking the pediatric cancer journey here in Arizona.<br><br>
+
+    <strong>Space is limited, so registration is required.</strong><br>
+    We cannot wait to celebrate the holiday season with you and your family while making memories together! 💛<br><br>
+
+    <a href="https://www.zeffy.com/en-US/ticketing/pediatric-cancer-family-christmas-party"
+       target="_blank" rel="noopener noreferrer"
+       style="display:inline-block; margin-top:10px; padding:12px 18px; border-radius:14px; background:#ffe066; color:#111; font-weight:700; text-decoration:none; box-shadow:0 6px 18px rgba(0,0,0,.15);">
+      🎅🎟️ Register Your Family on Zeffy →
+    </a>
+  </p>
+</div>
 
 
 
