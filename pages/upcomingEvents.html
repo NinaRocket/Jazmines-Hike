@@ -44,7 +44,8 @@
       <h1 class="animate-character pulse">Upcoming Events </h1>
     </div>
     <p style="text-align:center;">There are always opportunities to support without attending an event! Visit our <a
-        href="./onlinefundraiser.html">online fundraising page!</a>
+        href="./onlinefundraiser.html">online fundraising page!</a> <br>
+       Seeking community for a weekly hike? You are welcome to join our <a href=#hikemeetupSunday>Jazmine's Journey Sunday Hike Meet-Up</a> every Sunday!
     <!-- <p style="text-align:center;">Year Round <span class="animate-charcter" style="font-size:18px !important">Toy Drive
       </span> information <a href="./toydrive.html">here.</a></p>
     </p> -->
@@ -56,145 +57,6 @@
 
   </div>
 
-  <!-- <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const { DateTime } = luxon;
-      const calendarEl = document.getElementById('calendar');
-
-      // events array
-      const events = [
-{
-  title: "Jazmine’s Journey Hike Meet-Up 🌄🥾",
-  daysOfWeek: [0],             
-  startTime: '06:00:00',
-  endTime: '08:00:00',          
-  startRecur: '2026-05-24',      
-  endRecur: '2027-01-01',        
-  textColor: 'black',
-  backgroundColor: 'white',
-  borderColor: 'white',
-  classNames: 'smallImg',
-  url: '#hikemeetupSunday',
-  
-},
-{
-  title: "Dave & Buster’s Giveback 🎮💛 Month of May",
-  start: '2026-05-01T00:00:00-07:00',
-  end: '2026-05-01T00:00:00-07:00', 
-  textColor: 'black',
-  backgroundColor: 'white',
-  borderColor: 'white',
-  classNames: 'smallImg',
-  url: '#dnb05012026',
-  
-},
-        {
-          title: 'May Bingo Fundraiser 🎉🎟️',
-          start: '2026-05-24T18:00:00-07:00',
-          end: '2026-05-24T20:00:00-07:00',
-          textColor: 'black',
-          backgroundColor: 'white',
-          borderColor: 'white',
-          classNames: 'smallImg',
-          url: '#bingo05242026',
-          image_url: '/Assets/Fundraisers/bingologo.png'
-        },
-        {
-  title: "Jeni’s Ice Cream Giveback 🍦💛",
-  start: '2026-06-24T16:00:00-07:00',
-  end: '2026-06-24T19:00:00-07:00',
-  textColor: 'black',
-  backgroundColor: 'white',
-  borderColor: 'white',
-  classNames: 'smallImg',
-  url: '#jenis06242026',
-
-},
-        {
-          title: "Jazmine’s Journey Hike 🥾💛 (Nov)",
-          start: '2026-11-07T06:45:00-07:00',
-          end: '2026-11-07T10:00:00-07:00',
-          textColor: 'black',
-          backgroundColor: 'white',
-          borderColor: 'white',
-          classNames: 'smallImg',
-          url: '#hike11072026',
-          image_url: '/Assets/jazjourneymountainlogo.png'
-        },
-        {
-          title: "Jazmine's Pickleball",
-          start: '2026-12-17T18:00:00-07:00',
-          end: '2026-12-17T21:00:00-07:00',
-          textColor: 'black',
-          backgroundColor: 'white',
-          borderColor: 'white',
-          classNames: 'smallImg',
-          url: '#pickleball12172026',
-          image_url: '/Assets/Fundraisers/pickleball.jpeg'
-        },
-
-
-      ];
-
-      // Parse events with ISO 8601 dates using Luxon to ensure compatibility
-      const parsedEvents = events.map(event => {
-        const start = DateTime.fromISO(event.start).toISO();
-        const end = event.end ? DateTime.fromISO(event.end).toISO() : null;
-
-        console.log(`Event: ${event.title}, Start: ${start}, End: ${end}`);
-
-        return {
-          ...event,
-          start: start,
-          end: end
-        };
-      });
-
-      // Initialize FullCalendar with parsedEvents
-      const calendar = new FullCalendar.Calendar(calendarEl, {
-        initialView: 'listYear',
-        events: parsedEvents,
-        eventContent: function (arg) {
-          let arrayOfDomNodes = [];
-
-          // Create anchor element for the URL
-          let anchorElement = document.createElement('a');
-          anchorElement.href = arg.event.url;
-          anchorElement.style.display = 'flex';
-          anchorElement.style.alignItems = 'center';
-
-          // Title event
-          if (arg.event._def.title) {
-            let titleEvent = document.createElement('div');
-            titleEvent.innerHTML = arg.event._def.title;
-            titleEvent.classList = "fc-event-title fc-sticky";
-            anchorElement.appendChild(titleEvent);
-          }
-
-          // Image event
-          if (arg.event.extendedProps.image_url) {
-            let imgEvent = document.createElement('img');
-            imgEvent.src = arg.event.extendedProps.image_url;
-            imgEvent.classList = "fc-event-img";
-            anchorElement.appendChild(imgEvent);
-          }
-
-          // Append the anchor element (with title and image) to the DOM nodes array
-          arrayOfDomNodes.push(anchorElement);
-
-          return { domNodes: arrayOfDomNodes };
-        },
-        eventTimeFormat: {
-          hour: 'numeric',
-          minute: '2-digit',
-          meridiem: 'short',
-        }
-      });
-
-      calendar.render();
-    });
-
-  </script> -->
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const { DateTime } = luxon;
@@ -215,17 +77,7 @@
         url: '#dnb05012026',
        
       },
-      {
-        title: 'May Bingo Fundraiser 🎉🎟️',
-        start: '2026-05-24T18:00:00-07:00',
-        end: '2026-05-24T20:00:00-07:00',
-        textColor: 'black',
-        backgroundColor: 'white',
-        borderColor: 'white',
-        classNames: 'smallImg',
-        url: '#bingo05242026',
-        image_url: '/Assets/Fundraisers/bingologo.png'
-      },
+      
       {
         title: "Jeni’s Ice Cream Giveback 🍦💛",
         start: '2026-06-24T16:00:00-07:00',
@@ -237,6 +89,17 @@
         url: '#jenis06242026',
         // image_url: '/Assets/Fundraisers/jenislogo.png'
       },
+      {
+  title: 'June Bingo Night 🎉🎟️',
+  start: '2026-06-28T18:00:00-07:00',
+  end: '2026-06-28T20:00:00-07:00',
+  textColor: 'black',
+  backgroundColor: 'white',
+  borderColor: 'white',
+  classNames: 'smallImg',
+  url: '#bingo06282026',
+  image_url: '/Assets/Fundraisers/bingologo.png'
+},
       {
   title: "Kroc Center Summer Fundraiser 💛🎉",
   start: '2026-07-26T13:00:00-07:00',
@@ -259,6 +122,7 @@
         url: '#hike11072026',
         image_url: '/Assets/jazjourneymountainlogo.png'
       },
+      
       {
         title: "Jazmine's Pickleball",
         start: '2026-12-17T18:00:00-07:00',
@@ -419,6 +283,9 @@
     </p>
   </div>
 </div>
+
+
+
 <!-- Sunday Hike Meet-Up -->
 <div class="container centerText" style="text-align:center;">
   <a class="anchor" name="hikemeetupSunday"></a>
@@ -432,11 +299,11 @@
   <p>Location: North Mountain Visitor Center, Phoenix, Arizona</p>
 
   <p class="section-text" style="font-size: 18px;">
-    Join us every Sunday at <strong>6:00 AM</strong> for our Jazmine’s Journey Hike Meet-Up at <strong>North Mountain Visitor Center</strong> in Phoenix.<br><br>
+    Join us every Sunday at <strong>6:00 AM</strong> for our Jazmine’s Journey Hike Meet-Up at <strong>North Mountain Visitor Center</strong> in Phoenix.<br>
 
-    This is a <strong>free, community-driven hike</strong> open to anyone looking to get outside, move their body, and connect with others — all experience levels welcome.<br><br>
+    This is a <strong>free, community-driven hike</strong> open to anyone looking to get outside, move their body, and connect with others — all experience levels welcome.<br>
 
-    But this is more than just a hike. This is about <strong>community, connection, and purpose</strong>.<br><br>
+    But this is more than just a hike. This is about <strong>community, connection, and purpose</strong>.<br>
 
     Together, we’re taking steps for Jazmine — the steps she didn’t get to take. Each mile is in her honor and in support of her unseen journey to cure pediatric cancer.<br><br>
 
@@ -480,6 +347,43 @@
   </p>
 </div>
 <hr>
+
+<!-- June Bingo Fundraiser -->
+<div class="container centerText" style="text-align:center;">
+  <a class="anchor" name="bingo06282026"></a>
+
+  <div style="text-align:center;">
+    
+    <img src="../../Assets/Fundraisers/bingologo.png" style="width:200px;border-radius: 20px; margin-bottom: 15px;" alt="Jazmine’s Journey June Bingo Night">
+  </div>
+
+  <p>Sunday, June 28, 2026 | 6:00 PM – 8:00 PM</p>
+  <p class="event-titles">Jazmine’s Journey Bingo Night 🎉🎟️</p>
+  <p>Location: Chicken N Pickle – Glendale, 9330 W Hanna Ln, Glendale, AZ 85305</p>
+
+  <p class="section-text" style="font-size: 18px;">
+    🎉 Join us for Jazmine’s Journey Bingo Night! 🎉<br><br>
+
+    Come out for a fun evening of bingo while helping support Arizona pediatric cancer families through the
+    <strong>Jazmine’s Journey Family Support Fund</strong>. 💛<br><br>
+
+    <strong>Event Highlights:</strong><br>
+    🎟️ <strong>$10 per person</strong><br>
+    🏆 <strong>5 rounds of bingo included</strong><br>
+    💛 <strong>Pediatric cancer families play FREE</strong><br><br>
+
+    Every dollar raised helps provide support to Arizona pediatric cancer families during treatment.<br><br>
+
+    <a href="https://www.zeffy.com/en-US/ticketing/jazmines-journey-june-2026-bingo"
+       target="_blank" rel="noopener noreferrer"
+       style="display:inline-block; margin-top:10px; padding:12px 18px; border-radius:14px; background:#ffe066; color:#111; font-weight:700; text-decoration:none; box-shadow:0 6px 18px rgba(0,0,0,.15);">
+      🎟️ Reserve Your June Bingo Spot on Zeffy →
+    </a>
+  </p>
+</div>
+<hr>
+
+
 <!-- Annual Blood Drive May -->
 <!-- <div class="container centerText" style="text-align:center;">
   <a class="anchor" name="blooddrive05092026"></a>
@@ -518,38 +422,6 @@
   </p>
 </div>
 <hr> -->
-
-<!-- May Bingo Fundraiser -->
-<div class="container centerText" style="text-align:center;">
-  <a class="anchor" name="bingo05242026"></a>
-
-  <div style="text-align:center;">
-    <!-- Swap this image path to your actual asset -->
-    <img src="../../Assets/bingologo.png" style="width:200px;border-radius: 20px; margin-bottom: 15px;" alt="Jazmine’s Journey May Bingo Fundraiser">
-  </div>
-
-  <p>Sunday, May 24, 2026 | 6:00 PM – 8:00 PM</p>
-  <p class="event-titles">May Bingo – Jazmine’s Journey Fundraiser 🎉🎟️</p>
-  <p>Location: Chicken N Pickle – Glendale, 9330 W Hanna Ln, Glendale, AZ 85305</p>
-
-  <p class="section-text" style="font-size: 18px;">
-    Join Jazmine’s Journey for a fun night of Bingo at <strong>Chicken N Pickle – Glendale</strong>!<br><br>
-
-    <strong>Tickets:</strong><br>
-    🎟 <strong>$20</strong> — 5 rounds of Bingo (per person)<br>
-    💛 <strong>FREE</strong> — Pediatric Cancer Family Ticket (per person)  💛 Please review our <a href="#attendancePolicy"><strong>Free Event Attendance Policy</strong></a> if your plans change.<br><br>
-
-    Spots are limited — grab your seat and come play for a cause!<br><br>
-
-    <a href="https://www.zeffy.com/en-US/ticketing/may-bingo-jazmines-journey-fundraiser"
-       target="_blank" rel="noopener noreferrer"
-       style="display:inline-block; margin-top:10px; padding:12px 18px; border-radius:14px; background:#ffe066; color:#111; font-weight:700; text-decoration:none; box-shadow:0 6px 18px rgba(0,0,0,.15);">
-      🎟️ Register for May Bingo on Zeffy →
-    </a>
-  </p>
-</div>
-<hr>
-
 
 <!-- Jeni's Ice Cream Giveback June -->
 <div class="container centerText" style="text-align:center;">
