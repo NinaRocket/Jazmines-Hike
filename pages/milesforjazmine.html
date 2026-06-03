@@ -1,122 +1,383 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="../../Assets/Jazmines-Journey-Logo.PNG"/>
-    <title>Jazmine's Journey</title>
-    <link rel="stylesheet" href="../../style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script src="../components/header.js" type="text/javascript" defer></script>
-    <script src="../components/footer.js" type="text/javascript" defer></script>
-      <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D0LTW2B42M"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  gtag('config', 'G-D0LTW2B42M');
-</script>
+  <link rel="icon" type="image/png" href="/Assets/Jazmines-Journey-Logo.PNG"/>
+  <title>Jazmine's Journey | Miles for Jazmine</title>
+
+  <link rel="stylesheet" href="/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <script src="/components/header.js" type="text/javascript" defer></script>
+  <script src="/components/footer.js" type="text/javascript" defer></script>
+
+  <style>
+    .miles-hero {
+      background: linear-gradient(135deg, #fff7ec 0%, #ffe4c7 45%, #fbd4f2 100%);
+      border-radius: 28px;
+      padding: 3rem 2rem;
+      margin: 2rem auto;
+      text-align: center;
+      box-shadow: 0 12px 30px rgba(204, 109, 39, 0.15);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .miles-hero::before,
+    .miles-hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.25;
+      z-index: 0;
+    }
+
+    .miles-hero::before {
+      width: 180px;
+      height: 180px;
+      background: #ffb85c;
+      top: -60px;
+      left: -60px;
+    }
+
+    .miles-hero::after {
+      width: 220px;
+      height: 220px;
+      background: #d46dbb;
+      bottom: -90px;
+      right: -80px;
+    }
+
+    .miles-hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    .miles-logo {
+      max-width: 240px;
+      margin-bottom: 1.5rem;
+    }
+
+    .miles-eyebrow {
+      color: #cc6d27;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .miles-title {
+      color: #6b2b7a;
+      font-weight: 800;
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      line-height: 1.05;
+      margin-bottom: 1rem;
+    }
+
+    .miles-subtitle {
+      color: #4f4f4f;
+      font-size: 1.25rem;
+      max-width: 720px;
+      margin: 0 auto 1.75rem;
+    }
+
+    .miles-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #cc6d27, #e88b35);
+      color: #fff;
+      padding: 0.9rem 1.6rem;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: 0 8px 18px rgba(204, 109, 39, 0.25);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .miles-btn:hover {
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px rgba(204, 109, 39, 0.35);
+    }
+
+    .miles-section {
+      max-width: 1050px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+
+    .miles-card {
+      background: #fff;
+      border-radius: 22px;
+      padding: 2rem;
+      height: 100%;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(204, 109, 39, 0.12);
+    }
+
+    .miles-card h3 {
+      color: #cc6d27;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .miles-card p,
+    .miles-card li {
+      color: #4f4f4f;
+      font-size: 1.05rem;
+      line-height: 1.65;
+    }
+
+    .miles-highlight {
+      background: #fff8f0;
+      border-left: 6px solid #cc6d27;
+      border-radius: 18px;
+      padding: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .step-number {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #cc6d27;
+      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .miles-download-box {
+      background: linear-gradient(135deg, #6b2b7a, #9f4ba6);
+      color: #fff;
+      border-radius: 26px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      box-shadow: 0 12px 28px rgba(107, 43, 122, 0.22);
+    }
+
+    .miles-download-box h2 {
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .miles-download-box p {
+      max-width: 720px;
+      margin: 0 auto 1.5rem;
+      font-size: 1.1rem;
+      line-height: 1.65;
+    }
+
+    .miles-download-box .miles-btn {
+      background: #fff;
+      color: #6b2b7a;
+      box-shadow: none;
+    }
+
+    .miles-download-box .miles-btn:hover {
+      color: #6b2b7a;
+    }
+
+    .miles-note {
+      font-size: 0.95rem;
+      color: #666;
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .miles-hero {
+        padding: 2.25rem 1.25rem;
+      }
+
+      .miles-card {
+        padding: 1.5rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <header-component></header-component>
+  <header-component></header-component>
 
+  <main>
+    <!-- Hero -->
+    <section class="container">
+      <div class="miles-hero">
+        <div class="miles-hero-content">
+        
+          <img class="miles-logo" src="/Assets/Logo/circle-jazmines-steps-logo.png" alt="Miles for Jazmine logo">
 
-     <!-- heading -->
-  <div class="row">
-        <div class="col section-header">
-          <h2>Jazmine's Journey</h2>
-          <p class="animate-charcter pulse" style="background-image: linear-gradient(-225deg, #231557 0%, #ec8235 29%, #ff1361 67%, #fff800 100%) !important;">Miles for Jazmine</p>
-        </div>
- </div>
+          <p class="miles-eyebrow">Taking steps in her memory</p>
 
- <!-- content -->
-<div class="row container-fluid centerText" style="margin:auto;">
-                
-    <!-- top image div -->
-  <div class="" style="text-align:center;">
-           <img src="/Assets/Logo/circle-jazmines-steps-logo.png" style="width:200px;border-radius: 20px;" class="" alt="...">
-                   
-   </div>
-   <br>
-   <br>              
-  <!-- text body content -->
-  <div class="container centerText">
-    <div style="text-align:center;">
-        <p style="font-size:22px;">
-            <br>
-            <strong>Miles for Jazmine: Her Unseen Journey to Cure Pediatric Cancer 💛</strong>
+          <h1 class="miles-title">Miles for Jazmine</h1>
+
+          <p class="miles-subtitle">
+            Honor Jazmine’s strength and spirit through a meaningful movement challenge created to raise awareness,
+            support pediatric cancer families, and continue her unseen journey.
           </p>
+
+      <a class="miles-btn" href="https://www.zeffy.com/en-US/ticketing/miles-for-jazmine" target="_blank">
+  Join the Challenge
+</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Intro -->
+    <section class="miles-section">
+      <div class="row g-4 align-items-stretch">
+        <div class="col-lg-6">
+          <div class="miles-card">
+            <h3>30 Miles in 30 Days</h3>
+            <p>
+              Our Miles for Jazmine challenge is simple: complete 30 miles in 30 days.
+            </p>
+            <p>
+              You can walk, run, bike, swim, hike, use adaptive movement, or move in whatever way works best for your body.
+              This challenge is about honoring Jazmine, supporting pediatric cancer families, and taking each step with purpose.
+            </p>
+
+            <div class="miles-highlight">
+              <strong>Every mile is a tribute. Every step makes a difference.</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="miles-card">
+            <h3>A simpler way to participate</h3>
+            <p>
+              Miles for Jazmine was originally created as a web app, but we are moving to a simple downloadable PDF
+              challenge tracker for now.
+            </p>
+            <p>
+              This helps Jazmine’s Journey keep costs low while still giving families, supporters, and community members
+              a meaningful way to participate from anywhere.
+            </p>
+
+            <div class="miles-highlight">
+              <strong>No account needed. No app required. Just download, move, track, and honor Jazmine.</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+ <section class="miles-section">
+  <div class="text-center mb-4">
+    <h2 style="color:#6b2b7a; font-weight:800;">How It Works</h2>
+    <p style="max-width:720px; margin:0 auto; color:#555; font-size:1.1rem;">
+      The challenge is simple, meaningful, and flexible so you can participate in a way that works for you.
+    </p>
+  </div>
+
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="miles-card text-center">
+        <div class="step-number">1</div>
+        <h3>Register</h3>
+        <p>
+          Sign up for the Miles for Jazmine Challenge through Zeffy.
+        </p>
+      </div>
     </div>
 
-   <p class="section-text" style="font-size: 18px;"> 
- 
-            Join us in honoring Jazmine’s strength and spirit through Miles for Jazmine — a movement-based challenge series created to raise awareness and funds for pediatric cancer. Her journey was one of courage, love, and unseen battles, and now, we walk in her footsteps to continue the fight.
-            <br>
-            Our first challenge: <strong>30 Miles in 30 Days.</strong>
-            <br>
-            <br>
-            Walk, run, bike, swim — move in whatever way works for you — and complete 30 miles over 30 days to support children and families facing pediatric cancer. Every mile is a tribute. Every step makes a difference.
-            <br>
-            <br>
-            <strong>Coming Soon: Registration, impact stories, and ways to get involved.</strong>
-
- </p>
-</div>
-<div class="container" style="text-align:center;">
-    <div id="mc_embed_shell">
-        <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
-    <style type="text/css">
-          #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width: 600px;}
-          /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-             We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-  </style>
-  <div id="mc_embed_signup">
-      <form action="https://jazminesjourney.us21.list-manage.com/subscribe/post?u=b84b865ea6ed9e8e3894bb424&amp;id=97d348f017&amp;f_id=00f0a8e9f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-          <div id="mc_embed_signup_scroll"><h2>Yes, I want to be notified when Miles for Jazmine launches!</h2>
-              <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-              <div class="mc-field-group"><label for="mce-FNAME">First Name </label><input type="text" name="FNAME" class=" text" id="mce-FNAME" value=""></div><div class="mc-field-group"><label for="mce-LNAME">Last Name </label><input type="text" name="LNAME" class=" text" id="mce-LNAME" value=""></div><div class="mc-field-group"><label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" value="" required=""></div>
-          <div id="mce-responses" class="clear">
-              <div class="response" id="mce-error-response" style="display: none;"></div>
-              <div class="response" id="mce-success-response" style="display: none;"></div>
-          </div><div aria-hidden="true" style="position: absolute; left: -5000px;"><input type="text" name="b_b84b865ea6ed9e8e3894bb424_97d348f017" tabindex="-1" value=""></div><div class="clear"><input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Notify Me"></div>
+    <div class="col-md-4">
+      <div class="miles-card text-center">
+        <div class="step-number">2</div>
+        <h3>Track Your Miles</h3>
+        <p>
+          Receive your mileage log sheet and complete 30 miles in 30 days by walking, running, hiking, biking, swimming, or moving your way.
+        </p>
       </div>
-  </form>
+    </div>
+
+    <div class="col-md-4">
+      <div class="miles-card text-center">
+        <div class="step-number">3</div>
+        <h3>Get Recognized</h3>
+        <p>
+          Submit your completed log sheet and be recognized on the Jazmine’s Journey website as a Miles for Jazmine finisher.
+        </p>
+      </div>
+    </div>
   </div>
-</div>
-  
+</section>
 
+    <!-- Why It Matters -->
+    <section class="miles-section">
+      <div class="miles-card">
+        <h3>Why Miles for Jazmine Matters</h3>
 
-<style type="text/css">
-    #mc_embed_signup{background:#fff; color:#b86a1e !important; clear:left; font-weight: 600 !important; font:14px Helvetica,Arial,sans-serif; width: 600px;}
-    /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-       We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-       h2{
-          color:#ec8235 !important;
-       }
-       #mc_embed_signup{
-        width: 350px!important;
-       }
-       #mc_embed_shell{
-        width:100%!important;
-       }
-       label{
-        margin:5px;
-       }
-</style>
+        <p>
+          Jazmine’s Journey exists to support families impacted by pediatric cancer and to honor Jazmine’s life,
+          strength, and legacy. Miles for Jazmine is one more way we can carry her story forward.
+        </p>
 
-</div>
+        <p>
+          Whether you complete your miles alone, with friends, with your family, at the gym, on a trail, around your neighborhood,
+          or one small step at a time, your participation helps bring awareness to children and families facing the unimaginable.
+        </p>
 
-</div>
-</div>
-        
+        <div class="miles-highlight">
+          <strong>
+            You are not just logging miles. You are taking steps Jazmine never got the chance to take.
+          </strong>
+        </div>
+      </div>
+    </section>
 
-<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[0]='EMAIL';ftypes[0]='email';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+    <section class="miles-section">
+  <div class="miles-card">
+    <h3>Celebrate Your Finish</h3>
 
-  
-<footer-component></footer-component>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <p>
+      When you complete your 30 miles, send us your finished log sheet so we can celebrate your accomplishment.
+      Finishers will be recognized on the Jazmine’s Journey website as part of our Miles for Jazmine community.
+    </p>
+
+    <div class="miles-highlight">
+      <strong>
+        Your miles matter. Your effort matters. And we would love to celebrate you.
+      </strong>
+    </div>
+  </div>
+</section>
+
+    <!-- Download CTA -->
+    <!-- <section class="miles-section">
+      <div class="miles-download-box">
+        <h2>Ready to take the challenge?</h2>
+
+        <p>
+          Download your Miles for Jazmine PDF tracker and start your 30 miles in 30 days.
+          Move at your own pace, track your progress, and know that every step honors Jazmine’s journey.
+        </p>
+
+       
+        <a class="miles-btn" href="/Assets/Documents/Miles_for_Jazmine_LogSheet.pdf" download>
+          Download the PDF Tracker
+        </a>
+      </div>
+
+      <p class="miles-note">
+        Questions? Please contact us at
+        <a href="mailto:info@jazminesjourney.com">info@jazminesjourney.com</a>.
+      </p>
+    </section> -->
+  </main>
+
+  <footer-component></footer-component>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
