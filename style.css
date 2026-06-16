@@ -541,11 +541,12 @@ label{
     color:#492a0c;
 }
 .contact-email-text{
-    /* padding:40px; */
+    /* margin-top:40px; */
     text-align:center;
     font-size:24px;
     color:#492a0c;
 }
+
 .button{
     background-color: #ffc107 !important;
     margin-top:15px;

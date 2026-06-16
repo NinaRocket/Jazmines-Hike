@@ -156,7 +156,7 @@ class Header extends HTMLElement {
             <li class="nav-item">
               <a
                 class="nav-link active"
-                href="https://us21.list-manage.com/survey?u=b84b865ea6ed9e8e3894bb424&id=e815e3eea3&attribution=false"
+                href="https://forms.gle/dabA8PKHs66oHFxe8"
                 target="_blank"
                 rel="noopener noreferrer"
               >
